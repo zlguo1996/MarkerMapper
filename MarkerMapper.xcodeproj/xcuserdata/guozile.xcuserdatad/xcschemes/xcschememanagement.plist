@@ -4,10 +4,48 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DodecaTrackerPlugin.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>MarkerMapper.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>A71CC3FB2078E0B800517017</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7684C79205FF4B6000C8CFC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A770EE35206F373000513CFB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A770EE44206F378000513CFB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A770EE4C206F443F00513CFB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A770EE5B206F45DF00513CFB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
