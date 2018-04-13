@@ -57,6 +57,12 @@ public:
     void setVideoCapture(const VideoCapture& vc){
         video_capture = vc;
     }
+    void setVideoCapture(const int& vc){
+        video_capture = cv::VideoCapture(vc);
+    }
+    void setVideoCapture(const string& vc){
+        video_capture = cv::VideoCapture(vc);
+    }
     void setCameraPose(const Mat& rt){
         camera_pose = rt;
     }

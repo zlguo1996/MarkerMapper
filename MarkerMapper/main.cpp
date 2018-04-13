@@ -78,14 +78,14 @@ int main(int argc, const char * argv[]) {
     
     Camera camera(camera_parameters_file_path, video_capture, cv::Mat::eye(4, 4, CV_32F), md);
     Pen pen(marker_map_path_base_name+".yml");
-    PenDetector pd(camera,pen);
+    PenDetector pd(&camera,&pen);
     
     while (camera.grab()) {
         pd.detectOneFrame();
         Mat img;
-        pd.camera.current_frame.copyTo(img);
-        pd.camera.drawDetectedMarkers(img);
-        pd.camera.draw3DAxis(img, dodeca_marker_size*2);
+        pd.camera->current_frame.copyTo(img);
+        pd.camera->drawDetectedMarkers(img);
+        pd.camera->draw3DAxis(img, dodeca_marker_size*2);
         
 //        aruco::MarkerMapPoseTracker mmappt;
 //        mmappt.setParams(cp, mmap);

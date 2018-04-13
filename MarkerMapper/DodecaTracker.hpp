@@ -17,38 +17,42 @@
 
 using namespace std;
 
+// 相机模式 （实时视频或是读取文件）
+enum Camera_Mode {VIDEO_NONE, VIDEO_LIVE, VIDEO_FILE};
+
 // 管理相机和笔和追踪
 class DodecaTracker{
 private:
     // 相机参数
     string camera_parameter_path;
     int video_capture_index;
+    string video_file_path;
+    Camera_Mode camera_mode;
+    
     cv::Mat camera_pose;
     // 笔参数
     string marker_map_path;
     
-    bool haveInitCamera;
-    bool haveInitPen;
+    Camera camera;
+    Pen pen;
 
     PenDetector pen_detector;
     
-    bool getCamera(Camera& camera){
-        assert(haveInitCamera);
-        
+    bool getCamera(){
         aruco::MarkerDetector md;
         md.setDictionary(dictionary);
         md.getParameters().setCornerRefinementMethod(aruco::CornerRefinementMethod::CORNER_LINES);
         
         camera.setCameraParameter(camera_parameter_path);
-        camera.setVideoCapture(video_capture_index);
+        if(camera_mode==VIDEO_LIVE) camera.setVideoCapture(video_capture_index);
+        else if(camera_mode==VIDEO_FILE) camera.setVideoCapture(video_file_path);
+        else return false;
         camera.setCameraPose(camera_pose);
         camera.setMarkerDetector(md);
         
         return true;
     }
-    bool getPen(Pen& pen){
-        assert(haveInitPen);
-        
+    bool getPen(){
         pen.setMarkerMap(marker_map_path);
         
         return true;
@@ -64,8 +68,7 @@ public:
     static float dodeca_marker_size;       //正十二面体表面marker边长
     
     DodecaTracker(){
-        haveInitCamera = false;
-        haveInitPen = false;
+        camera_mode = VIDEO_NONE;
     }
     
     bool initCamera(string camera_parameter_path, int video_capture_index=0, Mat camera_pose = cv::Mat::eye(4, 4, CV_32F)){
@@ -75,9 +78,28 @@ public:
         
         this->camera_parameter_path = camera_parameter_path;
         this->video_capture_index = video_capture_index;
+        this->camera_mode = VIDEO_LIVE;
         this->camera_pose = camera_pose;
         
-        haveInitCamera = true;
+        getCamera();
+        
+        return true;
+    }
+    bool initCamera(string camera_parameter_path, string video_file_path, Mat camera_pose = cv::Mat::eye(4, 4, CV_32F)){
+        fstream file;
+        file.open(camera_parameter_path);
+        if(!file.is_open()) return false;
+        fstream video_file;
+        video_file.open(video_file_path);
+        if(!video_file.is_open()) return false;
+        
+        this->camera_parameter_path = camera_parameter_path;
+        this->video_file_path = video_file_path;
+        this->camera_mode = VIDEO_FILE;
+        this->camera_pose = camera_pose;
+        
+        getCamera();
+        
         return true;
     }
     bool initPen(string marker_map_path){
@@ -87,23 +109,21 @@ public:
         
         this->marker_map_path = marker_map_path;
         
-        haveInitPen = true;
+        getPen();
+        
         return true;
     }
     bool initPenDetector(){
-        assert(haveInitPen&&haveInitCamera);
-        
-        Camera camera;
-        getCamera(camera);
-        Pen pen;
-        getPen(pen);
-        
         if(!(camera.isValid()&&pen.isValid())) return false;
         
-        pen_detector.addCamera(camera);
-        pen_detector.addPen(pen);
+        pen_detector = PenDetector(&camera, &pen);
         
         return pen_detector.isValid();
+    }
+    
+    // 等待下一帧
+    bool grab(){
+        return pen_detector.grabOneFrame();
     }
     
     // 检测当前帧
@@ -112,8 +132,8 @@ public:
     }
     
     // 获得当前帧指定笔的世界坐标的pose
-    cv::Mat getPose(int pen_index=0){
-        return pen_detector.getLastFramePose(pen_index);
+    cv::Mat getPose(){
+        return pen.getFrame(camera.next_frame_index-1);
     }
     
     bool isValid(){

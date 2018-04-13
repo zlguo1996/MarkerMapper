@@ -20,17 +20,16 @@
 #include "../MarkerMapper/Libraries/my_lib/Tools.hpp"
 
 namespace DodecaTrackerPlugin {
-    extern DodecaTracker dodeca_tracker;
-    extern "C" bool EXPORT_API initCamera(char* camera_parameter_path, int deviceNum=0){
-        string camera_parameter_path_s = camera_parameter_path;
-        dodeca_tracker.initCamera(camera_parameter_path_s, deviceNum);
-    }
-    extern "C" bool EXPORT_API initCameraRvecTvec(char* camera_parameter_path, float* rvec, float* tvec, int deviceNum=0){
-        string camera_parameter_path_s = camera_parameter_path;
-        Mat cam_mat;
-        
-        
-    }
+    DodecaTracker* dodeca_tracker;
+    
+    extern "C" void EXPORT_API _DodecaTrackerPlugin();
+    extern "C" bool EXPORT_API _initCamera(char* camera_parameter_path, int deviceNum);
+    extern "C" bool EXPORT_API _initCameraRvecTvec(char* camera_parameter_path, int deviceNum, float* rvec, float* tvec);
+    extern "C" bool EXPORT_API _initPen(char* marker_map_path);
+    extern "C" bool EXPORT_API _initPenDetector();
+    extern "C" bool EXPORT_API _grab();
+    extern "C" bool EXPORT_API _detect();
+    extern "C" bool EXPORT_API _getPose(float* rvec, float* tvec);
+    extern "C" bool EXPORT_API _isValid();
 }
-
 

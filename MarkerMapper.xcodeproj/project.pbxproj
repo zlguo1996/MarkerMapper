@@ -8,7 +8,146 @@
 
 /* Begin PBXBuildFile section */
 		A70A849D2078DBFD0015282A /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A70A849B2078D9140015282A /* Tools.cpp */; };
-		A7684C7E205FF4B6000C8CFC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7684C7D205FF4B6000C8CFC /* main.cpp */; };
+		A71CC4702078F10B00517017 /* libopencv_aruco.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C97205FFF8C000C8CFC /* libopencv_aruco.3.4.1.dylib */; };
+		A71CC4712078F10B00517017 /* libopencv_aruco.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C97205FFF8C000C8CFC /* libopencv_aruco.3.4.1.dylib */; };
+		A71CC4722078F10B00517017 /* libopencv_aruco.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C97205FFF8C000C8CFC /* libopencv_aruco.3.4.1.dylib */; };
+		A71CC4732078F10B00517017 /* libopencv_bgsegm.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8F205FFF8C000C8CFC /* libopencv_bgsegm.3.4.1.dylib */; };
+		A71CC4742078F10B00517017 /* libopencv_bgsegm.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8F205FFF8C000C8CFC /* libopencv_bgsegm.3.4.1.dylib */; };
+		A71CC4752078F10B00517017 /* libopencv_bgsegm.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8F205FFF8C000C8CFC /* libopencv_bgsegm.3.4.1.dylib */; };
+		A71CC4762078F10B00517017 /* libopencv_bioinspired.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C94205FFF8C000C8CFC /* libopencv_bioinspired.3.4.1.dylib */; };
+		A71CC4772078F10B00517017 /* libopencv_bioinspired.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C94205FFF8C000C8CFC /* libopencv_bioinspired.3.4.1.dylib */; };
+		A71CC4782078F10B00517017 /* libopencv_bioinspired.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C94205FFF8C000C8CFC /* libopencv_bioinspired.3.4.1.dylib */; };
+		A71CC4792078F10B00517017 /* libopencv_calib3d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C87205FFF8C000C8CFC /* libopencv_calib3d.3.4.1.dylib */; };
+		A71CC47A2078F10B00517017 /* libopencv_calib3d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C87205FFF8C000C8CFC /* libopencv_calib3d.3.4.1.dylib */; };
+		A71CC47B2078F10B00517017 /* libopencv_calib3d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C87205FFF8C000C8CFC /* libopencv_calib3d.3.4.1.dylib */; };
+		A71CC47C2078F10B00517017 /* libopencv_ccalib.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8B205FFF8C000C8CFC /* libopencv_ccalib.3.4.1.dylib */; };
+		A71CC47D2078F10B00517017 /* libopencv_ccalib.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8B205FFF8C000C8CFC /* libopencv_ccalib.3.4.1.dylib */; };
+		A71CC47E2078F10B00517017 /* libopencv_ccalib.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8B205FFF8C000C8CFC /* libopencv_ccalib.3.4.1.dylib */; };
+		A71CC47F2078F10B00517017 /* libopencv_core.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C88205FFF8C000C8CFC /* libopencv_core.3.4.1.dylib */; };
+		A71CC4802078F10B00517017 /* libopencv_core.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C88205FFF8C000C8CFC /* libopencv_core.3.4.1.dylib */; };
+		A71CC4812078F10B00517017 /* libopencv_core.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C88205FFF8C000C8CFC /* libopencv_core.3.4.1.dylib */; };
+		A71CC4822078F10B00517017 /* libopencv_datasets.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAA205FFF8D000C8CFC /* libopencv_datasets.3.4.1.dylib */; };
+		A71CC4832078F10B00517017 /* libopencv_datasets.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAA205FFF8D000C8CFC /* libopencv_datasets.3.4.1.dylib */; };
+		A71CC4842078F10B00517017 /* libopencv_datasets.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAA205FFF8D000C8CFC /* libopencv_datasets.3.4.1.dylib */; };
+		A71CC4852078F10B00517017 /* libopencv_dnn_objdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C98205FFF8C000C8CFC /* libopencv_dnn_objdetect.3.4.1.dylib */; };
+		A71CC4862078F10B00517017 /* libopencv_dnn_objdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C98205FFF8C000C8CFC /* libopencv_dnn_objdetect.3.4.1.dylib */; };
+		A71CC4872078F10B00517017 /* libopencv_dnn_objdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C98205FFF8C000C8CFC /* libopencv_dnn_objdetect.3.4.1.dylib */; };
+		A71CC4882078F10B00517017 /* libopencv_dnn.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C92205FFF8C000C8CFC /* libopencv_dnn.3.4.1.dylib */; };
+		A71CC4892078F10B00517017 /* libopencv_dnn.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C92205FFF8C000C8CFC /* libopencv_dnn.3.4.1.dylib */; };
+		A71CC48A2078F10B00517017 /* libopencv_dnn.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C92205FFF8C000C8CFC /* libopencv_dnn.3.4.1.dylib */; };
+		A71CC48B2078F10B00517017 /* libopencv_dpm.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C99205FFF8C000C8CFC /* libopencv_dpm.3.4.1.dylib */; };
+		A71CC48C2078F10B00517017 /* libopencv_dpm.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C99205FFF8C000C8CFC /* libopencv_dpm.3.4.1.dylib */; };
+		A71CC48D2078F10B00517017 /* libopencv_dpm.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C99205FFF8C000C8CFC /* libopencv_dpm.3.4.1.dylib */; };
+		A71CC48E2078F10B00517017 /* libopencv_face.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C95205FFF8C000C8CFC /* libopencv_face.3.4.1.dylib */; };
+		A71CC48F2078F10B00517017 /* libopencv_face.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C95205FFF8C000C8CFC /* libopencv_face.3.4.1.dylib */; };
+		A71CC4902078F10B00517017 /* libopencv_face.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C95205FFF8C000C8CFC /* libopencv_face.3.4.1.dylib */; };
+		A71CC4912078F10B00517017 /* libopencv_features2d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9D205FFF8C000C8CFC /* libopencv_features2d.3.4.1.dylib */; };
+		A71CC4922078F10B00517017 /* libopencv_features2d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9D205FFF8C000C8CFC /* libopencv_features2d.3.4.1.dylib */; };
+		A71CC4932078F10B00517017 /* libopencv_features2d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9D205FFF8C000C8CFC /* libopencv_features2d.3.4.1.dylib */; };
+		A71CC4942078F10B00517017 /* libopencv_flann.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9A205FFF8C000C8CFC /* libopencv_flann.3.4.1.dylib */; };
+		A71CC4952078F10B00517017 /* libopencv_flann.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9A205FFF8C000C8CFC /* libopencv_flann.3.4.1.dylib */; };
+		A71CC4962078F10B00517017 /* libopencv_flann.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9A205FFF8C000C8CFC /* libopencv_flann.3.4.1.dylib */; };
+		A71CC4972078F10B00517017 /* libopencv_fuzzy.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA3205FFF8C000C8CFC /* libopencv_fuzzy.3.4.1.dylib */; };
+		A71CC4982078F10B00517017 /* libopencv_fuzzy.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA3205FFF8C000C8CFC /* libopencv_fuzzy.3.4.1.dylib */; };
+		A71CC4992078F10B00517017 /* libopencv_fuzzy.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA3205FFF8C000C8CFC /* libopencv_fuzzy.3.4.1.dylib */; };
+		A71CC49A2078F10B00517017 /* libopencv_hfs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C90205FFF8C000C8CFC /* libopencv_hfs.3.4.1.dylib */; };
+		A71CC49B2078F10B00517017 /* libopencv_hfs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C90205FFF8C000C8CFC /* libopencv_hfs.3.4.1.dylib */; };
+		A71CC49C2078F10B00517017 /* libopencv_hfs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C90205FFF8C000C8CFC /* libopencv_hfs.3.4.1.dylib */; };
+		A71CC49D2078F10B00517017 /* libopencv_highgui.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C96205FFF8C000C8CFC /* libopencv_highgui.3.4.1.dylib */; };
+		A71CC49E2078F10B00517017 /* libopencv_highgui.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C96205FFF8C000C8CFC /* libopencv_highgui.3.4.1.dylib */; };
+		A71CC49F2078F10B00517017 /* libopencv_highgui.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C96205FFF8C000C8CFC /* libopencv_highgui.3.4.1.dylib */; };
+		A71CC4A02078F10B00517017 /* libopencv_img_hash.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9B205FFF8C000C8CFC /* libopencv_img_hash.3.4.1.dylib */; };
+		A71CC4A12078F10B00517017 /* libopencv_img_hash.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9B205FFF8C000C8CFC /* libopencv_img_hash.3.4.1.dylib */; };
+		A71CC4A22078F10B00517017 /* libopencv_img_hash.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9B205FFF8C000C8CFC /* libopencv_img_hash.3.4.1.dylib */; };
+		A71CC4A32078F10B00517017 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9C205FFF8C000C8CFC /* libopencv_imgcodecs.3.4.1.dylib */; };
+		A71CC4A42078F10B00517017 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9C205FFF8C000C8CFC /* libopencv_imgcodecs.3.4.1.dylib */; };
+		A71CC4A52078F10B00517017 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9C205FFF8C000C8CFC /* libopencv_imgcodecs.3.4.1.dylib */; };
+		A71CC4A62078F10B00517017 /* libopencv_imgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAE205FFF8D000C8CFC /* libopencv_imgproc.3.4.1.dylib */; };
+		A71CC4A72078F10B00517017 /* libopencv_imgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAE205FFF8D000C8CFC /* libopencv_imgproc.3.4.1.dylib */; };
+		A71CC4A82078F10B00517017 /* libopencv_imgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAE205FFF8D000C8CFC /* libopencv_imgproc.3.4.1.dylib */; };
+		A71CC4A92078F10B00517017 /* libopencv_line_descriptor.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C91205FFF8C000C8CFC /* libopencv_line_descriptor.3.4.1.dylib */; };
+		A71CC4AA2078F10B00517017 /* libopencv_line_descriptor.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C91205FFF8C000C8CFC /* libopencv_line_descriptor.3.4.1.dylib */; };
+		A71CC4AB2078F10B00517017 /* libopencv_line_descriptor.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C91205FFF8C000C8CFC /* libopencv_line_descriptor.3.4.1.dylib */; };
+		A71CC4AC2078F10B00517017 /* libopencv_ml.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAC205FFF8D000C8CFC /* libopencv_ml.3.4.1.dylib */; };
+		A71CC4AD2078F10B00517017 /* libopencv_ml.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAC205FFF8D000C8CFC /* libopencv_ml.3.4.1.dylib */; };
+		A71CC4AE2078F10B00517017 /* libopencv_ml.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAC205FFF8D000C8CFC /* libopencv_ml.3.4.1.dylib */; };
+		A71CC4AF2078F10B00517017 /* libopencv_objdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9E205FFF8C000C8CFC /* libopencv_objdetect.3.4.1.dylib */; };
+		A71CC4B02078F10B00517017 /* libopencv_objdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9E205FFF8C000C8CFC /* libopencv_objdetect.3.4.1.dylib */; };
+		A71CC4B12078F10B00517017 /* libopencv_objdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9E205FFF8C000C8CFC /* libopencv_objdetect.3.4.1.dylib */; };
+		A71CC4B22078F10B00517017 /* libopencv_optflow.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA5205FFF8D000C8CFC /* libopencv_optflow.3.4.1.dylib */; };
+		A71CC4B32078F10B00517017 /* libopencv_optflow.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA5205FFF8D000C8CFC /* libopencv_optflow.3.4.1.dylib */; };
+		A71CC4B42078F10B00517017 /* libopencv_optflow.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA5205FFF8D000C8CFC /* libopencv_optflow.3.4.1.dylib */; };
+		A71CC4B52078F10B00517017 /* libopencv_phase_unwrapping.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CB0205FFF8D000C8CFC /* libopencv_phase_unwrapping.3.4.1.dylib */; };
+		A71CC4B62078F10B00517017 /* libopencv_phase_unwrapping.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CB0205FFF8D000C8CFC /* libopencv_phase_unwrapping.3.4.1.dylib */; };
+		A71CC4B72078F10B00517017 /* libopencv_phase_unwrapping.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CB0205FFF8D000C8CFC /* libopencv_phase_unwrapping.3.4.1.dylib */; };
+		A71CC4B82078F10B00517017 /* libopencv_photo.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAF205FFF8D000C8CFC /* libopencv_photo.3.4.1.dylib */; };
+		A71CC4B92078F10B00517017 /* libopencv_photo.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAF205FFF8D000C8CFC /* libopencv_photo.3.4.1.dylib */; };
+		A71CC4BA2078F10B00517017 /* libopencv_photo.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAF205FFF8D000C8CFC /* libopencv_photo.3.4.1.dylib */; };
+		A71CC4BB2078F10B00517017 /* libopencv_plot.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAD205FFF8D000C8CFC /* libopencv_plot.3.4.1.dylib */; };
+		A71CC4BC2078F10B00517017 /* libopencv_plot.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAD205FFF8D000C8CFC /* libopencv_plot.3.4.1.dylib */; };
+		A71CC4BD2078F10B00517017 /* libopencv_plot.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAD205FFF8D000C8CFC /* libopencv_plot.3.4.1.dylib */; };
+		A71CC4BE2078F10B00517017 /* libopencv_reg.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8C205FFF8C000C8CFC /* libopencv_reg.3.4.1.dylib */; };
+		A71CC4BF2078F10B00517017 /* libopencv_reg.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8C205FFF8C000C8CFC /* libopencv_reg.3.4.1.dylib */; };
+		A71CC4C02078F10B00517017 /* libopencv_reg.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8C205FFF8C000C8CFC /* libopencv_reg.3.4.1.dylib */; };
+		A71CC4C12078F10B00517017 /* libopencv_rgbd.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA0205FFF8C000C8CFC /* libopencv_rgbd.3.4.1.dylib */; };
+		A71CC4C22078F10B00517017 /* libopencv_rgbd.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA0205FFF8C000C8CFC /* libopencv_rgbd.3.4.1.dylib */; };
+		A71CC4C32078F10B00517017 /* libopencv_rgbd.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA0205FFF8C000C8CFC /* libopencv_rgbd.3.4.1.dylib */; };
+		A71CC4C42078F10B00517017 /* libopencv_saliency.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA6205FFF8D000C8CFC /* libopencv_saliency.3.4.1.dylib */; };
+		A71CC4C52078F10B00517017 /* libopencv_saliency.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA6205FFF8D000C8CFC /* libopencv_saliency.3.4.1.dylib */; };
+		A71CC4C62078F10B00517017 /* libopencv_saliency.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA6205FFF8D000C8CFC /* libopencv_saliency.3.4.1.dylib */; };
+		A71CC4C72078F10B00517017 /* libopencv_shape.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAB205FFF8D000C8CFC /* libopencv_shape.3.4.1.dylib */; };
+		A71CC4C82078F10B00517017 /* libopencv_shape.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAB205FFF8D000C8CFC /* libopencv_shape.3.4.1.dylib */; };
+		A71CC4C92078F10B00517017 /* libopencv_shape.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAB205FFF8D000C8CFC /* libopencv_shape.3.4.1.dylib */; };
+		A71CC4CA2078F10B00517017 /* libopencv_stereo.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9F205FFF8C000C8CFC /* libopencv_stereo.3.4.1.dylib */; };
+		A71CC4CB2078F10B00517017 /* libopencv_stereo.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9F205FFF8C000C8CFC /* libopencv_stereo.3.4.1.dylib */; };
+		A71CC4CC2078F10B00517017 /* libopencv_stereo.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C9F205FFF8C000C8CFC /* libopencv_stereo.3.4.1.dylib */; };
+		A71CC4CD2078F10B00517017 /* libopencv_stitching.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8A205FFF8C000C8CFC /* libopencv_stitching.3.4.1.dylib */; };
+		A71CC4CE2078F10B00517017 /* libopencv_stitching.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8A205FFF8C000C8CFC /* libopencv_stitching.3.4.1.dylib */; };
+		A71CC4CF2078F10B00517017 /* libopencv_stitching.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8A205FFF8C000C8CFC /* libopencv_stitching.3.4.1.dylib */; };
+		A71CC4D02078F10B00517017 /* libopencv_structured_light.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA8205FFF8D000C8CFC /* libopencv_structured_light.3.4.1.dylib */; };
+		A71CC4D12078F10B00517017 /* libopencv_structured_light.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA8205FFF8D000C8CFC /* libopencv_structured_light.3.4.1.dylib */; };
+		A71CC4D22078F10B00517017 /* libopencv_structured_light.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA8205FFF8D000C8CFC /* libopencv_structured_light.3.4.1.dylib */; };
+		A71CC4D32078F10B00517017 /* libopencv_superres.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8E205FFF8C000C8CFC /* libopencv_superres.3.4.1.dylib */; };
+		A71CC4D42078F10B00517017 /* libopencv_superres.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8E205FFF8C000C8CFC /* libopencv_superres.3.4.1.dylib */; };
+		A71CC4D52078F10B00517017 /* libopencv_superres.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8E205FFF8C000C8CFC /* libopencv_superres.3.4.1.dylib */; };
+		A71CC4D62078F10B00517017 /* libopencv_surface_matching.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C89205FFF8C000C8CFC /* libopencv_surface_matching.3.4.1.dylib */; };
+		A71CC4D72078F10B00517017 /* libopencv_surface_matching.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C89205FFF8C000C8CFC /* libopencv_surface_matching.3.4.1.dylib */; };
+		A71CC4D82078F10B00517017 /* libopencv_surface_matching.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C89205FFF8C000C8CFC /* libopencv_surface_matching.3.4.1.dylib */; };
+		A71CC4D92078F10B00517017 /* libopencv_text.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C85205FFF8C000C8CFC /* libopencv_text.3.4.1.dylib */; };
+		A71CC4DA2078F10B00517017 /* libopencv_text.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C85205FFF8C000C8CFC /* libopencv_text.3.4.1.dylib */; };
+		A71CC4DB2078F10B00517017 /* libopencv_text.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C85205FFF8C000C8CFC /* libopencv_text.3.4.1.dylib */; };
+		A71CC4DC2078F10B00517017 /* libopencv_tracking.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8D205FFF8C000C8CFC /* libopencv_tracking.3.4.1.dylib */; };
+		A71CC4DD2078F10B00517017 /* libopencv_tracking.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8D205FFF8C000C8CFC /* libopencv_tracking.3.4.1.dylib */; };
+		A71CC4DE2078F10B00517017 /* libopencv_tracking.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C8D205FFF8C000C8CFC /* libopencv_tracking.3.4.1.dylib */; };
+		A71CC4DF2078F10B00517017 /* libopencv_video.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA1205FFF8C000C8CFC /* libopencv_video.3.4.1.dylib */; };
+		A71CC4E02078F10B00517017 /* libopencv_video.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA1205FFF8C000C8CFC /* libopencv_video.3.4.1.dylib */; };
+		A71CC4E12078F10B00517017 /* libopencv_video.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA1205FFF8C000C8CFC /* libopencv_video.3.4.1.dylib */; };
+		A71CC4E22078F10B00517017 /* libopencv_videoio.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA7205FFF8D000C8CFC /* libopencv_videoio.3.4.1.dylib */; };
+		A71CC4E32078F10B00517017 /* libopencv_videoio.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA7205FFF8D000C8CFC /* libopencv_videoio.3.4.1.dylib */; };
+		A71CC4E42078F10B00517017 /* libopencv_videoio.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA7205FFF8D000C8CFC /* libopencv_videoio.3.4.1.dylib */; };
+		A71CC4E52078F10B00517017 /* libopencv_videostab.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C86205FFF8C000C8CFC /* libopencv_videostab.3.4.1.dylib */; };
+		A71CC4E62078F10B00517017 /* libopencv_videostab.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C86205FFF8C000C8CFC /* libopencv_videostab.3.4.1.dylib */; };
+		A71CC4E72078F10B00517017 /* libopencv_videostab.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C86205FFF8C000C8CFC /* libopencv_videostab.3.4.1.dylib */; };
+		A71CC4E82078F10B00517017 /* libopencv_xfeatures2d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA2205FFF8C000C8CFC /* libopencv_xfeatures2d.3.4.1.dylib */; };
+		A71CC4E92078F10B00517017 /* libopencv_xfeatures2d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA2205FFF8C000C8CFC /* libopencv_xfeatures2d.3.4.1.dylib */; };
+		A71CC4EA2078F10B00517017 /* libopencv_xfeatures2d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA2205FFF8C000C8CFC /* libopencv_xfeatures2d.3.4.1.dylib */; };
+		A71CC4EB2078F10B00517017 /* libopencv_ximgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C93205FFF8C000C8CFC /* libopencv_ximgproc.3.4.1.dylib */; };
+		A71CC4EC2078F10B00517017 /* libopencv_ximgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C93205FFF8C000C8CFC /* libopencv_ximgproc.3.4.1.dylib */; };
+		A71CC4ED2078F10B00517017 /* libopencv_ximgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C93205FFF8C000C8CFC /* libopencv_ximgproc.3.4.1.dylib */; };
+		A71CC4EE2078F10B00517017 /* libopencv_xobjdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA4205FFF8C000C8CFC /* libopencv_xobjdetect.3.4.1.dylib */; };
+		A71CC4EF2078F10B00517017 /* libopencv_xobjdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA4205FFF8C000C8CFC /* libopencv_xobjdetect.3.4.1.dylib */; };
+		A71CC4F02078F10B00517017 /* libopencv_xobjdetect.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA4205FFF8C000C8CFC /* libopencv_xobjdetect.3.4.1.dylib */; };
+		A71CC4F12078F10B00517017 /* libopencv_xphoto.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA9205FFF8D000C8CFC /* libopencv_xphoto.3.4.1.dylib */; };
+		A71CC4F22078F10B00517017 /* libopencv_xphoto.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA9205FFF8D000C8CFC /* libopencv_xphoto.3.4.1.dylib */; };
+		A71CC4F32078F10B00517017 /* libopencv_xphoto.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CA9205FFF8D000C8CFC /* libopencv_xphoto.3.4.1.dylib */; };
+		A71CC4F42078F15400517017 /* libaruco.3.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */; };
+		A71CC4F52078F15400517017 /* libaruco.3.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */; };
+		A71CC4F62078F15400517017 /* libaruco.3.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */; };
+		A71CC4F72078F15400517017 /* libmarker_mapper.1.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DADEF72060F8FA00AD8DA1 /* libmarker_mapper.1.0.9.dylib */; };
+		A71CC4F82078F15400517017 /* libmarker_mapper.1.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DADEF72060F8FA00AD8DA1 /* libmarker_mapper.1.0.9.dylib */; };
+		A71CC4F92078F15400517017 /* libmarker_mapper.1.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DADEF72060F8FA00AD8DA1 /* libmarker_mapper.1.0.9.dylib */; };
+		A7591B85207B124A006C0E94 /* libpcl_visualization.1.8.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A3468C206DFCD6008C3032 /* libpcl_visualization.1.8.1.dylib */; };
+		A7591B89207F394C006C0E94 /* dodtracmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7591B88207F394C006C0E94 /* dodtracmain.cpp */; };
 		A7684CB1205FFF8D000C8CFC /* libopencv_text.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C85205FFF8C000C8CFC /* libopencv_text.3.4.1.dylib */; };
 		A7684CB2205FFF8D000C8CFC /* libopencv_videostab.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C86205FFF8C000C8CFC /* libopencv_videostab.3.4.1.dylib */; };
 		A7684CB3205FFF8D000C8CFC /* libopencv_calib3d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C87205FFF8C000C8CFC /* libopencv_calib3d.3.4.1.dylib */; };
@@ -57,7 +196,33 @@
 		A7684EBB2060AACF000C8CFC /* libaruco.3.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */; };
 		A7684EBC2060AACF000C8CFC /* libaruco.3.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */; };
 		A7684EBD2060AACF000C8CFC /* libaruco.3.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */; };
+		A76E4F982079B15900947465 /* Tools.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A70A849A2078D9130015282A /* Tools.hpp */; };
+		A76E4F992079B15900947465 /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A70A849B2078D9140015282A /* Tools.cpp */; };
+		A76E4F9A2079B15900947465 /* sgl.h in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEFE2062015B00AD8DA1 /* sgl.h */; };
+		A76E4F9B2079B15900947465 /* sglviewer.h in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEFF2062015B00AD8DA1 /* sglviewer.h */; };
+		A76E4F9C2079B15900947465 /* calibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7684EB72060AA9A000C8CFC /* calibrator.cpp */; };
+		A76E4F9D2079B15900947465 /* calibrator.h in Sources */ = {isa = PBXBuildFile; fileRef = A7684EB82060AA9A000C8CFC /* calibrator.h */; };
+		A76E4F9E2079B15900947465 /* levmarq.h in Sources */ = {isa = PBXBuildFile; fileRef = A7684EBA2060AAA8000C8CFC /* levmarq.h */; };
+		A76E4F9F2079B15900947465 /* stdafx.h in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEFC2061E92B00AD8DA1 /* stdafx.h */; };
+		A76E4FA12079B15900947465 /* Calibration.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEFA2061E88200AD8DA1 /* Calibration.hpp */; };
+		A76E4FA22079B15900947465 /* Calibration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEF92061E88200AD8DA1 /* Calibration.cpp */; };
+		A76E4FA32079B15900947465 /* Pen.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADF0220624EC300AD8DA1 /* Pen.hpp */; };
+		A76E4FA42079B15900947465 /* Pen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADF0120624EC300AD8DA1 /* Pen.cpp */; };
+		A76E4FA52079B15900947465 /* Camera.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADF052062516800AD8DA1 /* Camera.hpp */; };
+		A76E4FA62079B15900947465 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADF042062516800AD8DA1 /* Camera.cpp */; };
+		A76E4FA72079B15900947465 /* PenDetector.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADF0820625B4D00AD8DA1 /* PenDetector.hpp */; };
+		A76E4FA82079B15900947465 /* PenDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADF0720625B4D00AD8DA1 /* PenDetector.cpp */; };
+		A76E4FA92079B15900947465 /* DodecaTracker.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A7EB45D1207661970048ADD7 /* DodecaTracker.hpp */; };
+		A76E4FAA2079B15900947465 /* DodecaTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7EB45D0207661970048ADD7 /* DodecaTracker.cpp */; };
+		A76E4FAB2079B18A00947465 /* DodecaTrackerPlugin.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A770EE63206F463000513CFB /* DodecaTrackerPlugin.hpp */; };
 		A770EE64206F463000513CFB /* DodecaTrackerPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A770EE62206F463000513CFB /* DodecaTrackerPlugin.cpp */; };
+		A7852BE62079FA480028361F /* libboost_system-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7852BE52079FA480028361F /* libboost_system-mt.dylib */; };
+		A7852BE72079FA740028361F /* libpcl_common.1.8.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A34681206DFCD5008C3032 /* libpcl_common.1.8.1.dylib */; };
+		A7852BE82079FA740028361F /* libpcl_io.1.8.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A34694206DFCD6008C3032 /* libpcl_io.1.8.1.dylib */; };
+		A7852BED2079FDE50028361F /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7852BE92079FDE40028361F /* Graphics.cpp */; };
+		A7852BF12079FFCC0028361F /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7852BF02079FFCC0028361F /* libglfw.3.2.dylib */; };
+		A7852BF32079FFE00028361F /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7852BF22079FFE00028361F /* libGLEW.2.1.0.dylib */; };
+		A7852BF4207A03EC0028361F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A346AF206E0551008C3032 /* OpenGL.framework */; };
 		A7DADEF82060F8FA00AD8DA1 /* libmarker_mapper.1.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DADEF72060F8FA00AD8DA1 /* libmarker_mapper.1.0.9.dylib */; };
 		A7DADEFB2061E88200AD8DA1 /* Calibration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEF92061E88200AD8DA1 /* Calibration.cpp */; };
 		A7DADF0320624EC300AD8DA1 /* Pen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADF0120624EC300AD8DA1 /* Pen.cpp */; };
@@ -81,9 +246,8 @@
 /* Begin PBXFileReference section */
 		A70A849A2078D9130015282A /* Tools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tools.hpp; sourceTree = "<group>"; };
 		A70A849B2078D9140015282A /* Tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tools.cpp; sourceTree = "<group>"; };
-		A71CC3FC2078E0B800517017 /* hi.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hi.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7591B88207F394C006C0E94 /* dodtracmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dodtracmain.cpp; sourceTree = "<group>"; };
 		A7684C7A205FF4B6000C8CFC /* MarkerMapper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MarkerMapper; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7684C7D205FF4B6000C8CFC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A7684C85205FFF8C000C8CFC /* libopencv_text.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_text.3.4.1.dylib; path = ../../../../../../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_text.3.4.1.dylib; sourceTree = "<group>"; };
 		A7684C86205FFF8C000C8CFC /* libopencv_videostab.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_videostab.3.4.1.dylib; path = ../../../../../../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_videostab.3.4.1.dylib; sourceTree = "<group>"; };
 		A7684C87205FFF8C000C8CFC /* libopencv_calib3d.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.4.1.dylib; path = ../../../../../../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_calib3d.3.4.1.dylib; sourceTree = "<group>"; };
@@ -133,13 +297,309 @@
 		A7684EB72060AA9A000C8CFC /* calibrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = calibrator.cpp; sourceTree = "<group>"; };
 		A7684EB82060AA9A000C8CFC /* calibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calibrator.h; sourceTree = "<group>"; };
 		A7684EBA2060AAA8000C8CFC /* levmarq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = levmarq.h; sourceTree = "<group>"; };
-		A770EE36206F373000513CFB /* libtest.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtest.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		A770EE45206F378000513CFB /* libtest2.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtest2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		A770EE4D206F443F00513CFB /* libDodecaTracker.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libDodecaTracker.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		A770EE5C206F45DF00513CFB /* DodecaTrackerPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DodecaTrackerPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A770EE5E206F45DF00513CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A770EE62206F463000513CFB /* DodecaTrackerPlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DodecaTrackerPlugin.cpp; sourceTree = "<group>"; };
 		A770EE63206F463000513CFB /* DodecaTrackerPlugin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DodecaTrackerPlugin.hpp; sourceTree = "<group>"; };
+		A785299D2079F9210028361F /* libvtkFiltersHybridPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersHybridPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersHybridPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A785299E2079F9210028361F /* libvtkIOTecplotTable-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOTecplotTable-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOTecplotTable-8.1.1.dylib"; sourceTree = "<group>"; };
+		A785299F2079F9210028361F /* libvtkFiltersGenericPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersGenericPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersGenericPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529A02079F9210028361F /* libvtkInteractionStyleTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInteractionStyleTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInteractionStyleTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529A12079F9210028361F /* libvtkIOEnSight-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOEnSight-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOEnSight-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529A22079F9210028361F /* libvtkFiltersProgrammableTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersProgrammableTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersProgrammableTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529A32079F9220028361F /* libvtkIOImportTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOImportTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOImportTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529A42079F9220028361F /* libvtkCommonColor-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonColor-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonColor-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529A52079F9220028361F /* libvtkRenderingFreeTypePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingFreeTypePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingFreeTypePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529A62079F9220028361F /* libvtkoggtheora-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkoggtheora-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkoggtheora-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529A72079F9220028361F /* libvtkImagingMathPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingMathPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingMathPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529A82079F9220028361F /* libvtkRenderingCoreTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingCoreTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingCoreTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529A92079F9220028361F /* libvtkDomainsChemistryTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkDomainsChemistryTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkDomainsChemistryTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529AA2079F9220028361F /* libvtkImagingStatisticsPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingStatisticsPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingStatisticsPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529AB2079F9220028361F /* libvtkRenderingImageTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingImageTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingImageTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529AC2079F9220028361F /* libvtkImagingMorphologicalPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingMorphologicalPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingMorphologicalPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529AD2079F9220028361F /* libvtkFiltersStatisticsTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersStatisticsTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersStatisticsTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529AE2079F9220028361F /* libvtkCommonMathTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonMathTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonMathTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529AF2079F9220028361F /* libvtkIOXMLParserTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOXMLParserTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOXMLParserTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529B02079F9220028361F /* libvtkIONetCDF-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIONetCDF-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIONetCDF-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529B12079F9220028361F /* libvtkRenderingContext2DPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingContext2DPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingContext2DPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529B22079F9220028361F /* libvtkParallelCorePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkParallelCorePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkParallelCorePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529B32079F9220028361F /* libvtkIOTecplotTablePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOTecplotTablePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOTecplotTablePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529B42079F9220028361F /* libvtkCommonSystemPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonSystemPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonSystemPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529B52079F9230028361F /* libvtkFiltersTexturePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersTexturePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersTexturePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529B62079F9230028361F /* libvtkFiltersTopology-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersTopology-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersTopology-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529B72079F9230028361F /* libvtkImagingColor-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingColor-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingColor-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529B82079F9230028361F /* libvtkjsoncpp-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkjsoncpp-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkjsoncpp-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529B92079F9230028361F /* libvtkFiltersParallelImagingTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersParallelImagingTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersParallelImagingTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529BA2079F9230028361F /* libvtkFiltersModelingTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersModelingTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersModelingTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529BB2079F9230028361F /* libvtkIONetCDFTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIONetCDFTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIONetCDFTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529BC2079F9230028361F /* libvtkIOSQL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOSQL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOSQL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529BD2079F9230028361F /* libvtkFiltersCorePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersCorePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersCorePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529BE2079F9230028361F /* libvtkCommonCore-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonCore-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonCore-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529BF2079F9230028361F /* libvtkFiltersSelectionPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersSelectionPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersSelectionPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529C02079F9230028361F /* libvtkFiltersImagingTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersImagingTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersImagingTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529C12079F9230028361F /* libvtkCommonDataModelPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonDataModelPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonDataModelPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529C22079F9240028361F /* libvtkCommonColorTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonColorTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonColorTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529C32079F9240028361F /* libvtkFiltersVerdictPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersVerdictPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersVerdictPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529C42079F9240028361F /* libvtkFiltersGeneralTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersGeneralTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersGeneralTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529C52079F9240028361F /* libvtkImagingFourierPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingFourierPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingFourierPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529C62079F9240028361F /* libvtkIOSQLTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOSQLTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOSQLTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529C72079F9240028361F /* libvtkImagingMorphologicalTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingMorphologicalTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingMorphologicalTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529C82079F9240028361F /* libvtkRenderingVolumeOpenGL2-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingVolumeOpenGL2-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingVolumeOpenGL2-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529C92079F9240028361F /* libvtkFiltersParallelPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersParallelPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersParallelPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529CA2079F9250028361F /* libvtkIOParallelPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOParallelPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOParallelPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529CB2079F9250028361F /* libvtkFiltersHybridTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersHybridTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersHybridTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529CC2079F9250028361F /* libvtkIOGeometryPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOGeometryPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOGeometryPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529CD2079F9250028361F /* libvtkFiltersModeling-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersModeling-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersModeling-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529CE2079F9250028361F /* libvtkfreetype-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkfreetype-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkfreetype-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529CF2079F9250028361F /* libvtkFiltersGenericTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersGenericTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersGenericTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529D02079F9250028361F /* libvtkmetaio-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkmetaio-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkmetaio-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529D12079F9250028361F /* libvtkRenderingCore-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingCore-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingCore-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529D22079F9250028361F /* libvtkFiltersSMPPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersSMPPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersSMPPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529D32079F9260028361F /* libvtkRenderingLabelPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingLabelPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingLabelPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529D42079F9260028361F /* libvtknetcdfcpp-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtknetcdfcpp-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtknetcdfcpp-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529D52079F9260028361F /* libvtkIOParallelXMLPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOParallelXMLPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOParallelXMLPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529D62079F9260028361F /* libvtkImagingMorphological-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingMorphological-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingMorphological-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529D72079F9260028361F /* libvtkFiltersHyperTree-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersHyperTree-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersHyperTree-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529D82079F9260028361F /* libvtkInteractionWidgets-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInteractionWidgets-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInteractionWidgets-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529D92079F9260028361F /* libvtkRenderingContext2D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingContext2D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingContext2D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529DA2079F9260028361F /* libvtkRenderingVolume-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingVolume-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingVolume-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529DB2079F9260028361F /* libvtkFiltersSelectionTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersSelectionTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersSelectionTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529DC2079F9270028361F /* libvtkIOParallel-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOParallel-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOParallel-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529DD2079F9270028361F /* libvtkCommonExecutionModel-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonExecutionModel-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonExecutionModel-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529DE2079F9270028361F /* libvtkViewsContext2D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkViewsContext2D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkViewsContext2D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529DF2079F9270028361F /* libvtkFiltersPythonPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersPythonPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersPythonPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529E02079F9270028361F /* libvtksys-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtksys-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtksys-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529E12079F9270028361F /* libvtkInteractionImagePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInteractionImagePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInteractionImagePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529E22079F9270028361F /* libvtkCommonTransformsTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonTransformsTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonTransformsTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529E32079F9270028361F /* libvtkFiltersAMRTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersAMRTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersAMRTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529E42079F9270028361F /* libvtkFiltersPoints-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersPoints-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersPoints-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529E52079F9270028361F /* libvtkIOMoviePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOMoviePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOMoviePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529E62079F9280028361F /* libvtkRenderingGL2PSOpenGL2Python27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingGL2PSOpenGL2Python27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingGL2PSOpenGL2Python27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529E72079F9280028361F /* libvtkInfovisCorePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInfovisCorePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInfovisCorePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529E82079F9280028361F /* libvtkgl2ps-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkgl2ps-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkgl2ps-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529E92079F9280028361F /* libvtkFiltersPointsPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersPointsPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersPointsPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529EA2079F9280028361F /* libvtkIOVideoPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOVideoPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOVideoPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529EB2079F9280028361F /* libvtkexoIIc-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkexoIIc-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkexoIIc-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529EC2079F9280028361F /* libvtkInfovisCoreTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInfovisCoreTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInfovisCoreTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529ED2079F9280028361F /* libvtkCommonDataModelTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonDataModelTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonDataModelTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529EE2079F9280028361F /* libvtkRenderingTkTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingTkTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingTkTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529EF2079F9290028361F /* libvtkParallelCore-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkParallelCore-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkParallelCore-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529F02079F9290028361F /* libvtkFiltersPointsTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersPointsTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersPointsTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529F12079F9290028361F /* libvtkFiltersHyperTreeTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersHyperTreeTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersHyperTreeTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529F22079F9290028361F /* libvtkCommonSystem-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonSystem-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonSystem-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529F32079F9290028361F /* libvtkFiltersTopologyPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersTopologyPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersTopologyPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529F42079F9290028361F /* libvtkDomainsChemistryPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkDomainsChemistryPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkDomainsChemistryPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529F52079F9290028361F /* libvtkGeovisCorePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkGeovisCorePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkGeovisCorePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529F62079F9290028361F /* libvtkInteractionWidgetsPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInteractionWidgetsPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInteractionWidgetsPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529F72079F9290028361F /* libvtkViewsInfovis-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkViewsInfovis-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkViewsInfovis-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529F82079F92A0028361F /* libvtkInfovisBoostGraphAlgorithms-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInfovisBoostGraphAlgorithms-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInfovisBoostGraphAlgorithms-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529F92079F92A0028361F /* libvtkIOMINCPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOMINCPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOMINCPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529FA2079F92A0028361F /* libvtkGeovisCore-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkGeovisCore-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkGeovisCore-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529FB2079F92A0028361F /* libvtkViewsInfovisTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkViewsInfovisTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkViewsInfovisTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529FC2079F92A0028361F /* libvtkIOImageTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOImageTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOImageTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529FD2079F92A0028361F /* libvtkInteractionStyle-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInteractionStyle-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInteractionStyle-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529FE2079F92A0028361F /* libvtkDomainsChemistryOpenGL2Python27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkDomainsChemistryOpenGL2Python27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkDomainsChemistryOpenGL2Python27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A78529FF2079F92A0028361F /* libvtkInfovisLayout-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInfovisLayout-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInfovisLayout-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A002079F92B0028361F /* libvtkIOXMLPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOXMLPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOXMLPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A012079F92B0028361F /* libvtkIOXMLTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOXMLTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOXMLTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A022079F92B0028361F /* libvtkFiltersCore-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersCore-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersCore-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A032079F92B0028361F /* libvtkRenderingAnnotation-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingAnnotation-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingAnnotation-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A042079F92B0028361F /* libvtkRenderingVolumeOpenGLIITCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingVolumeOpenGLIITCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingVolumeOpenGLIITCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A052079F92B0028361F /* libvtkRenderingVolumeOpenGL2Python27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingVolumeOpenGL2Python27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingVolumeOpenGL2Python27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A062079F92B0028361F /* libvtkRenderingAnnotationTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingAnnotationTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingAnnotationTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A072079F92B0028361F /* libvtkIOParallelXML-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOParallelXML-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOParallelXML-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A082079F92C0028361F /* libvtkImagingMath-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingMath-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingMath-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A092079F92C0028361F /* libvtkIOInfovisPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOInfovisPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOInfovisPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A0A2079F92C0028361F /* libvtkImagingStatisticsTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingStatisticsTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingStatisticsTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A0B2079F92C0028361F /* libvtkIOMovie-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOMovie-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOMovie-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A0C2079F92C0028361F /* libvtkInteractionImage-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInteractionImage-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInteractionImage-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A0D2079F92D0028361F /* libvtkRenderingContextOpenGL2Python27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingContextOpenGL2Python27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingContextOpenGL2Python27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A0E2079F92D0028361F /* libvtkImagingStencilTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingStencilTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingStencilTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A0F2079F92D0028361F /* libvtkRenderingLODTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingLODTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingLODTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A102079F92D0028361F /* libvtkFiltersParallelImagingPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersParallelImagingPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersParallelImagingPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A112079F92D0028361F /* libvtkFiltersSMP-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersSMP-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersSMP-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A122079F92D0028361F /* libvtkRenderingImage-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingImage-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingImage-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A132079F92D0028361F /* libvtkChartsCore-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkChartsCore-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkChartsCore-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A142079F92D0028361F /* libvtkIOExport-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOExport-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOExport-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A152079F92D0028361F /* libvtkIONetCDFPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIONetCDFPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIONetCDFPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A162079F92E0028361F /* libvtkRenderingLabelTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingLabelTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingLabelTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A172079F92E0028361F /* libvtkDomainsChemistryOpenGL2-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkDomainsChemistryOpenGL2-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkDomainsChemistryOpenGL2-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A182079F92E0028361F /* libvtkCommonMiscPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonMiscPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonMiscPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A192079F92E0028361F /* libvtkCommonTransformsPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonTransformsPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonTransformsPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A1A2079F92E0028361F /* libvtkImagingGeneral-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingGeneral-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingGeneral-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A1B2079F92E0028361F /* libvtkIOExportOpenGL2Python27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOExportOpenGL2Python27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOExportOpenGL2Python27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A1C2079F92E0028361F /* libvtkRenderingAnnotationPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingAnnotationPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingAnnotationPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A1D2079F92E0028361F /* libvtkCommonMathPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonMathPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonMathPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A1E2079F92E0028361F /* libvtkIOExportPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOExportPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOExportPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A1F2079F92E0028361F /* libvtkRenderingVolumeTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingVolumeTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingVolumeTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A202079F92E0028361F /* libvtkIOTecplotTableTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOTecplotTableTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOTecplotTableTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A212079F92E0028361F /* libvtklz4-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtklz4-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtklz4-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A222079F92E0028361F /* libvtkFiltersSources-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersSources-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersSources-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A232079F92F0028361F /* libvtkIOInfovis-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOInfovis-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOInfovis-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A242079F92F0028361F /* libvtkFiltersModelingPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersModelingPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersModelingPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A252079F92F0028361F /* libvtkIOExportOpenGL2-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOExportOpenGL2-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOExportOpenGL2-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A262079F92F0028361F /* libvtkglew-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkglew-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkglew-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A272079F92F0028361F /* libvtkIOMINC-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOMINC-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOMINC-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A282079F92F0028361F /* libvtkIOImage-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOImage-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOImage-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A292079F92F0028361F /* libvtkRenderingChemistryOpenGLIITCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingChemistryOpenGLIITCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingChemistryOpenGLIITCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A2A2079F92F0028361F /* libvtkFiltersAMRPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersAMRPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersAMRPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A2B2079F92F0028361F /* libvtkViewsCore-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkViewsCore-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkViewsCore-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A2C2079F92F0028361F /* libvtkCommonMisc-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonMisc-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonMisc-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A2D2079F92F0028361F /* libvtkIOParallelTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOParallelTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOParallelTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A2E2079F92F0028361F /* libvtkImagingStencil-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingStencil-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingStencil-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A2F2079F92F0028361F /* libvtkIOLegacyPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOLegacyPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOLegacyPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A302079F92F0028361F /* libvtkDICOMParser-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkDICOMParser-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkDICOMParser-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A312079F92F0028361F /* libvtkChartsCoreTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkChartsCoreTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkChartsCoreTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A322079F9300028361F /* libvtkFiltersFlowPaths-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersFlowPaths-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersFlowPaths-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A332079F9300028361F /* libvtkInfovisCore-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInfovisCore-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInfovisCore-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A342079F9300028361F /* libvtkIOImport-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOImport-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOImport-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A352079F9300028361F /* libvtkRenderingContextOpenGLIITCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingContextOpenGLIITCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingContextOpenGLIITCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A362079F9300028361F /* libvtkRenderingOpenGL2Python27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingOpenGL2Python27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingOpenGL2Python27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A372079F9300028361F /* libvtkFiltersProgrammablePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersProgrammablePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersProgrammablePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A382079F9300028361F /* libvtkInfovisBoostGraphAlgorithmsPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInfovisBoostGraphAlgorithmsPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInfovisBoostGraphAlgorithmsPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A392079F9300028361F /* libvtkFiltersImagingPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersImagingPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersImagingPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A3A2079F9300028361F /* libvtkFiltersSourcesPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersSourcesPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersSourcesPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A3B2079F9300028361F /* libvtkFiltersSelection-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersSelection-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersSelection-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A3C2079F9300028361F /* libvtkFiltersStatistics-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersStatistics-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersStatistics-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A3D2079F9300028361F /* libvtkInteractionStylePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInteractionStylePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInteractionStylePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A3E2079F9310028361F /* libvtkFiltersSMPTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersSMPTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersSMPTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A3F2079F9310028361F /* libvtkGeovisCoreTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkGeovisCoreTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkGeovisCoreTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A402079F9310028361F /* libvtkInteractionImageTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInteractionImageTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInteractionImageTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A412079F9310028361F /* libvtkRenderingLOD-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingLOD-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingLOD-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A422079F9310028361F /* libvtkIOLSDynaTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOLSDynaTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOLSDynaTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A432079F9310028361F /* libvtkRenderingOpenGLIITCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingOpenGLIITCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingOpenGLIITCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A442079F9310028361F /* libvtkIOInfovisTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOInfovisTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOInfovisTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A452079F9310028361F /* libvtkIOLegacyTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOLegacyTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOLegacyTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A462079F9310028361F /* libvtkIOParallelXMLTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOParallelXMLTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOParallelXMLTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A472079F9310028361F /* libvtkImagingCore-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingCore-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingCore-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A482079F9310028361F /* libvtkIOLegacy-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOLegacy-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOLegacy-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A492079F9310028361F /* libvtkIOPLYTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOPLYTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOPLYTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A4A2079F9310028361F /* libvtkIOLSDyna-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOLSDyna-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOLSDyna-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A4B2079F9320028361F /* libvtkFiltersGeometry-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersGeometry-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersGeometry-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A4C2079F9320028361F /* libvtkFiltersAMR-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersAMR-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersAMR-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A4D2079F9320028361F /* libvtkIOPLYPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOPLYPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOPLYPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A4E2079F9320028361F /* libvtkCommonSystemTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonSystemTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonSystemTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A4F2079F9320028361F /* libvtkChartsCorePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkChartsCorePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkChartsCorePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A502079F9320028361F /* libvtkFiltersFlowPathsTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersFlowPathsTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersFlowPathsTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A512079F9320028361F /* libvtkIOCore-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOCore-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOCore-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A522079F9320028361F /* libvtkImagingColorPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingColorPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingColorPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A532079F9320028361F /* libvtkImagingStencilPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingStencilPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingStencilPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A542079F9320028361F /* libvtkFiltersGeneralPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersGeneralPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersGeneralPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A552079F9320028361F /* libvtkIOExportTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOExportTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOExportTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A562079F9320028361F /* libvtkImagingHybridTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingHybridTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingHybridTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A572079F9330028361F /* libvtkFiltersProgrammable-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersProgrammable-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersProgrammable-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A582079F9330028361F /* libvtkRenderingFreeTypeTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingFreeTypeTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingFreeTypeTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A592079F9330028361F /* libvtkFiltersParallel-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersParallel-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersParallel-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A5A2079F9330028361F /* libvtkCommonCoreTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonCoreTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonCoreTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A5B2079F9330028361F /* libvtkproj4-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkproj4-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkproj4-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A5C2079F9330028361F /* libvtkCommonMath-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonMath-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonMath-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A5D2079F9330028361F /* libvtkImagingCorePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingCorePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingCorePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A5E2079F9330028361F /* libvtkIOEnSightPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOEnSightPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOEnSightPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A5F2079F9330028361F /* libvtkIOMovieTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOMovieTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOMovieTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A602079F9330028361F /* libvtkImagingColorTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingColorTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingColorTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A612079F9330028361F /* libvtkInfovisLayoutPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInfovisLayoutPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInfovisLayoutPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A622079F9330028361F /* libvtkRenderingContextOpenGL2-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingContextOpenGL2-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingContextOpenGL2-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A632079F9340028361F /* libvtkCommonComputationalGeometry-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonComputationalGeometry-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonComputationalGeometry-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A642079F9340028361F /* libvtkFiltersStatisticsPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersStatisticsPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersStatisticsPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A652079F9340028361F /* libvtkParallelCoreTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkParallelCoreTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkParallelCoreTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A662079F9340028361F /* libvtkRenderingGL2PSOpenGL2-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingGL2PSOpenGL2-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingGL2PSOpenGL2-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A672079F9340028361F /* libvtkImagingSourcesTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingSourcesTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingSourcesTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A682079F9340028361F /* libvtkIOGeometryTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOGeometryTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOGeometryTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A692079F9340028361F /* libvtkCommonExecutionModelTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonExecutionModelTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonExecutionModelTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A6A2079F9340028361F /* libvtkIOAMRPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOAMRPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOAMRPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A6B2079F9340028361F /* libvtkCommonDataModel-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonDataModel-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonDataModel-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A6C2079F9350028361F /* libvtkFiltersTexture-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersTexture-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersTexture-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A6D2079F9350028361F /* libvtkalglib-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkalglib-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkalglib-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A6E2079F9350028361F /* libvtkRenderingGLtoPSOpenGLIITCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingGLtoPSOpenGLIITCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingGLtoPSOpenGLIITCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A6F2079F9350028361F /* libvtkIOAMRTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOAMRTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOAMRTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A702079F9350028361F /* libvtkFiltersVerdict-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersVerdict-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersVerdict-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A712079F9350028361F /* libvtkFiltersFlowPathsPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersFlowPathsPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersFlowPathsPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A722079F9350028361F /* libvtkIOImportPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOImportPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOImportPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A732079F9350028361F /* libvtkFiltersExtractionPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersExtractionPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersExtractionPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A742079F9350028361F /* libvtkIOPLY-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOPLY-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOPLY-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A752079F9360028361F /* libvtkCommonCorePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonCorePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonCorePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A762079F9360028361F /* libvtkFiltersExtraction-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersExtraction-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersExtraction-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A772079F9360028361F /* libvtkIOGeometry-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOGeometry-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOGeometry-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A782079F9360028361F /* libvtkIOLSDynaPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOLSDynaPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOLSDynaPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A792079F9360028361F /* libvtkRenderingPythonTkWidgets-8.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingPythonTkWidgets-8.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingPythonTkWidgets-8.1.dylib"; sourceTree = "<group>"; };
+		A7852A7A2079F9360028361F /* libvtkImagingGeneralTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingGeneralTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingGeneralTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A7B2079F9360028361F /* libvtkFiltersCoreTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersCoreTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersCoreTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A7C2079F9360028361F /* libvtkFiltersTextureTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersTextureTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersTextureTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A7D2079F9360028361F /* libvtklibharu-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtklibharu-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtklibharu-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A7E2079F9360028361F /* libvtkImagingStatistics-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingStatistics-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingStatistics-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A7F2079F9360028361F /* libvtkCommonColorPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonColorPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonColorPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A802079F9370028361F /* libvtkImagingCoreTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingCoreTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingCoreTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A812079F9370028361F /* libvtkIOXMLParser-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOXMLParser-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOXMLParser-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A822079F9370028361F /* libvtkViewsCoreTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkViewsCoreTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkViewsCoreTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A832079F9370028361F /* libvtkverdict-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkverdict-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkverdict-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A842079F9370028361F /* libvtkFiltersGeneral-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersGeneral-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersGeneral-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A852079F9370028361F /* libvtkFiltersExtractionTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersExtractionTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersExtractionTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A862079F9370028361F /* libvtkFiltersHybrid-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersHybrid-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersHybrid-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A872079F9370028361F /* libvtkImagingHybrid-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingHybrid-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingHybrid-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A882079F9370028361F /* libvtkFiltersPython-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersPython-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersPython-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A892079F9370028361F /* libvtkIOEnSightTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOEnSightTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOEnSightTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A8A2079F9370028361F /* libvtkIOExportOpenGLIITCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOExportOpenGLIITCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOExportOpenGLIITCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A8B2079F9380028361F /* libvtkRenderingLODPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingLODPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingLODPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A8C2079F9380028361F /* libvtkViewsContextIIDTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkViewsContextIIDTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkViewsContextIIDTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A8D2079F9380028361F /* libvtkIOVideoTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOVideoTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOVideoTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A8E2079F9380028361F /* libvtkViewsInfovisPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkViewsInfovisPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkViewsInfovisPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A8F2079F9380028361F /* libvtkFiltersImaging-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersImaging-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersImaging-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A902079F9380028361F /* libvtkIOCorePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOCorePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOCorePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A912079F9380028361F /* libvtkImagingSourcesPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingSourcesPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingSourcesPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A922079F9380028361F /* libvtkRenderingFreeTypeFontConfig-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingFreeTypeFontConfig-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingFreeTypeFontConfig-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A932079F9380028361F /* libvtkFiltersParallelImaging-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersParallelImaging-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersParallelImaging-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A942079F9380028361F /* libvtkImagingGeneralPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingGeneralPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingGeneralPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A952079F9380028361F /* libvtkImagingMathTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingMathTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingMathTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A962079F9380028361F /* libvtkInteractionWidgetsTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInteractionWidgetsTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInteractionWidgetsTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A972079F9390028361F /* libvtkIOExodusTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOExodusTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOExodusTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A982079F9390028361F /* libvtkRenderingCorePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingCorePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingCorePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A992079F9390028361F /* libvtkRenderingVolumePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingVolumePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingVolumePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A9A2079F9390028361F /* libvtkImagingFourierTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingFourierTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingFourierTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A9B2079F9390028361F /* libvtkViewsCorePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkViewsCorePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkViewsCorePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A9C2079F9390028361F /* libvtkFiltersHyperTreePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersHyperTreePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersHyperTreePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A9D2079F9390028361F /* libvtkCommonMiscTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonMiscTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonMiscTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A9E2079F9390028361F /* libvtkIOXMLParserPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOXMLParserPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOXMLParserPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852A9F2079F9390028361F /* libvtkInfovisLayoutTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInfovisLayoutTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInfovisLayoutTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AA02079F9390028361F /* libvtkRenderingContextIIDTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingContextIIDTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingContextIIDTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AA12079F9390028361F /* libvtkRenderingFreeType-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingFreeType-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingFreeType-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AA22079F93A0028361F /* libvtkRenderingLabel-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingLabel-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingLabel-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AA32079F93A0028361F /* libvtkRenderingOpenGL2-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingOpenGL2-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingOpenGL2-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AA42079F93A0028361F /* libvtkImagingSources-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingSources-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingSources-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AA52079F93A0028361F /* libvtkIOVideo-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOVideo-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOVideo-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AA62079F93A0028361F /* libvtkFiltersVerdictTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersVerdictTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersVerdictTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AA72079F93A0028361F /* libvtkImagingHybridPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingHybridPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingHybridPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AA82079F93A0028361F /* libvtkRenderingImagePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkRenderingImagePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkRenderingImagePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AA92079F93A0028361F /* libvtksqlite-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtksqlite-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtksqlite-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AAA2079F93A0028361F /* libvtkCommonComputationalGeometryPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonComputationalGeometryPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonComputationalGeometryPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AAB2079F93A0028361F /* libvtkFiltersGeometryTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersGeometryTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersGeometryTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AAC2079F93A0028361F /* libvtkFiltersGeneric-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersGeneric-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersGeneric-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AAD2079F93A0028361F /* libvtkFiltersParallelTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersParallelTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersParallelTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AAE2079F93A0028361F /* libvtkFiltersSourcesTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersSourcesTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersSourcesTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AAF2079F93A0028361F /* libvtkImagingFourier-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkImagingFourier-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkImagingFourier-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AB02079F93A0028361F /* libvtkIOAMR-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOAMR-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOAMR-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AB12079F93B0028361F /* libvtkDomainsChemistry-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkDomainsChemistry-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkDomainsChemistry-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AB22079F93B0028361F /* libvtkCommonExecutionModelPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonExecutionModelPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonExecutionModelPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AB32079F93B0028361F /* libvtkInfovisBoostGraphAlgorithmsTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkInfovisBoostGraphAlgorithmsTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkInfovisBoostGraphAlgorithmsTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AB42079F93B0028361F /* libvtkIOXML-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOXML-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOXML-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AB52079F93B0028361F /* libvtkIOMINCTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOMINCTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOMINCTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AB62079F93B0028361F /* libvtkWrappingPython27Core-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkWrappingPython27Core-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkWrappingPython27Core-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AB72079F93B0028361F /* libvtkIOCoreTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOCoreTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOCoreTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AB82079F93B0028361F /* libvtkIOSQLPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOSQLPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOSQLPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AB92079F93B0028361F /* libvtkViewsContext2DPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkViewsContext2DPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkViewsContext2DPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852ABA2079F93B0028361F /* libvtkFiltersTopologyTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersTopologyTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersTopologyTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852ABB2079F93B0028361F /* libvtkCommonComputationalGeometryTCL-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonComputationalGeometryTCL-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonComputationalGeometryTCL-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852ABC2079F93B0028361F /* libvtkFiltersGeometryPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersGeometryPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersGeometryPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852ABD2079F93B0028361F /* libvtkIOImagePython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOImagePython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOImagePython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852ABE2079F93B0028361F /* libvtkIOExodus-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOExodus-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOExodus-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852ABF2079F93B0028361F /* libvtkCommonTransforms-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkCommonTransforms-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkCommonTransforms-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852AC02079F93C0028361F /* libvtkIOExodusPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOExodusPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOExodusPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
+		A7852BE52079FA480028361F /* libboost_system-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_system-mt.dylib"; path = "../../../../../../../../../usr/local/Cellar/boost/1.66.0/lib/libboost_system-mt.dylib"; sourceTree = "<group>"; };
+		A7852BE92079FDE40028361F /* Graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graphics.cpp; sourceTree = "<group>"; };
+		A7852BEA2079FDE50028361F /* Graphics.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Graphics.hpp; sourceTree = "<group>"; };
+		A7852BEC2079FDE50028361F /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		A7852BEF2079FE990028361F /* GLCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLCamera.h; sourceTree = "<group>"; };
+		A7852BF02079FFCC0028361F /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = ../../../../../../../../../usr/local/Cellar/glfw/3.2.1/lib/libglfw.3.2.dylib; sourceTree = "<group>"; };
+		A7852BF22079FFE00028361F /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../../../../../usr/local/Cellar/glew/2.1.0/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
 		A7A34681206DFCD5008C3032 /* libpcl_common.1.8.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_common.1.8.1.dylib; path = ../../../../../../../../../usr/local/Cellar/pcl/1.8.1_2/lib/libpcl_common.1.8.1.dylib; sourceTree = "<group>"; };
 		A7A34682206DFCD5008C3032 /* libpcl_tracking.1.8.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_tracking.1.8.1.dylib; path = ../../../../../../../../../usr/local/Cellar/pcl/1.8.1_2/lib/libpcl_tracking.1.8.1.dylib; sourceTree = "<group>"; };
 		A7A34683206DFCD5008C3032 /* libpcl_keypoints.1.8.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcl_keypoints.1.8.1.dylib; path = ../../../../../../../../../usr/local/Cellar/pcl/1.8.1_2/lib/libpcl_keypoints.1.8.1.dylib; sourceTree = "<group>"; };
@@ -182,17 +642,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A71CC3F92078E0B800517017 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A7684C77205FF4B6000C8CFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7591B85207B124A006C0E94 /* libpcl_visualization.1.8.1.dylib in Frameworks */,
+				A7852BF4207A03EC0028361F /* OpenGL.framework in Frameworks */,
+				A7852BF32079FFE00028361F /* libGLEW.2.1.0.dylib in Frameworks */,
+				A7852BF12079FFCC0028361F /* libglfw.3.2.dylib in Frameworks */,
+				A7852BE72079FA740028361F /* libpcl_common.1.8.1.dylib in Frameworks */,
+				A7852BE82079FA740028361F /* libpcl_io.1.8.1.dylib in Frameworks */,
+				A7852BE62079FA480028361F /* libboost_system-mt.dylib in Frameworks */,
 				A7DADEF82060F8FA00AD8DA1 /* libmarker_mapper.1.0.9.dylib in Frameworks */,
 				A7684EBB2060AACF000C8CFC /* libaruco.3.0.6.dylib in Frameworks */,
 				A7684EBC2060AACF000C8CFC /* libaruco.3.0.6.dylib in Frameworks */,
@@ -244,31 +704,148 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A770EE33206F373000513CFB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A770EE42206F378000513CFB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A770EE4A206F443F00513CFB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A770EE59206F45DF00513CFB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71CC4F42078F15400517017 /* libaruco.3.0.6.dylib in Frameworks */,
+				A71CC4F52078F15400517017 /* libaruco.3.0.6.dylib in Frameworks */,
+				A71CC4F62078F15400517017 /* libaruco.3.0.6.dylib in Frameworks */,
+				A71CC4F72078F15400517017 /* libmarker_mapper.1.0.9.dylib in Frameworks */,
+				A71CC4F82078F15400517017 /* libmarker_mapper.1.0.9.dylib in Frameworks */,
+				A71CC4F92078F15400517017 /* libmarker_mapper.1.0.9.dylib in Frameworks */,
+				A71CC4702078F10B00517017 /* libopencv_aruco.3.4.1.dylib in Frameworks */,
+				A71CC4712078F10B00517017 /* libopencv_aruco.3.4.1.dylib in Frameworks */,
+				A71CC4722078F10B00517017 /* libopencv_aruco.3.4.1.dylib in Frameworks */,
+				A71CC4732078F10B00517017 /* libopencv_bgsegm.3.4.1.dylib in Frameworks */,
+				A71CC4742078F10B00517017 /* libopencv_bgsegm.3.4.1.dylib in Frameworks */,
+				A71CC4752078F10B00517017 /* libopencv_bgsegm.3.4.1.dylib in Frameworks */,
+				A71CC4762078F10B00517017 /* libopencv_bioinspired.3.4.1.dylib in Frameworks */,
+				A71CC4772078F10B00517017 /* libopencv_bioinspired.3.4.1.dylib in Frameworks */,
+				A71CC4782078F10B00517017 /* libopencv_bioinspired.3.4.1.dylib in Frameworks */,
+				A71CC4792078F10B00517017 /* libopencv_calib3d.3.4.1.dylib in Frameworks */,
+				A71CC47A2078F10B00517017 /* libopencv_calib3d.3.4.1.dylib in Frameworks */,
+				A71CC47B2078F10B00517017 /* libopencv_calib3d.3.4.1.dylib in Frameworks */,
+				A71CC47C2078F10B00517017 /* libopencv_ccalib.3.4.1.dylib in Frameworks */,
+				A71CC47D2078F10B00517017 /* libopencv_ccalib.3.4.1.dylib in Frameworks */,
+				A71CC47E2078F10B00517017 /* libopencv_ccalib.3.4.1.dylib in Frameworks */,
+				A71CC47F2078F10B00517017 /* libopencv_core.3.4.1.dylib in Frameworks */,
+				A71CC4802078F10B00517017 /* libopencv_core.3.4.1.dylib in Frameworks */,
+				A71CC4812078F10B00517017 /* libopencv_core.3.4.1.dylib in Frameworks */,
+				A71CC4822078F10B00517017 /* libopencv_datasets.3.4.1.dylib in Frameworks */,
+				A71CC4832078F10B00517017 /* libopencv_datasets.3.4.1.dylib in Frameworks */,
+				A71CC4842078F10B00517017 /* libopencv_datasets.3.4.1.dylib in Frameworks */,
+				A71CC4852078F10B00517017 /* libopencv_dnn_objdetect.3.4.1.dylib in Frameworks */,
+				A71CC4862078F10B00517017 /* libopencv_dnn_objdetect.3.4.1.dylib in Frameworks */,
+				A71CC4872078F10B00517017 /* libopencv_dnn_objdetect.3.4.1.dylib in Frameworks */,
+				A71CC4882078F10B00517017 /* libopencv_dnn.3.4.1.dylib in Frameworks */,
+				A71CC4892078F10B00517017 /* libopencv_dnn.3.4.1.dylib in Frameworks */,
+				A71CC48A2078F10B00517017 /* libopencv_dnn.3.4.1.dylib in Frameworks */,
+				A71CC48B2078F10B00517017 /* libopencv_dpm.3.4.1.dylib in Frameworks */,
+				A71CC48C2078F10B00517017 /* libopencv_dpm.3.4.1.dylib in Frameworks */,
+				A71CC48D2078F10B00517017 /* libopencv_dpm.3.4.1.dylib in Frameworks */,
+				A71CC48E2078F10B00517017 /* libopencv_face.3.4.1.dylib in Frameworks */,
+				A71CC48F2078F10B00517017 /* libopencv_face.3.4.1.dylib in Frameworks */,
+				A71CC4902078F10B00517017 /* libopencv_face.3.4.1.dylib in Frameworks */,
+				A71CC4912078F10B00517017 /* libopencv_features2d.3.4.1.dylib in Frameworks */,
+				A71CC4922078F10B00517017 /* libopencv_features2d.3.4.1.dylib in Frameworks */,
+				A71CC4932078F10B00517017 /* libopencv_features2d.3.4.1.dylib in Frameworks */,
+				A71CC4942078F10B00517017 /* libopencv_flann.3.4.1.dylib in Frameworks */,
+				A71CC4952078F10B00517017 /* libopencv_flann.3.4.1.dylib in Frameworks */,
+				A71CC4962078F10B00517017 /* libopencv_flann.3.4.1.dylib in Frameworks */,
+				A71CC4972078F10B00517017 /* libopencv_fuzzy.3.4.1.dylib in Frameworks */,
+				A71CC4982078F10B00517017 /* libopencv_fuzzy.3.4.1.dylib in Frameworks */,
+				A71CC4992078F10B00517017 /* libopencv_fuzzy.3.4.1.dylib in Frameworks */,
+				A71CC49A2078F10B00517017 /* libopencv_hfs.3.4.1.dylib in Frameworks */,
+				A71CC49B2078F10B00517017 /* libopencv_hfs.3.4.1.dylib in Frameworks */,
+				A71CC49C2078F10B00517017 /* libopencv_hfs.3.4.1.dylib in Frameworks */,
+				A71CC49D2078F10B00517017 /* libopencv_highgui.3.4.1.dylib in Frameworks */,
+				A71CC49E2078F10B00517017 /* libopencv_highgui.3.4.1.dylib in Frameworks */,
+				A71CC49F2078F10B00517017 /* libopencv_highgui.3.4.1.dylib in Frameworks */,
+				A71CC4A02078F10B00517017 /* libopencv_img_hash.3.4.1.dylib in Frameworks */,
+				A71CC4A12078F10B00517017 /* libopencv_img_hash.3.4.1.dylib in Frameworks */,
+				A71CC4A22078F10B00517017 /* libopencv_img_hash.3.4.1.dylib in Frameworks */,
+				A71CC4A32078F10B00517017 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */,
+				A71CC4A42078F10B00517017 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */,
+				A71CC4A52078F10B00517017 /* libopencv_imgcodecs.3.4.1.dylib in Frameworks */,
+				A71CC4A62078F10B00517017 /* libopencv_imgproc.3.4.1.dylib in Frameworks */,
+				A71CC4A72078F10B00517017 /* libopencv_imgproc.3.4.1.dylib in Frameworks */,
+				A71CC4A82078F10B00517017 /* libopencv_imgproc.3.4.1.dylib in Frameworks */,
+				A71CC4A92078F10B00517017 /* libopencv_line_descriptor.3.4.1.dylib in Frameworks */,
+				A71CC4AA2078F10B00517017 /* libopencv_line_descriptor.3.4.1.dylib in Frameworks */,
+				A71CC4AB2078F10B00517017 /* libopencv_line_descriptor.3.4.1.dylib in Frameworks */,
+				A71CC4AC2078F10B00517017 /* libopencv_ml.3.4.1.dylib in Frameworks */,
+				A71CC4AD2078F10B00517017 /* libopencv_ml.3.4.1.dylib in Frameworks */,
+				A71CC4AE2078F10B00517017 /* libopencv_ml.3.4.1.dylib in Frameworks */,
+				A71CC4AF2078F10B00517017 /* libopencv_objdetect.3.4.1.dylib in Frameworks */,
+				A71CC4B02078F10B00517017 /* libopencv_objdetect.3.4.1.dylib in Frameworks */,
+				A71CC4B12078F10B00517017 /* libopencv_objdetect.3.4.1.dylib in Frameworks */,
+				A71CC4B22078F10B00517017 /* libopencv_optflow.3.4.1.dylib in Frameworks */,
+				A71CC4B32078F10B00517017 /* libopencv_optflow.3.4.1.dylib in Frameworks */,
+				A71CC4B42078F10B00517017 /* libopencv_optflow.3.4.1.dylib in Frameworks */,
+				A71CC4B52078F10B00517017 /* libopencv_phase_unwrapping.3.4.1.dylib in Frameworks */,
+				A71CC4B62078F10B00517017 /* libopencv_phase_unwrapping.3.4.1.dylib in Frameworks */,
+				A71CC4B72078F10B00517017 /* libopencv_phase_unwrapping.3.4.1.dylib in Frameworks */,
+				A71CC4B82078F10B00517017 /* libopencv_photo.3.4.1.dylib in Frameworks */,
+				A71CC4B92078F10B00517017 /* libopencv_photo.3.4.1.dylib in Frameworks */,
+				A71CC4BA2078F10B00517017 /* libopencv_photo.3.4.1.dylib in Frameworks */,
+				A71CC4BB2078F10B00517017 /* libopencv_plot.3.4.1.dylib in Frameworks */,
+				A71CC4BC2078F10B00517017 /* libopencv_plot.3.4.1.dylib in Frameworks */,
+				A71CC4BD2078F10B00517017 /* libopencv_plot.3.4.1.dylib in Frameworks */,
+				A71CC4BE2078F10B00517017 /* libopencv_reg.3.4.1.dylib in Frameworks */,
+				A71CC4BF2078F10B00517017 /* libopencv_reg.3.4.1.dylib in Frameworks */,
+				A71CC4C02078F10B00517017 /* libopencv_reg.3.4.1.dylib in Frameworks */,
+				A71CC4C12078F10B00517017 /* libopencv_rgbd.3.4.1.dylib in Frameworks */,
+				A71CC4C22078F10B00517017 /* libopencv_rgbd.3.4.1.dylib in Frameworks */,
+				A71CC4C32078F10B00517017 /* libopencv_rgbd.3.4.1.dylib in Frameworks */,
+				A71CC4C42078F10B00517017 /* libopencv_saliency.3.4.1.dylib in Frameworks */,
+				A71CC4C52078F10B00517017 /* libopencv_saliency.3.4.1.dylib in Frameworks */,
+				A71CC4C62078F10B00517017 /* libopencv_saliency.3.4.1.dylib in Frameworks */,
+				A71CC4C72078F10B00517017 /* libopencv_shape.3.4.1.dylib in Frameworks */,
+				A71CC4C82078F10B00517017 /* libopencv_shape.3.4.1.dylib in Frameworks */,
+				A71CC4C92078F10B00517017 /* libopencv_shape.3.4.1.dylib in Frameworks */,
+				A71CC4CA2078F10B00517017 /* libopencv_stereo.3.4.1.dylib in Frameworks */,
+				A71CC4CB2078F10B00517017 /* libopencv_stereo.3.4.1.dylib in Frameworks */,
+				A71CC4CC2078F10B00517017 /* libopencv_stereo.3.4.1.dylib in Frameworks */,
+				A71CC4CD2078F10B00517017 /* libopencv_stitching.3.4.1.dylib in Frameworks */,
+				A71CC4CE2078F10B00517017 /* libopencv_stitching.3.4.1.dylib in Frameworks */,
+				A71CC4CF2078F10B00517017 /* libopencv_stitching.3.4.1.dylib in Frameworks */,
+				A71CC4D02078F10B00517017 /* libopencv_structured_light.3.4.1.dylib in Frameworks */,
+				A71CC4D12078F10B00517017 /* libopencv_structured_light.3.4.1.dylib in Frameworks */,
+				A71CC4D22078F10B00517017 /* libopencv_structured_light.3.4.1.dylib in Frameworks */,
+				A71CC4D32078F10B00517017 /* libopencv_superres.3.4.1.dylib in Frameworks */,
+				A71CC4D42078F10B00517017 /* libopencv_superres.3.4.1.dylib in Frameworks */,
+				A71CC4D52078F10B00517017 /* libopencv_superres.3.4.1.dylib in Frameworks */,
+				A71CC4D62078F10B00517017 /* libopencv_surface_matching.3.4.1.dylib in Frameworks */,
+				A71CC4D72078F10B00517017 /* libopencv_surface_matching.3.4.1.dylib in Frameworks */,
+				A71CC4D82078F10B00517017 /* libopencv_surface_matching.3.4.1.dylib in Frameworks */,
+				A71CC4D92078F10B00517017 /* libopencv_text.3.4.1.dylib in Frameworks */,
+				A71CC4DA2078F10B00517017 /* libopencv_text.3.4.1.dylib in Frameworks */,
+				A71CC4DB2078F10B00517017 /* libopencv_text.3.4.1.dylib in Frameworks */,
+				A71CC4DC2078F10B00517017 /* libopencv_tracking.3.4.1.dylib in Frameworks */,
+				A71CC4DD2078F10B00517017 /* libopencv_tracking.3.4.1.dylib in Frameworks */,
+				A71CC4DE2078F10B00517017 /* libopencv_tracking.3.4.1.dylib in Frameworks */,
+				A71CC4DF2078F10B00517017 /* libopencv_video.3.4.1.dylib in Frameworks */,
+				A71CC4E02078F10B00517017 /* libopencv_video.3.4.1.dylib in Frameworks */,
+				A71CC4E12078F10B00517017 /* libopencv_video.3.4.1.dylib in Frameworks */,
+				A71CC4E22078F10B00517017 /* libopencv_videoio.3.4.1.dylib in Frameworks */,
+				A71CC4E32078F10B00517017 /* libopencv_videoio.3.4.1.dylib in Frameworks */,
+				A71CC4E42078F10B00517017 /* libopencv_videoio.3.4.1.dylib in Frameworks */,
+				A71CC4E52078F10B00517017 /* libopencv_videostab.3.4.1.dylib in Frameworks */,
+				A71CC4E62078F10B00517017 /* libopencv_videostab.3.4.1.dylib in Frameworks */,
+				A71CC4E72078F10B00517017 /* libopencv_videostab.3.4.1.dylib in Frameworks */,
+				A71CC4E82078F10B00517017 /* libopencv_xfeatures2d.3.4.1.dylib in Frameworks */,
+				A71CC4E92078F10B00517017 /* libopencv_xfeatures2d.3.4.1.dylib in Frameworks */,
+				A71CC4EA2078F10B00517017 /* libopencv_xfeatures2d.3.4.1.dylib in Frameworks */,
+				A71CC4EB2078F10B00517017 /* libopencv_ximgproc.3.4.1.dylib in Frameworks */,
+				A71CC4EC2078F10B00517017 /* libopencv_ximgproc.3.4.1.dylib in Frameworks */,
+				A71CC4ED2078F10B00517017 /* libopencv_ximgproc.3.4.1.dylib in Frameworks */,
+				A71CC4EE2078F10B00517017 /* libopencv_xobjdetect.3.4.1.dylib in Frameworks */,
+				A71CC4EF2078F10B00517017 /* libopencv_xobjdetect.3.4.1.dylib in Frameworks */,
+				A71CC4F02078F10B00517017 /* libopencv_xobjdetect.3.4.1.dylib in Frameworks */,
+				A71CC4F12078F10B00517017 /* libopencv_xphoto.3.4.1.dylib in Frameworks */,
+				A71CC4F22078F10B00517017 /* libopencv_xphoto.3.4.1.dylib in Frameworks */,
+				A71CC4F32078F10B00517017 /* libopencv_xphoto.3.4.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +855,10 @@
 		A70A849E2078DC0C0015282A /* my_lib */ = {
 			isa = PBXGroup;
 			children = (
+				A7852BEF2079FE990028361F /* GLCamera.h */,
+				A7852BE92079FDE40028361F /* Graphics.cpp */,
+				A7852BEA2079FDE50028361F /* Graphics.hpp */,
+				A7852BEC2079FDE50028361F /* Shader.h */,
 				A70A849A2078D9130015282A /* Tools.hpp */,
 				A70A849B2078D9140015282A /* Tools.cpp */,
 			);
@@ -298,11 +879,7 @@
 			isa = PBXGroup;
 			children = (
 				A7684C7A205FF4B6000C8CFC /* MarkerMapper */,
-				A770EE36206F373000513CFB /* libtest.dylib */,
-				A770EE45206F378000513CFB /* libtest2.dylib */,
-				A770EE4D206F443F00513CFB /* libDodecaTracker.dylib */,
 				A770EE5C206F45DF00513CFB /* DodecaTrackerPlugin.bundle */,
-				A71CC3FC2078E0B800517017 /* hi.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -310,9 +887,9 @@
 		A7684C7C205FF4B6000C8CFC /* MarkerMapper */ = {
 			isa = PBXGroup;
 			children = (
+				A7591B88207F394C006C0E94 /* dodtracmain.cpp */,
 				A7684CDF20600738000C8CFC /* Libraries */,
 				A7DADEFC2061E92B00AD8DA1 /* stdafx.h */,
-				A7684C7D205FF4B6000C8CFC /* main.cpp */,
 				A7DADEFA2061E88200AD8DA1 /* Calibration.hpp */,
 				A7DADEF92061E88200AD8DA1 /* Calibration.cpp */,
 				A7DADF0220624EC300AD8DA1 /* Pen.hpp */,
@@ -330,6 +907,301 @@
 		A7684C84205FFF8C000C8CFC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7852BF22079FFE00028361F /* libGLEW.2.1.0.dylib */,
+				A7852BF02079FFCC0028361F /* libglfw.3.2.dylib */,
+				A7852BE52079FA480028361F /* libboost_system-mt.dylib */,
+				A7852A6D2079F9350028361F /* libvtkalglib-8.1.1.dylib */,
+				A7852A132079F92D0028361F /* libvtkChartsCore-8.1.1.dylib */,
+				A7852A4F2079F9320028361F /* libvtkChartsCorePython27D-8.1.1.dylib */,
+				A7852A312079F92F0028361F /* libvtkChartsCoreTCL-8.1.1.dylib */,
+				A78529A42079F9220028361F /* libvtkCommonColor-8.1.1.dylib */,
+				A7852A7F2079F9360028361F /* libvtkCommonColorPython27D-8.1.1.dylib */,
+				A78529C22079F9240028361F /* libvtkCommonColorTCL-8.1.1.dylib */,
+				A7852A632079F9340028361F /* libvtkCommonComputationalGeometry-8.1.1.dylib */,
+				A7852AAA2079F93A0028361F /* libvtkCommonComputationalGeometryPython27D-8.1.1.dylib */,
+				A7852ABB2079F93B0028361F /* libvtkCommonComputationalGeometryTCL-8.1.1.dylib */,
+				A78529BE2079F9230028361F /* libvtkCommonCore-8.1.1.dylib */,
+				A7852A752079F9360028361F /* libvtkCommonCorePython27D-8.1.1.dylib */,
+				A7852A5A2079F9330028361F /* libvtkCommonCoreTCL-8.1.1.dylib */,
+				A7852A6B2079F9340028361F /* libvtkCommonDataModel-8.1.1.dylib */,
+				A78529C12079F9230028361F /* libvtkCommonDataModelPython27D-8.1.1.dylib */,
+				A78529ED2079F9280028361F /* libvtkCommonDataModelTCL-8.1.1.dylib */,
+				A78529DD2079F9270028361F /* libvtkCommonExecutionModel-8.1.1.dylib */,
+				A7852AB22079F93B0028361F /* libvtkCommonExecutionModelPython27D-8.1.1.dylib */,
+				A7852A692079F9340028361F /* libvtkCommonExecutionModelTCL-8.1.1.dylib */,
+				A7852A5C2079F9330028361F /* libvtkCommonMath-8.1.1.dylib */,
+				A7852A1D2079F92E0028361F /* libvtkCommonMathPython27D-8.1.1.dylib */,
+				A78529AE2079F9220028361F /* libvtkCommonMathTCL-8.1.1.dylib */,
+				A7852A2C2079F92F0028361F /* libvtkCommonMisc-8.1.1.dylib */,
+				A7852A182079F92E0028361F /* libvtkCommonMiscPython27D-8.1.1.dylib */,
+				A7852A9D2079F9390028361F /* libvtkCommonMiscTCL-8.1.1.dylib */,
+				A78529F22079F9290028361F /* libvtkCommonSystem-8.1.1.dylib */,
+				A78529B42079F9220028361F /* libvtkCommonSystemPython27D-8.1.1.dylib */,
+				A7852A4E2079F9320028361F /* libvtkCommonSystemTCL-8.1.1.dylib */,
+				A7852ABF2079F93B0028361F /* libvtkCommonTransforms-8.1.1.dylib */,
+				A7852A192079F92E0028361F /* libvtkCommonTransformsPython27D-8.1.1.dylib */,
+				A78529E22079F9270028361F /* libvtkCommonTransformsTCL-8.1.1.dylib */,
+				A7852A302079F92F0028361F /* libvtkDICOMParser-8.1.1.dylib */,
+				A7852AB12079F93B0028361F /* libvtkDomainsChemistry-8.1.1.dylib */,
+				A7852A172079F92E0028361F /* libvtkDomainsChemistryOpenGL2-8.1.1.dylib */,
+				A78529FE2079F92A0028361F /* libvtkDomainsChemistryOpenGL2Python27D-8.1.1.dylib */,
+				A78529F42079F9290028361F /* libvtkDomainsChemistryPython27D-8.1.1.dylib */,
+				A78529A92079F9220028361F /* libvtkDomainsChemistryTCL-8.1.1.dylib */,
+				A78529EB2079F9280028361F /* libvtkexoIIc-8.1.1.dylib */,
+				A7852A4C2079F9320028361F /* libvtkFiltersAMR-8.1.1.dylib */,
+				A7852A2A2079F92F0028361F /* libvtkFiltersAMRPython27D-8.1.1.dylib */,
+				A78529E32079F9270028361F /* libvtkFiltersAMRTCL-8.1.1.dylib */,
+				A7852A022079F92B0028361F /* libvtkFiltersCore-8.1.1.dylib */,
+				A78529BD2079F9230028361F /* libvtkFiltersCorePython27D-8.1.1.dylib */,
+				A7852A7B2079F9360028361F /* libvtkFiltersCoreTCL-8.1.1.dylib */,
+				A7852A762079F9360028361F /* libvtkFiltersExtraction-8.1.1.dylib */,
+				A7852A732079F9350028361F /* libvtkFiltersExtractionPython27D-8.1.1.dylib */,
+				A7852A852079F9370028361F /* libvtkFiltersExtractionTCL-8.1.1.dylib */,
+				A7852A322079F9300028361F /* libvtkFiltersFlowPaths-8.1.1.dylib */,
+				A7852A712079F9350028361F /* libvtkFiltersFlowPathsPython27D-8.1.1.dylib */,
+				A7852A502079F9320028361F /* libvtkFiltersFlowPathsTCL-8.1.1.dylib */,
+				A7852A842079F9370028361F /* libvtkFiltersGeneral-8.1.1.dylib */,
+				A7852A542079F9320028361F /* libvtkFiltersGeneralPython27D-8.1.1.dylib */,
+				A78529C42079F9240028361F /* libvtkFiltersGeneralTCL-8.1.1.dylib */,
+				A7852AAC2079F93A0028361F /* libvtkFiltersGeneric-8.1.1.dylib */,
+				A785299F2079F9210028361F /* libvtkFiltersGenericPython27D-8.1.1.dylib */,
+				A78529CF2079F9250028361F /* libvtkFiltersGenericTCL-8.1.1.dylib */,
+				A7852A4B2079F9320028361F /* libvtkFiltersGeometry-8.1.1.dylib */,
+				A7852ABC2079F93B0028361F /* libvtkFiltersGeometryPython27D-8.1.1.dylib */,
+				A7852AAB2079F93A0028361F /* libvtkFiltersGeometryTCL-8.1.1.dylib */,
+				A7852A862079F9370028361F /* libvtkFiltersHybrid-8.1.1.dylib */,
+				A785299D2079F9210028361F /* libvtkFiltersHybridPython27D-8.1.1.dylib */,
+				A78529CB2079F9250028361F /* libvtkFiltersHybridTCL-8.1.1.dylib */,
+				A78529D72079F9260028361F /* libvtkFiltersHyperTree-8.1.1.dylib */,
+				A7852A9C2079F9390028361F /* libvtkFiltersHyperTreePython27D-8.1.1.dylib */,
+				A78529F12079F9290028361F /* libvtkFiltersHyperTreeTCL-8.1.1.dylib */,
+				A7852A8F2079F9380028361F /* libvtkFiltersImaging-8.1.1.dylib */,
+				A7852A392079F9300028361F /* libvtkFiltersImagingPython27D-8.1.1.dylib */,
+				A78529C02079F9230028361F /* libvtkFiltersImagingTCL-8.1.1.dylib */,
+				A78529CD2079F9250028361F /* libvtkFiltersModeling-8.1.1.dylib */,
+				A7852A242079F92F0028361F /* libvtkFiltersModelingPython27D-8.1.1.dylib */,
+				A78529BA2079F9230028361F /* libvtkFiltersModelingTCL-8.1.1.dylib */,
+				A7852A592079F9330028361F /* libvtkFiltersParallel-8.1.1.dylib */,
+				A7852A932079F9380028361F /* libvtkFiltersParallelImaging-8.1.1.dylib */,
+				A7852A102079F92D0028361F /* libvtkFiltersParallelImagingPython27D-8.1.1.dylib */,
+				A78529B92079F9230028361F /* libvtkFiltersParallelImagingTCL-8.1.1.dylib */,
+				A78529C92079F9240028361F /* libvtkFiltersParallelPython27D-8.1.1.dylib */,
+				A7852AAD2079F93A0028361F /* libvtkFiltersParallelTCL-8.1.1.dylib */,
+				A78529E42079F9270028361F /* libvtkFiltersPoints-8.1.1.dylib */,
+				A78529E92079F9280028361F /* libvtkFiltersPointsPython27D-8.1.1.dylib */,
+				A78529F02079F9290028361F /* libvtkFiltersPointsTCL-8.1.1.dylib */,
+				A7852A572079F9330028361F /* libvtkFiltersProgrammable-8.1.1.dylib */,
+				A7852A372079F9300028361F /* libvtkFiltersProgrammablePython27D-8.1.1.dylib */,
+				A78529A22079F9210028361F /* libvtkFiltersProgrammableTCL-8.1.1.dylib */,
+				A7852A882079F9370028361F /* libvtkFiltersPython-8.1.1.dylib */,
+				A78529DF2079F9270028361F /* libvtkFiltersPythonPython27D-8.1.1.dylib */,
+				A7852A3B2079F9300028361F /* libvtkFiltersSelection-8.1.1.dylib */,
+				A78529BF2079F9230028361F /* libvtkFiltersSelectionPython27D-8.1.1.dylib */,
+				A78529DB2079F9260028361F /* libvtkFiltersSelectionTCL-8.1.1.dylib */,
+				A7852A112079F92D0028361F /* libvtkFiltersSMP-8.1.1.dylib */,
+				A78529D22079F9250028361F /* libvtkFiltersSMPPython27D-8.1.1.dylib */,
+				A7852A3E2079F9310028361F /* libvtkFiltersSMPTCL-8.1.1.dylib */,
+				A7852A222079F92E0028361F /* libvtkFiltersSources-8.1.1.dylib */,
+				A7852A3A2079F9300028361F /* libvtkFiltersSourcesPython27D-8.1.1.dylib */,
+				A7852AAE2079F93A0028361F /* libvtkFiltersSourcesTCL-8.1.1.dylib */,
+				A7852A3C2079F9300028361F /* libvtkFiltersStatistics-8.1.1.dylib */,
+				A7852A642079F9340028361F /* libvtkFiltersStatisticsPython27D-8.1.1.dylib */,
+				A78529AD2079F9220028361F /* libvtkFiltersStatisticsTCL-8.1.1.dylib */,
+				A7852A6C2079F9350028361F /* libvtkFiltersTexture-8.1.1.dylib */,
+				A78529B52079F9230028361F /* libvtkFiltersTexturePython27D-8.1.1.dylib */,
+				A7852A7C2079F9360028361F /* libvtkFiltersTextureTCL-8.1.1.dylib */,
+				A78529B62079F9230028361F /* libvtkFiltersTopology-8.1.1.dylib */,
+				A78529F32079F9290028361F /* libvtkFiltersTopologyPython27D-8.1.1.dylib */,
+				A7852ABA2079F93B0028361F /* libvtkFiltersTopologyTCL-8.1.1.dylib */,
+				A7852A702079F9350028361F /* libvtkFiltersVerdict-8.1.1.dylib */,
+				A78529C32079F9240028361F /* libvtkFiltersVerdictPython27D-8.1.1.dylib */,
+				A7852AA62079F93A0028361F /* libvtkFiltersVerdictTCL-8.1.1.dylib */,
+				A78529CE2079F9250028361F /* libvtkfreetype-8.1.1.dylib */,
+				A78529FA2079F92A0028361F /* libvtkGeovisCore-8.1.1.dylib */,
+				A78529F52079F9290028361F /* libvtkGeovisCorePython27D-8.1.1.dylib */,
+				A7852A3F2079F9310028361F /* libvtkGeovisCoreTCL-8.1.1.dylib */,
+				A78529E82079F9280028361F /* libvtkgl2ps-8.1.1.dylib */,
+				A7852A262079F92F0028361F /* libvtkglew-8.1.1.dylib */,
+				A78529B72079F9230028361F /* libvtkImagingColor-8.1.1.dylib */,
+				A7852A522079F9320028361F /* libvtkImagingColorPython27D-8.1.1.dylib */,
+				A7852A602079F9330028361F /* libvtkImagingColorTCL-8.1.1.dylib */,
+				A7852A472079F9310028361F /* libvtkImagingCore-8.1.1.dylib */,
+				A7852A5D2079F9330028361F /* libvtkImagingCorePython27D-8.1.1.dylib */,
+				A7852A802079F9370028361F /* libvtkImagingCoreTCL-8.1.1.dylib */,
+				A7852AAF2079F93A0028361F /* libvtkImagingFourier-8.1.1.dylib */,
+				A78529C52079F9240028361F /* libvtkImagingFourierPython27D-8.1.1.dylib */,
+				A7852A9A2079F9390028361F /* libvtkImagingFourierTCL-8.1.1.dylib */,
+				A7852A1A2079F92E0028361F /* libvtkImagingGeneral-8.1.1.dylib */,
+				A7852A942079F9380028361F /* libvtkImagingGeneralPython27D-8.1.1.dylib */,
+				A7852A7A2079F9360028361F /* libvtkImagingGeneralTCL-8.1.1.dylib */,
+				A7852A872079F9370028361F /* libvtkImagingHybrid-8.1.1.dylib */,
+				A7852AA72079F93A0028361F /* libvtkImagingHybridPython27D-8.1.1.dylib */,
+				A7852A562079F9320028361F /* libvtkImagingHybridTCL-8.1.1.dylib */,
+				A7852A082079F92C0028361F /* libvtkImagingMath-8.1.1.dylib */,
+				A78529A72079F9220028361F /* libvtkImagingMathPython27D-8.1.1.dylib */,
+				A7852A952079F9380028361F /* libvtkImagingMathTCL-8.1.1.dylib */,
+				A78529D62079F9260028361F /* libvtkImagingMorphological-8.1.1.dylib */,
+				A78529AC2079F9220028361F /* libvtkImagingMorphologicalPython27D-8.1.1.dylib */,
+				A78529C72079F9240028361F /* libvtkImagingMorphologicalTCL-8.1.1.dylib */,
+				A7852AA42079F93A0028361F /* libvtkImagingSources-8.1.1.dylib */,
+				A7852A912079F9380028361F /* libvtkImagingSourcesPython27D-8.1.1.dylib */,
+				A7852A672079F9340028361F /* libvtkImagingSourcesTCL-8.1.1.dylib */,
+				A7852A7E2079F9360028361F /* libvtkImagingStatistics-8.1.1.dylib */,
+				A78529AA2079F9220028361F /* libvtkImagingStatisticsPython27D-8.1.1.dylib */,
+				A7852A0A2079F92C0028361F /* libvtkImagingStatisticsTCL-8.1.1.dylib */,
+				A7852A2E2079F92F0028361F /* libvtkImagingStencil-8.1.1.dylib */,
+				A7852A532079F9320028361F /* libvtkImagingStencilPython27D-8.1.1.dylib */,
+				A7852A0E2079F92D0028361F /* libvtkImagingStencilTCL-8.1.1.dylib */,
+				A78529F82079F92A0028361F /* libvtkInfovisBoostGraphAlgorithms-8.1.1.dylib */,
+				A7852A382079F9300028361F /* libvtkInfovisBoostGraphAlgorithmsPython27D-8.1.1.dylib */,
+				A7852AB32079F93B0028361F /* libvtkInfovisBoostGraphAlgorithmsTCL-8.1.1.dylib */,
+				A7852A332079F9300028361F /* libvtkInfovisCore-8.1.1.dylib */,
+				A78529E72079F9280028361F /* libvtkInfovisCorePython27D-8.1.1.dylib */,
+				A78529EC2079F9280028361F /* libvtkInfovisCoreTCL-8.1.1.dylib */,
+				A78529FF2079F92A0028361F /* libvtkInfovisLayout-8.1.1.dylib */,
+				A7852A612079F9330028361F /* libvtkInfovisLayoutPython27D-8.1.1.dylib */,
+				A7852A9F2079F9390028361F /* libvtkInfovisLayoutTCL-8.1.1.dylib */,
+				A7852A0C2079F92C0028361F /* libvtkInteractionImage-8.1.1.dylib */,
+				A78529E12079F9270028361F /* libvtkInteractionImagePython27D-8.1.1.dylib */,
+				A7852A402079F9310028361F /* libvtkInteractionImageTCL-8.1.1.dylib */,
+				A78529FD2079F92A0028361F /* libvtkInteractionStyle-8.1.1.dylib */,
+				A7852A3D2079F9300028361F /* libvtkInteractionStylePython27D-8.1.1.dylib */,
+				A78529A02079F9210028361F /* libvtkInteractionStyleTCL-8.1.1.dylib */,
+				A78529D82079F9260028361F /* libvtkInteractionWidgets-8.1.1.dylib */,
+				A78529F62079F9290028361F /* libvtkInteractionWidgetsPython27D-8.1.1.dylib */,
+				A7852A962079F9380028361F /* libvtkInteractionWidgetsTCL-8.1.1.dylib */,
+				A7852AB02079F93A0028361F /* libvtkIOAMR-8.1.1.dylib */,
+				A7852A6A2079F9340028361F /* libvtkIOAMRPython27D-8.1.1.dylib */,
+				A7852A6F2079F9350028361F /* libvtkIOAMRTCL-8.1.1.dylib */,
+				A7852A512079F9320028361F /* libvtkIOCore-8.1.1.dylib */,
+				A7852A902079F9380028361F /* libvtkIOCorePython27D-8.1.1.dylib */,
+				A7852AB72079F93B0028361F /* libvtkIOCoreTCL-8.1.1.dylib */,
+				A78529A12079F9210028361F /* libvtkIOEnSight-8.1.1.dylib */,
+				A7852A5E2079F9330028361F /* libvtkIOEnSightPython27D-8.1.1.dylib */,
+				A7852A892079F9370028361F /* libvtkIOEnSightTCL-8.1.1.dylib */,
+				A7852ABE2079F93B0028361F /* libvtkIOExodus-8.1.1.dylib */,
+				A7852AC02079F93C0028361F /* libvtkIOExodusPython27D-8.1.1.dylib */,
+				A7852A972079F9390028361F /* libvtkIOExodusTCL-8.1.1.dylib */,
+				A7852A142079F92D0028361F /* libvtkIOExport-8.1.1.dylib */,
+				A7852A252079F92F0028361F /* libvtkIOExportOpenGL2-8.1.1.dylib */,
+				A7852A1B2079F92E0028361F /* libvtkIOExportOpenGL2Python27D-8.1.1.dylib */,
+				A7852A8A2079F9370028361F /* libvtkIOExportOpenGLIITCL-8.1.1.dylib */,
+				A7852A1E2079F92E0028361F /* libvtkIOExportPython27D-8.1.1.dylib */,
+				A7852A552079F9320028361F /* libvtkIOExportTCL-8.1.1.dylib */,
+				A7852A772079F9360028361F /* libvtkIOGeometry-8.1.1.dylib */,
+				A78529CC2079F9250028361F /* libvtkIOGeometryPython27D-8.1.1.dylib */,
+				A7852A682079F9340028361F /* libvtkIOGeometryTCL-8.1.1.dylib */,
+				A7852A282079F92F0028361F /* libvtkIOImage-8.1.1.dylib */,
+				A7852ABD2079F93B0028361F /* libvtkIOImagePython27D-8.1.1.dylib */,
+				A78529FC2079F92A0028361F /* libvtkIOImageTCL-8.1.1.dylib */,
+				A7852A342079F9300028361F /* libvtkIOImport-8.1.1.dylib */,
+				A7852A722079F9350028361F /* libvtkIOImportPython27D-8.1.1.dylib */,
+				A78529A32079F9220028361F /* libvtkIOImportTCL-8.1.1.dylib */,
+				A7852A232079F92F0028361F /* libvtkIOInfovis-8.1.1.dylib */,
+				A7852A092079F92C0028361F /* libvtkIOInfovisPython27D-8.1.1.dylib */,
+				A7852A442079F9310028361F /* libvtkIOInfovisTCL-8.1.1.dylib */,
+				A7852A482079F9310028361F /* libvtkIOLegacy-8.1.1.dylib */,
+				A7852A2F2079F92F0028361F /* libvtkIOLegacyPython27D-8.1.1.dylib */,
+				A7852A452079F9310028361F /* libvtkIOLegacyTCL-8.1.1.dylib */,
+				A7852A4A2079F9310028361F /* libvtkIOLSDyna-8.1.1.dylib */,
+				A7852A782079F9360028361F /* libvtkIOLSDynaPython27D-8.1.1.dylib */,
+				A7852A422079F9310028361F /* libvtkIOLSDynaTCL-8.1.1.dylib */,
+				A7852A272079F92F0028361F /* libvtkIOMINC-8.1.1.dylib */,
+				A78529F92079F92A0028361F /* libvtkIOMINCPython27D-8.1.1.dylib */,
+				A7852AB52079F93B0028361F /* libvtkIOMINCTCL-8.1.1.dylib */,
+				A7852A0B2079F92C0028361F /* libvtkIOMovie-8.1.1.dylib */,
+				A78529E52079F9270028361F /* libvtkIOMoviePython27D-8.1.1.dylib */,
+				A7852A5F2079F9330028361F /* libvtkIOMovieTCL-8.1.1.dylib */,
+				A78529B02079F9220028361F /* libvtkIONetCDF-8.1.1.dylib */,
+				A7852A152079F92D0028361F /* libvtkIONetCDFPython27D-8.1.1.dylib */,
+				A78529BB2079F9230028361F /* libvtkIONetCDFTCL-8.1.1.dylib */,
+				A78529DC2079F9270028361F /* libvtkIOParallel-8.1.1.dylib */,
+				A78529CA2079F9250028361F /* libvtkIOParallelPython27D-8.1.1.dylib */,
+				A7852A2D2079F92F0028361F /* libvtkIOParallelTCL-8.1.1.dylib */,
+				A7852A072079F92B0028361F /* libvtkIOParallelXML-8.1.1.dylib */,
+				A78529D52079F9260028361F /* libvtkIOParallelXMLPython27D-8.1.1.dylib */,
+				A7852A462079F9310028361F /* libvtkIOParallelXMLTCL-8.1.1.dylib */,
+				A7852A742079F9350028361F /* libvtkIOPLY-8.1.1.dylib */,
+				A7852A4D2079F9320028361F /* libvtkIOPLYPython27D-8.1.1.dylib */,
+				A7852A492079F9310028361F /* libvtkIOPLYTCL-8.1.1.dylib */,
+				A78529BC2079F9230028361F /* libvtkIOSQL-8.1.1.dylib */,
+				A7852AB82079F93B0028361F /* libvtkIOSQLPython27D-8.1.1.dylib */,
+				A78529C62079F9240028361F /* libvtkIOSQLTCL-8.1.1.dylib */,
+				A785299E2079F9210028361F /* libvtkIOTecplotTable-8.1.1.dylib */,
+				A78529B32079F9220028361F /* libvtkIOTecplotTablePython27D-8.1.1.dylib */,
+				A7852A202079F92E0028361F /* libvtkIOTecplotTableTCL-8.1.1.dylib */,
+				A7852AA52079F93A0028361F /* libvtkIOVideo-8.1.1.dylib */,
+				A78529EA2079F9280028361F /* libvtkIOVideoPython27D-8.1.1.dylib */,
+				A7852A8D2079F9380028361F /* libvtkIOVideoTCL-8.1.1.dylib */,
+				A7852AB42079F93B0028361F /* libvtkIOXML-8.1.1.dylib */,
+				A7852A812079F9370028361F /* libvtkIOXMLParser-8.1.1.dylib */,
+				A7852A9E2079F9390028361F /* libvtkIOXMLParserPython27D-8.1.1.dylib */,
+				A78529AF2079F9220028361F /* libvtkIOXMLParserTCL-8.1.1.dylib */,
+				A7852A002079F92B0028361F /* libvtkIOXMLPython27D-8.1.1.dylib */,
+				A7852A012079F92B0028361F /* libvtkIOXMLTCL-8.1.1.dylib */,
+				A78529B82079F9230028361F /* libvtkjsoncpp-8.1.1.dylib */,
+				A7852A7D2079F9360028361F /* libvtklibharu-8.1.1.dylib */,
+				A7852A212079F92E0028361F /* libvtklz4-8.1.1.dylib */,
+				A78529D02079F9250028361F /* libvtkmetaio-8.1.1.dylib */,
+				A78529D42079F9260028361F /* libvtknetcdfcpp-8.1.1.dylib */,
+				A78529A62079F9220028361F /* libvtkoggtheora-8.1.1.dylib */,
+				A78529EF2079F9290028361F /* libvtkParallelCore-8.1.1.dylib */,
+				A78529B22079F9220028361F /* libvtkParallelCorePython27D-8.1.1.dylib */,
+				A7852A652079F9340028361F /* libvtkParallelCoreTCL-8.1.1.dylib */,
+				A7852A5B2079F9330028361F /* libvtkproj4-8.1.1.dylib */,
+				A7852A032079F92B0028361F /* libvtkRenderingAnnotation-8.1.1.dylib */,
+				A7852A1C2079F92E0028361F /* libvtkRenderingAnnotationPython27D-8.1.1.dylib */,
+				A7852A062079F92B0028361F /* libvtkRenderingAnnotationTCL-8.1.1.dylib */,
+				A7852A292079F92F0028361F /* libvtkRenderingChemistryOpenGLIITCL-8.1.1.dylib */,
+				A78529D92079F9260028361F /* libvtkRenderingContext2D-8.1.1.dylib */,
+				A78529B12079F9220028361F /* libvtkRenderingContext2DPython27D-8.1.1.dylib */,
+				A7852AA02079F9390028361F /* libvtkRenderingContextIIDTCL-8.1.1.dylib */,
+				A7852A622079F9330028361F /* libvtkRenderingContextOpenGL2-8.1.1.dylib */,
+				A7852A0D2079F92D0028361F /* libvtkRenderingContextOpenGL2Python27D-8.1.1.dylib */,
+				A7852A352079F9300028361F /* libvtkRenderingContextOpenGLIITCL-8.1.1.dylib */,
+				A78529D12079F9250028361F /* libvtkRenderingCore-8.1.1.dylib */,
+				A7852A982079F9390028361F /* libvtkRenderingCorePython27D-8.1.1.dylib */,
+				A78529A82079F9220028361F /* libvtkRenderingCoreTCL-8.1.1.dylib */,
+				A7852AA12079F9390028361F /* libvtkRenderingFreeType-8.1.1.dylib */,
+				A7852A922079F9380028361F /* libvtkRenderingFreeTypeFontConfig-8.1.1.dylib */,
+				A78529A52079F9220028361F /* libvtkRenderingFreeTypePython27D-8.1.1.dylib */,
+				A7852A582079F9330028361F /* libvtkRenderingFreeTypeTCL-8.1.1.dylib */,
+				A7852A662079F9340028361F /* libvtkRenderingGL2PSOpenGL2-8.1.1.dylib */,
+				A78529E62079F9280028361F /* libvtkRenderingGL2PSOpenGL2Python27D-8.1.1.dylib */,
+				A7852A6E2079F9350028361F /* libvtkRenderingGLtoPSOpenGLIITCL-8.1.1.dylib */,
+				A7852A122079F92D0028361F /* libvtkRenderingImage-8.1.1.dylib */,
+				A7852AA82079F93A0028361F /* libvtkRenderingImagePython27D-8.1.1.dylib */,
+				A78529AB2079F9220028361F /* libvtkRenderingImageTCL-8.1.1.dylib */,
+				A7852AA22079F93A0028361F /* libvtkRenderingLabel-8.1.1.dylib */,
+				A78529D32079F9260028361F /* libvtkRenderingLabelPython27D-8.1.1.dylib */,
+				A7852A162079F92E0028361F /* libvtkRenderingLabelTCL-8.1.1.dylib */,
+				A7852A412079F9310028361F /* libvtkRenderingLOD-8.1.1.dylib */,
+				A7852A8B2079F9380028361F /* libvtkRenderingLODPython27D-8.1.1.dylib */,
+				A7852A0F2079F92D0028361F /* libvtkRenderingLODTCL-8.1.1.dylib */,
+				A7852AA32079F93A0028361F /* libvtkRenderingOpenGL2-8.1.1.dylib */,
+				A7852A362079F9300028361F /* libvtkRenderingOpenGL2Python27D-8.1.1.dylib */,
+				A7852A432079F9310028361F /* libvtkRenderingOpenGLIITCL-8.1.1.dylib */,
+				A7852A792079F9360028361F /* libvtkRenderingPythonTkWidgets-8.1.dylib */,
+				A78529EE2079F9280028361F /* libvtkRenderingTkTCL-8.1.1.dylib */,
+				A78529DA2079F9260028361F /* libvtkRenderingVolume-8.1.1.dylib */,
+				A78529C82079F9240028361F /* libvtkRenderingVolumeOpenGL2-8.1.1.dylib */,
+				A7852A052079F92B0028361F /* libvtkRenderingVolumeOpenGL2Python27D-8.1.1.dylib */,
+				A7852A042079F92B0028361F /* libvtkRenderingVolumeOpenGLIITCL-8.1.1.dylib */,
+				A7852A992079F9390028361F /* libvtkRenderingVolumePython27D-8.1.1.dylib */,
+				A7852A1F2079F92E0028361F /* libvtkRenderingVolumeTCL-8.1.1.dylib */,
+				A7852AA92079F93A0028361F /* libvtksqlite-8.1.1.dylib */,
+				A78529E02079F9270028361F /* libvtksys-8.1.1.dylib */,
+				A7852A832079F9370028361F /* libvtkverdict-8.1.1.dylib */,
+				A78529DE2079F9270028361F /* libvtkViewsContext2D-8.1.1.dylib */,
+				A7852AB92079F93B0028361F /* libvtkViewsContext2DPython27D-8.1.1.dylib */,
+				A7852A8C2079F9380028361F /* libvtkViewsContextIIDTCL-8.1.1.dylib */,
+				A7852A2B2079F92F0028361F /* libvtkViewsCore-8.1.1.dylib */,
+				A7852A9B2079F9390028361F /* libvtkViewsCorePython27D-8.1.1.dylib */,
+				A7852A822079F9370028361F /* libvtkViewsCoreTCL-8.1.1.dylib */,
+				A78529F72079F9290028361F /* libvtkViewsInfovis-8.1.1.dylib */,
+				A7852A8E2079F9380028361F /* libvtkViewsInfovisPython27D-8.1.1.dylib */,
+				A78529FB2079F92A0028361F /* libvtkViewsInfovisTCL-8.1.1.dylib */,
+				A7852AB62079F93B0028361F /* libvtkWrappingPython27Core-8.1.1.dylib */,
 				A7A346B0206E0551008C3032 /* GLUT.framework */,
 				A7A346AF206E0551008C3032 /* OpenGL.framework */,
 				A7A34697206DFCD6008C3032 /* libpcl_apps.1.8.1.dylib */,
@@ -447,48 +1319,7 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		A770EE34206F373000513CFB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A770EE43206F378000513CFB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A770EE4B206F443F00513CFB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		A71CC3FB2078E0B800517017 /* hi */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A71CC3FF2078E0B800517017 /* Build configuration list for PBXNativeTarget "hi" */;
-			buildPhases = (
-				A71CC3F82078E0B800517017 /* Sources */,
-				A71CC3F92078E0B800517017 /* Frameworks */,
-				A71CC3FA2078E0B800517017 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = hi;
-			productName = hi;
-			productReference = A71CC3FC2078E0B800517017 /* hi.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 		A7684C79205FF4B6000C8CFC /* MarkerMapper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7684C81205FF4B6000C8CFC /* Build configuration list for PBXNativeTarget "MarkerMapper" */;
@@ -505,57 +1336,6 @@
 			productName = MarkerMapper;
 			productReference = A7684C7A205FF4B6000C8CFC /* MarkerMapper */;
 			productType = "com.apple.product-type.tool";
-		};
-		A770EE35206F373000513CFB /* test */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A770EE40206F373000513CFB /* Build configuration list for PBXNativeTarget "test" */;
-			buildPhases = (
-				A770EE32206F373000513CFB /* Sources */,
-				A770EE33206F373000513CFB /* Frameworks */,
-				A770EE34206F373000513CFB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = test;
-			productName = test;
-			productReference = A770EE36206F373000513CFB /* libtest.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
-		};
-		A770EE44206F378000513CFB /* test2 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A770EE46206F378000513CFB /* Build configuration list for PBXNativeTarget "test2" */;
-			buildPhases = (
-				A770EE41206F378000513CFB /* Sources */,
-				A770EE42206F378000513CFB /* Frameworks */,
-				A770EE43206F378000513CFB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = test2;
-			productName = test2;
-			productReference = A770EE45206F378000513CFB /* libtest2.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
-		};
-		A770EE4C206F443F00513CFB /* DodecaTracker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A770EE55206F443F00513CFB /* Build configuration list for PBXNativeTarget "DodecaTracker" */;
-			buildPhases = (
-				A770EE49206F443F00513CFB /* Sources */,
-				A770EE4A206F443F00513CFB /* Frameworks */,
-				A770EE4B206F443F00513CFB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DodecaTracker;
-			productName = DodecaTracker;
-			productReference = A770EE4D206F443F00513CFB /* libDodecaTracker.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
 		};
 		A770EE5B206F45DF00513CFB /* DodecaTrackerPlugin */ = {
 			isa = PBXNativeTarget;
@@ -583,23 +1363,7 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "郭子乐";
 				TargetAttributes = {
-					A71CC3FB2078E0B800517017 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
 					A7684C79205FF4B6000C8CFC = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
-					A770EE35206F373000513CFB = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
-					A770EE44206F378000513CFB = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
-					A770EE4C206F443F00513CFB = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -622,23 +1386,12 @@
 			projectRoot = "";
 			targets = (
 				A7684C79205FF4B6000C8CFC /* MarkerMapper */,
-				A770EE35206F373000513CFB /* test */,
-				A770EE44206F378000513CFB /* test2 */,
-				A770EE4C206F443F00513CFB /* DodecaTracker */,
 				A770EE5B206F45DF00513CFB /* DodecaTrackerPlugin */,
-				A71CC3FB2078E0B800517017 /* hi */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A71CC3FA2078E0B800517017 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A770EE5A206F45DF00513CFB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -649,46 +1402,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A71CC3F82078E0B800517017 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A7684C76205FF4B6000C8CFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A7684EB92060AA9A000C8CFC /* calibrator.cpp in Sources */,
-				A7684C7E205FF4B6000C8CFC /* main.cpp in Sources */,
 				A7DADF062062516800AD8DA1 /* Camera.cpp in Sources */,
+				A7591B89207F394C006C0E94 /* dodtracmain.cpp in Sources */,
 				A7DADEFB2061E88200AD8DA1 /* Calibration.cpp in Sources */,
 				A7DADF0320624EC300AD8DA1 /* Pen.cpp in Sources */,
 				A70A849D2078DBFD0015282A /* Tools.cpp in Sources */,
 				A7EB45D2207661970048ADD7 /* DodecaTracker.cpp in Sources */,
+				A7852BED2079FDE50028361F /* Graphics.cpp in Sources */,
 				A7DADF0920625B4D00AD8DA1 /* PenDetector.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A770EE32206F373000513CFB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A770EE41206F378000513CFB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A770EE49206F443F00513CFB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,6 +1422,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A76E4FAB2079B18A00947465 /* DodecaTrackerPlugin.hpp in Sources */,
+				A76E4F982079B15900947465 /* Tools.hpp in Sources */,
+				A76E4F992079B15900947465 /* Tools.cpp in Sources */,
+				A76E4F9A2079B15900947465 /* sgl.h in Sources */,
+				A76E4F9B2079B15900947465 /* sglviewer.h in Sources */,
+				A76E4F9C2079B15900947465 /* calibrator.cpp in Sources */,
+				A76E4F9D2079B15900947465 /* calibrator.h in Sources */,
+				A76E4F9E2079B15900947465 /* levmarq.h in Sources */,
+				A76E4F9F2079B15900947465 /* stdafx.h in Sources */,
+				A76E4FA12079B15900947465 /* Calibration.hpp in Sources */,
+				A76E4FA22079B15900947465 /* Calibration.cpp in Sources */,
+				A76E4FA32079B15900947465 /* Pen.hpp in Sources */,
+				A76E4FA42079B15900947465 /* Pen.cpp in Sources */,
+				A76E4FA52079B15900947465 /* Camera.hpp in Sources */,
+				A76E4FA62079B15900947465 /* Camera.cpp in Sources */,
+				A76E4FA72079B15900947465 /* PenDetector.hpp in Sources */,
+				A76E4FA82079B15900947465 /* PenDetector.cpp in Sources */,
+				A76E4FA92079B15900947465 /* DodecaTracker.hpp in Sources */,
+				A76E4FAA2079B15900947465 /* DodecaTracker.cpp in Sources */,
 				A770EE64206F463000513CFB /* DodecaTrackerPlugin.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,36 +1448,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A71CC4002078E0B800517017 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = Y2ZD568S42;
-				INFOPLIST_FILE = hi/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				PRODUCT_BUNDLE_IDENTIFIER = guozile.hi;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		A71CC4012078E0B800517017 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = Y2ZD568S42;
-				INFOPLIST_FILE = hi/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				PRODUCT_BUNDLE_IDENTIFIER = guozile.hi;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		A7684C7F205FF4B6000C8CFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -781,6 +1496,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/3.4.1_2/include,
+					/usr/local/include,
+					/usr/local/include/aruco,
+					/usr/local/Cellar/eigen/3.3.4/include/eigen3,
+					/usr/local/include/marker_mapper,
+					"/usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/3.4.1_2/lib,
+					/usr/local/lib,
+					"$(PROJECT_DIR)/MarkerMapper/Libraries/aruco",
+					/usr/local/Cellar/pcl/1.8.1_2/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -830,6 +1559,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/3.4.1_2/include,
+					/usr/local/include,
+					/usr/local/include/aruco,
+					/usr/local/Cellar/eigen/3.3.4/include/eigen3,
+					/usr/local/include/marker_mapper,
+					"/usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/opencv/3.4.1_2/lib,
+					/usr/local/lib,
+					"$(PROJECT_DIR)/MarkerMapper/Libraries/aruco",
+					/usr/local/Cellar/pcl/1.8.1_2/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -848,6 +1591,10 @@
 					/usr/local/Cellar/eigen/3.3.4/include/eigen3,
 					/usr/local/include/marker_mapper,
 					"/usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8",
+					/usr/local/Cellar/boost/1.66.0/include,
+					/usr/local/Cellar/glfw/3.2.1/include,
+					/usr/local/Cellar/glm/0.9.8.3/include,
+					/usr/local/Cellar/glew/2.1.0/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -855,6 +1602,10 @@
 					/usr/local/lib,
 					"$(PROJECT_DIR)/MarkerMapper/Libraries/aruco",
 					/usr/local/Cellar/pcl/1.8.1_2/lib,
+					/usr/local/Cellar/vtk/8.1.0/lib,
+					/usr/local/Cellar/boost/1.66.0/lib,
+					/usr/local/Cellar/glfw/3.2.1/lib,
+					/usr/local/Cellar/glew/2.1.0/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -872,6 +1623,10 @@
 					/usr/local/Cellar/eigen/3.3.4/include/eigen3,
 					/usr/local/include/marker_mapper,
 					"/usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8",
+					/usr/local/Cellar/boost/1.66.0/include,
+					/usr/local/Cellar/glfw/3.2.1/include,
+					/usr/local/Cellar/glm/0.9.8.3/include,
+					/usr/local/Cellar/glew/2.1.0/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -879,91 +1634,11 @@
 					/usr/local/lib,
 					"$(PROJECT_DIR)/MarkerMapper/Libraries/aruco",
 					/usr/local/Cellar/pcl/1.8.1_2/lib,
+					/usr/local/Cellar/vtk/8.1.0/lib,
+					/usr/local/Cellar/boost/1.66.0/lib,
+					/usr/local/Cellar/glfw/3.2.1/lib,
+					/usr/local/Cellar/glew/2.1.0/lib,
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		A770EE3E206F373000513CFB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y2ZD568S42;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		A770EE3F206F373000513CFB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y2ZD568S42;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		A770EE47206F378000513CFB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y2ZD568S42;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		A770EE48206F378000513CFB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y2ZD568S42;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		A770EE56206F443F00513CFB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y2ZD568S42;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		A770EE57206F443F00513CFB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y2ZD568S42;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -978,7 +1653,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/DodecaTrackerPlugin/lib",
+					/usr/local/Cellar/opencv/3.4.1_2/lib,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = guozile.DodecaTrackerPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -997,7 +1672,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/DodecaTrackerPlugin/lib",
+					/usr/local/Cellar/opencv/3.4.1_2/lib,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = guozile.DodecaTrackerPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1009,15 +1684,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A71CC3FF2078E0B800517017 /* Build configuration list for PBXNativeTarget "hi" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A71CC4002078E0B800517017 /* Debug */,
-				A71CC4012078E0B800517017 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A7684C75205FF4B6000C8CFC /* Build configuration list for PBXProject "MarkerMapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1032,33 +1698,6 @@
 			buildConfigurations = (
 				A7684C82205FF4B6000C8CFC /* Debug */,
 				A7684C83205FF4B6000C8CFC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A770EE40206F373000513CFB /* Build configuration list for PBXNativeTarget "test" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A770EE3E206F373000513CFB /* Debug */,
-				A770EE3F206F373000513CFB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A770EE46206F378000513CFB /* Build configuration list for PBXNativeTarget "test2" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A770EE47206F378000513CFB /* Debug */,
-				A770EE48206F378000513CFB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A770EE55206F443F00513CFB /* Build configuration list for PBXNativeTarget "DodecaTracker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A770EE56206F443F00513CFB /* Debug */,
-				A770EE57206F443F00513CFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

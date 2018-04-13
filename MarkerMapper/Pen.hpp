@@ -13,17 +13,7 @@
 
 using namespace aruco;
 
-struct FramePenInfo{
-    cv::Mat rt_mat;
-    int id;
-
-    FramePenInfo(Mat mat, int idx){
-        rt_mat = mat;
-        id = idx;
-    }
-};
-
-typedef std::map<uint32_t, FramePenInfo> FramePenSet;
+typedef std::map<uint32_t, cv::Mat> FramePenSet;
 
 class Pen{
     FramePenSet frame_pen_set;
@@ -43,13 +33,13 @@ public:
         marker_map.readFromFile(marker_map_path);
     }
     
-    void addFrame(FramePenInfo frame_info, int frame_index){
-        frame_pen_set.insert(FramePenSet::value_type(frame_index, frame_info));
+    void addFrame(cv::Mat rt_mat, int frame_index){
+        frame_pen_set.insert(FramePenSet::value_type(frame_index, rt_mat));
     }
     
     cv::Mat getFrame(int index){
         cv::Mat mat;
-        frame_pen_set[index].rt_mat.copyTo(mat);
+        frame_pen_set[index].copyTo(mat);
         return mat;
     }
     
