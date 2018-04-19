@@ -48,7 +48,7 @@ public:
         Mat rt_mat;
         if(!camera->mmPoseEstimation(rt_mat, pen->marker_map)) return false;
         
-        rt_mat = camera->camera_pose*rt_mat.inv();
+        rt_mat = camera->camera_pose*rt_mat;
         pen->addFrame(rt_mat, frame_index);
         
         return true;

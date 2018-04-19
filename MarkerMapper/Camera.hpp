@@ -24,14 +24,16 @@
 //};
 
 class Camera{
-    aruco::CameraParameters camera_parameters;  // 相机参数
     cv::VideoCapture video_capture;   // 现实中的相机
     aruco::MarkerDetector marker_detector;   // marker检测器
     aruco::MarkerMapPoseTracker mm_pose_tracker;    // marker位置追踪
     
     std::map<uint32_t, aruco_mm::arucoMarkerSet> marker_set;   // 存储每帧检测到的marker
+    static int max_marker_set_size; // 允许的最大map大小
+    static int max_erase_num;          // 缩减到的map大小
     
 public:
+    aruco::CameraParameters camera_parameters;  // 相机参数
     cv::Mat current_frame;
     cv::Mat last_frame;
     int next_frame_index;
@@ -74,6 +76,21 @@ public:
         return video_capture.isOpened()&&camera_parameters.isValid()&&!camera_pose.empty();
     }
     
+    bool calibratePose(string axis_marker_map_file_path){
+        aruco::MarkerMapPoseTracker mmpt;
+        aruco::MarkerMap mm;
+        mm.readFromFile(axis_marker_map_file_path);
+        mmpt.setParams(camera_parameters, mm);
+        if(!mmpt.estimatePose(marker_set[next_frame_index-1])) return false;;
+        camera_pose = mmpt.getRTMatrix().inv();
+        return true;
+    }
+    
+    bool reset(){
+        video_capture.release();
+        return true;
+    }
+    
     bool grab(){
         return video_capture.grab();
     }
@@ -86,19 +103,32 @@ public:
     }
     
     // 检测marker，返回检测到的marker数量
-    int detectMarkers(){
+    int detectMarkers(bool is_ift=true){
         aruco_mm::arucoMarkerSet markers = marker_detector.detect(current_frame);
-        aruco_mm::arucoMarkerSet ift_markers = detectInterframeMarkers(markers);
-        markers.insert(markers.end(), ift_markers.begin(), ift_markers.end());
+        if(is_ift){
+            aruco_mm::arucoMarkerSet ift_markers = detectInterframeMarkers(markers);
+            markers.insert(markers.end(), ift_markers.begin(), ift_markers.end());
+        }
         marker_set.insert(pair<uint32_t, aruco_mm::arucoMarkerSet>(next_frame_index-1, markers));
+        
+        // 限制marker_set大小
+        if(marker_set.size()>max_marker_set_size){
+            while(marker_set.size()>max_erase_num){
+                marker_set.erase(marker_set.begin());
+            }
+        }
+        
         return marker_set[next_frame_index-1].size();
     }
     
     // 追踪markermap相对于相机的位置，返回是否检测成功
     bool mmPoseEstimation(Mat& rt_mat, const aruco::MarkerMap& mm){
+        mm_pose_tracker.reset();
         mm_pose_tracker.setParams(camera_parameters, mm);
+        assert(mm_pose_tracker.isValid());
         if(!mm_pose_tracker.estimatePose(marker_set[next_frame_index-1])) return false;
         rt_mat = mm_pose_tracker.getRTMatrix();
+        
         return true;
     }
     
@@ -149,7 +179,7 @@ private:
             Point2f p = ift_contours_vel[i];
             float dist2 = (p-mean_p).dot(p-mean_p);
             if(dist2>4.0*stddev_p.dot(stddev_p)){
-                if(ift_erase_idx.empty()||ift_erase_idx.back()!=i) ift_erase_idx.push_back(i/4);
+                if(ift_erase_idx.empty()||ift_erase_idx.back()!=i/4) ift_erase_idx.push_back(i/4);
             }
         }
         for(int i=ift_erase_idx.size()-1; i>=0; i--) ift_markers.erase(ift_markers.begin()+ift_erase_idx[i]);

@@ -146,8 +146,8 @@
 		A71CC4F72078F15400517017 /* libmarker_mapper.1.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DADEF72060F8FA00AD8DA1 /* libmarker_mapper.1.0.9.dylib */; };
 		A71CC4F82078F15400517017 /* libmarker_mapper.1.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DADEF72060F8FA00AD8DA1 /* libmarker_mapper.1.0.9.dylib */; };
 		A71CC4F92078F15400517017 /* libmarker_mapper.1.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DADEF72060F8FA00AD8DA1 /* libmarker_mapper.1.0.9.dylib */; };
+		A744A713208481830080D7C2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A744A712208481830080D7C2 /* main.cpp */; };
 		A7591B85207B124A006C0E94 /* libpcl_visualization.1.8.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A3468C206DFCD6008C3032 /* libpcl_visualization.1.8.1.dylib */; };
-		A7591B89207F394C006C0E94 /* dodtracmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7591B88207F394C006C0E94 /* dodtracmain.cpp */; };
 		A7684CB1205FFF8D000C8CFC /* libopencv_text.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C85205FFF8C000C8CFC /* libopencv_text.3.4.1.dylib */; };
 		A7684CB2205FFF8D000C8CFC /* libopencv_videostab.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C86205FFF8C000C8CFC /* libopencv_videostab.3.4.1.dylib */; };
 		A7684CB3205FFF8D000C8CFC /* libopencv_calib3d.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C87205FFF8C000C8CFC /* libopencv_calib3d.3.4.1.dylib */; };
@@ -246,7 +246,7 @@
 /* Begin PBXFileReference section */
 		A70A849A2078D9130015282A /* Tools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tools.hpp; sourceTree = "<group>"; };
 		A70A849B2078D9140015282A /* Tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tools.cpp; sourceTree = "<group>"; };
-		A7591B88207F394C006C0E94 /* dodtracmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dodtracmain.cpp; sourceTree = "<group>"; };
+		A744A712208481830080D7C2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A7684C7A205FF4B6000C8CFC /* MarkerMapper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MarkerMapper; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7684C85205FFF8C000C8CFC /* libopencv_text.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_text.3.4.1.dylib; path = ../../../../../../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_text.3.4.1.dylib; sourceTree = "<group>"; };
 		A7684C86205FFF8C000C8CFC /* libopencv_videostab.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_videostab.3.4.1.dylib; path = ../../../../../../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_videostab.3.4.1.dylib; sourceTree = "<group>"; };
@@ -887,7 +887,7 @@
 		A7684C7C205FF4B6000C8CFC /* MarkerMapper */ = {
 			isa = PBXGroup;
 			children = (
-				A7591B88207F394C006C0E94 /* dodtracmain.cpp */,
+				A744A712208481830080D7C2 /* main.cpp */,
 				A7684CDF20600738000C8CFC /* Libraries */,
 				A7DADEFC2061E92B00AD8DA1 /* stdafx.h */,
 				A7DADEFA2061E88200AD8DA1 /* Calibration.hpp */,
@@ -1408,12 +1408,12 @@
 			files = (
 				A7684EB92060AA9A000C8CFC /* calibrator.cpp in Sources */,
 				A7DADF062062516800AD8DA1 /* Camera.cpp in Sources */,
-				A7591B89207F394C006C0E94 /* dodtracmain.cpp in Sources */,
 				A7DADEFB2061E88200AD8DA1 /* Calibration.cpp in Sources */,
 				A7DADF0320624EC300AD8DA1 /* Pen.cpp in Sources */,
 				A70A849D2078DBFD0015282A /* Tools.cpp in Sources */,
 				A7EB45D2207661970048ADD7 /* DodecaTracker.cpp in Sources */,
 				A7852BED2079FDE50028361F /* Graphics.cpp in Sources */,
+				A744A713208481830080D7C2 /* main.cpp in Sources */,
 				A7DADF0920625B4D00AD8DA1 /* PenDetector.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

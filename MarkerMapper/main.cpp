@@ -17,6 +17,7 @@
 
 //#define CALIB_CAM
 //#define CALIB_DODECA
+#define REALTIME_TRACK
 
 // 相机标定变量
 float calibration_marker_size = 0.018;    //标定用marker的边长
@@ -58,9 +59,11 @@ int main(int argc, const char * argv[]) {
     calibrateDodecaWithImages(marker_map_path_base_name, dodecahedron_photo_path, 45, calibration_marker_size, camera_parameters, dictionary);
 #endif
     
+    string board_marker_map_path = "Calibration/output/board_marker_map.yml";
+    
     //可视化map
     //visualizeMap(marker_map_path_base_name+".yml");
-    
+#ifdef REALTIME_TRACK
     //追踪
     aruco::MarkerMap mmap;
     mmap.readFromFile(marker_map_path_base_name+".yml");
@@ -74,18 +77,22 @@ int main(int argc, const char * argv[]) {
     md.getParameters().setCornerRefinementMethod(aruco::CornerRefinementMethod::CORNER_LINES);
     
     string case_path = "Tracking/case1.mov";
-    cv::VideoCapture video_capture(case_path);
+    cv::VideoCapture video_capture(1);
+    //video_capture.set(CV_CAP_PROP_FPS, 30);
+    cout << video_capture.get(CV_CAP_PROP_FPS) << endl;
     
     Camera camera(camera_parameters_file_path, video_capture, cv::Mat::eye(4, 4, CV_32F), md);
     Pen pen(marker_map_path_base_name+".yml");
     PenDetector pd(&camera,&pen);
     
     while (camera.grab()) {
-        pd.detectOneFrame();
+        bool success = pd.detectOneFrame();
         Mat img;
         pd.camera->current_frame.copyTo(img);
-        pd.camera->drawDetectedMarkers(img);
-        pd.camera->draw3DAxis(img, dodeca_marker_size*2);
+        if (success) {
+            pd.camera->drawDetectedMarkers(img);
+            pd.camera->draw3DAxis(img, dodeca_marker_size*2);
+        }
         
 //        aruco::MarkerMapPoseTracker mmappt;
 //        mmappt.setParams(cp, mmap);
@@ -95,12 +102,11 @@ int main(int argc, const char * argv[]) {
 //        for(auto i:markers) i.draw(img);
         
         imshow("in", img);
-        waitKey();
-        while (char(cv::waitKey(0)) != 27)
-            ;  // wait for esc to be pressed
+        waitKey(20);
+        //while (char(cv::waitKey(0)) != 27)
+        //    ;  // wait for esc to be pressed
     }
-    
-    string pcd_path = "Tracking/case1.pcd";
+#endif
     
     return 0;
 }

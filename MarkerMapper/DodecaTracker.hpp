@@ -71,6 +71,7 @@ public:
         camera_mode = VIDEO_NONE;
     }
     
+    // --------- 初始化 --------
     bool initCamera(string camera_parameter_path, int video_capture_index=0, Mat camera_pose = cv::Mat::eye(4, 4, CV_32F)){
         fstream file;
         file.open(camera_parameter_path);
@@ -121,12 +122,28 @@ public:
         return pen_detector.isValid();
     }
     
+    //------- 相机位置标定 ---------
+    int detectMarkers(){
+        int frame_index = camera.retrieve();
+        return camera.detectMarkers(false);
+    }
+    bool calibrateCameraPose(string calib_marker_map_path){
+        return camera.calibratePose(calib_marker_map_path);
+    }
+    cv::Mat getCameraPose(){
+        assert(!camera.camera_pose.empty());
+        Mat pose;
+        camera.camera_pose.copyTo(pose);
+        return pose;
+    }
+    
+    //---------- 笔姿态检测 ---------
     // 等待下一帧
     bool grab(){
         return pen_detector.grabOneFrame();
     }
     
-    // 检测当前帧
+    // 检测当前帧中笔的位置
     bool detect(){
         return pen_detector.detectOneFrame();
     }
@@ -138,6 +155,11 @@ public:
     
     bool isValid(){
         return pen_detector.isValid();
+    }
+    
+    bool reset(){
+        if(!pen_detector.isValid()) return false;
+        return camera.reset();
     }
 };
 
