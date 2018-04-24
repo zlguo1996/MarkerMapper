@@ -15,9 +15,9 @@
 #include "Pen.hpp"
 #include "PenDetector.hpp"
 
-//#define CALIB_CAM
+#define CALIB_CAM
 //#define CALIB_DODECA
-#define REALTIME_TRACK
+//#define REALTIME_TRACK
 
 // 相机标定变量
 float calibration_marker_size = 0.018;    //标定用marker的边长
@@ -39,13 +39,13 @@ void visualizeMap(const string& map_path){
 }
 
 int main(int argc, const char * argv[]) {
-    string camera_parameters_file_path = "Calibration/output/macbook_camera_parameters.yml";
+    string camera_parameters_file_path = "Calibration/output/logitech_brio_camera_calibration_1080p.yml";
 #ifdef CALIB_CAM
     // 标定相机，并保存相机参数到文件（api学习：aruco/utils_calibration/aruco_calibration.cpp）
-    string calibration_video_path = "Calibration/input/macbook_camera_calibration.mov";
-    string calibration_photo_path = "Calibration/input/macbook_camera_calibration";
-    //calibrateCameraWithImages(cp_file_path, calibration_photo_path, 17, 1080, 720, calibration_marker_size);
-    calibrateCameraWithVideo(camera_parameters_file_path, calibration_video_path, 1080, 720, calibration_marker_size);
+    //string calibration_video_path = "Calibration/input/macbook_camera_calibration.mov";
+    string calibration_photo_path = "Calibration/input/logitech_brio_camera_calibration/1080p";
+    calibrateCameraWithImages(camera_parameters_file_path, calibration_photo_path, 42, 1920, 1080, calibration_marker_size);
+    //calibrateCameraWithVideo(camera_parameters_file_path, calibration_video_path, 1080, 720, calibration_marker_size);
 #endif
     
     // 读取相机参数文件
