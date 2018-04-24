@@ -59,6 +59,12 @@ public:
     void setVideoCapture(const VideoCapture& vc){
         video_capture = vc;
     }
+    void setVideoCaptureParameters(){
+        video_capture.set(CV_CAP_PROP_FOURCC,CV_FOURCC('M','J','P','G'));
+        video_capture.set(CAP_PROP_FRAME_WIDTH, 1920.0);　　//设置摄像头采集图像分辨率
+        video_capture.set(CAP_PROP_FRAME_HEIGHT, 1080.0);
+        video_capture.set(CAP_PROP_FPS, 60);
+    }
     void setVideoCapture(const int& vc){
         video_capture = cv::VideoCapture(vc);
     }

@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MarkerMapper/Camera.hpp"
-            timestampString = "545663873.3045599"
+            timestampString = "546227799.008876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "detectInterframeMarkers(aruco_mm::arucoMarkerSet&amp; detected_markers)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MarkerMapper/Camera.hpp"
-            timestampString = "545663873.304625"
+            timestampString = "546227799.008947"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "detectInterframeMarkers(aruco_mm::arucoMarkerSet&amp; detected_markers)"
             landmarkType = "7">
          </BreakpointContent>

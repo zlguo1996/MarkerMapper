@@ -44,7 +44,11 @@ private:
         md.getParameters().setCornerRefinementMethod(aruco::CornerRefinementMethod::CORNER_LINES);
         
         camera.setCameraParameter(camera_parameter_path);
-        if(camera_mode==VIDEO_LIVE) camera.setVideoCapture(video_capture_index);
+        if(camera_mode==VIDEO_LIVE) {
+            camera.setVideoCapture(video_capture_index);
+            // 注：限定相机！！！！！！！！！！
+            camera.setVideoCaptureParameters();
+        }
         else if(camera_mode==VIDEO_FILE) camera.setVideoCapture(video_file_path);
         else return false;
         camera.setCameraPose(camera_pose);
