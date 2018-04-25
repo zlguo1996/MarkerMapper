@@ -94,11 +94,11 @@ int main(int argc, const char * argv[]) {
     while (camera.grab()) {
         bool success = pd.detectOneFrame();
         Mat img;
-//        pd.camera->current_frame.copyTo(img);
-//        if (success) {
-//            pd.camera->drawDetectedMarkers(img);
-//            pd.camera->draw3DAxis(img, dodeca_marker_size*2);
-//        }
+        pd.camera->current_frame.copyTo(img);
+        if (success) {
+            pd.camera->drawDetectedMarkers(img);
+            pd.camera->draw3DAxis(img, dodeca_marker_size*2);
+        }
         
 //        aruco::MarkerMapPoseTracker mmappt;
 //        mmappt.setParams(cp, mmap);
