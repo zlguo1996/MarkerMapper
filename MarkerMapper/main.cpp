@@ -39,12 +39,12 @@ void visualizeMap(const string& map_path){
 }
 
 int main(int argc, const char * argv[]) {
-    string camera_parameters_file_path = "Calibration/output/camera/logitech_brio_camera_calibration_1080p.yml";
+    string camera_parameters_file_path = "Calibration/output/camera/logitech_brio_camera_calibration_720p.yml";
 #ifdef CALIB_CAM
     // 标定相机，并保存相机参数到文件（api学习：aruco/utils_calibration/aruco_calibration.cpp）
     //string calibration_video_path = "Calibration/input/macbook_camera_calibration.mov";
-    string calibration_photo_path = "Calibration/input/logitech_brio_camera_calibration/1080p";
-    calibrateCameraWithImages(camera_parameters_file_path, calibration_photo_path, 42, 1920, 1080, calibration_marker_size);
+    string calibration_photo_path = "Calibration/input/logitech_brio_camera_calibration/720p";
+    calibrateCameraWithImages(camera_parameters_file_path, calibration_photo_path, 32, 1080, 720, calibration_marker_size);
     //calibrateCameraWithVideo(camera_parameters_file_path, calibration_video_path, 1080, 720, calibration_marker_size);
 #endif
     
@@ -82,18 +82,23 @@ int main(int argc, const char * argv[]) {
     cout << video_capture.get(CV_CAP_PROP_FPS) << endl;
     
     Camera camera(camera_parameters_file_path, video_capture, cv::Mat::eye(4, 4, CV_32F), md);
-    camera.setVideoCaptureParameters();
+    camera.setVideoCaptureParameters720p();
     Pen pen(marker_map_path_base_name+".yml");
     PenDetector pd(&camera,&pen);
+    
+    // 计时
+    time_t time1 = clock(), time2;
+    uint count = 1;
+    float fps = 0.0f;
     
     while (camera.grab()) {
         bool success = pd.detectOneFrame();
         Mat img;
-        pd.camera->current_frame.copyTo(img);
-        if (success) {
-            pd.camera->drawDetectedMarkers(img);
-            pd.camera->draw3DAxis(img, dodeca_marker_size*2);
-        }
+//        pd.camera->current_frame.copyTo(img);
+//        if (success) {
+//            pd.camera->drawDetectedMarkers(img);
+//            pd.camera->draw3DAxis(img, dodeca_marker_size*2);
+//        }
         
 //        aruco::MarkerMapPoseTracker mmappt;
 //        mmappt.setParams(cp, mmap);
@@ -102,7 +107,17 @@ int main(int argc, const char * argv[]) {
 //        }
 //        for(auto i:markers) i.draw(img);
         
-        imshow("in", img);
+        //imshow("in", img);
+        
+        // 计算fps
+        if(count%10==0){
+            time2 = clock();
+            fps = 1.0f/((float)(time2-time1)/CLOCKS_PER_SEC/10.0f);
+            time1 = time2;
+        }
+        cout << "fps: " << fps << endl;
+        count++;
+        
         char c = waitKey(20);
         if(c==27) break;
     }
