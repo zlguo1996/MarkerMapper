@@ -66,7 +66,7 @@ public:
     }
     void setVideoCaptureParameters720p(){
         video_capture.set(CV_CAP_PROP_FOURCC,CV_FOURCC('M','J','P','G'));
-        video_capture.set(CAP_PROP_FRAME_WIDTH, 1080.0);　　//设置摄像头采集图像分辨率
+        video_capture.set(CAP_PROP_FRAME_WIDTH, 1280.0);　　//设置摄像头采集图像分辨率
         video_capture.set(CAP_PROP_FRAME_HEIGHT, 720.0);
     }
     void setVideoCapture(const int& vc){
