@@ -202,6 +202,62 @@ dependencies: \
   /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Camera.hpp \
   /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/PenDetector.hpp \
   /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Calibration.hpp \
+  /usr/local/include/ceres/ceres.h \
+  /usr/local/include/ceres/autodiff_cost_function.h \
+  /usr/local/include/ceres/internal/autodiff.h \
+  /usr/local/include/ceres/jet.h /usr/local/include/ceres/fpclassify.h \
+  /usr/local/include/ceres/internal/port.h \
+  /usr/local/include/ceres/internal/config.h \
+  /usr/local/include/ceres/internal/eigen.h \
+  /usr/local/include/ceres/internal/fixed_array.h \
+  /usr/local/include/ceres/internal/macros.h \
+  /usr/local/include/ceres/internal/manual_constructor.h \
+  /usr/local/include/glog/logging.h /usr/local/include/gflags/gflags.h \
+  /usr/local/include/gflags/gflags_declare.h \
+  /usr/local/include/gflags/gflags_gflags.h \
+  /usr/local/include/glog/log_severity.h \
+  /usr/local/include/glog/vlog_is_on.h \
+  /usr/local/include/ceres/internal/variadic_evaluate.h \
+  /usr/local/include/ceres/types.h \
+  /usr/local/include/ceres/internal/disable_warnings.h \
+  /usr/local/include/ceres/internal/reenable_warnings.h \
+  /usr/local/include/ceres/internal/scoped_ptr.h \
+  /usr/local/include/ceres/sized_cost_function.h \
+  /usr/local/include/ceres/cost_function.h \
+  /usr/local/include/ceres/autodiff_local_parameterization.h \
+  /usr/local/include/ceres/local_parameterization.h \
+  /usr/local/include/ceres/cost_function_to_functor.h \
+  /usr/local/include/ceres/dynamic_cost_function_to_functor.h \
+  /usr/local/include/ceres/dynamic_cost_function.h \
+  /usr/local/include/ceres/covariance.h \
+  /usr/local/include/ceres/crs_matrix.h \
+  /usr/local/include/ceres/dynamic_autodiff_cost_function.h \
+  /usr/local/include/ceres/dynamic_numeric_diff_cost_function.h \
+  /usr/local/include/ceres/internal/numeric_diff.h \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/Dense \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/Eigenvalues \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Eigenvalues/./HessenbergDecomposition.h \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+  /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /usr/local/include/ceres/numeric_diff_options.h \
+  /usr/local/include/ceres/gradient_problem.h \
+  /usr/local/include/ceres/gradient_problem_solver.h \
+  /usr/local/include/ceres/iteration_callback.h \
+  /usr/local/include/ceres/loss_function.h \
+  /usr/local/include/ceres/numeric_diff_cost_function.h \
+  /usr/local/include/ceres/ordered_groups.h \
+  /usr/local/include/ceres/problem.h /usr/local/include/ceres/solver.h \
+  /usr/local/include/ceres/version.h /usr/local/include/ceres/rotation.h \
   /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Libraries/my_lib/Tools.hpp \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/aruco.hpp \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/aruco/dictionary.hpp \

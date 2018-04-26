@@ -146,7 +146,6 @@
 		A71CC4F72078F15400517017 /* libmarker_mapper.1.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DADEF72060F8FA00AD8DA1 /* libmarker_mapper.1.0.9.dylib */; };
 		A71CC4F82078F15400517017 /* libmarker_mapper.1.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DADEF72060F8FA00AD8DA1 /* libmarker_mapper.1.0.9.dylib */; };
 		A71CC4F92078F15400517017 /* libmarker_mapper.1.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DADEF72060F8FA00AD8DA1 /* libmarker_mapper.1.0.9.dylib */; };
-		A744A713208481830080D7C2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A744A712208481830080D7C2 /* main.cpp */; };
 		A7591B85207B124A006C0E94 /* libpcl_visualization.1.8.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A3468C206DFCD6008C3032 /* libpcl_visualization.1.8.1.dylib */; };
 		A7684CB1205FFF8D000C8CFC /* libopencv_text.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C85205FFF8C000C8CFC /* libopencv_text.3.4.1.dylib */; };
 		A7684CB2205FFF8D000C8CFC /* libopencv_videostab.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684C86205FFF8C000C8CFC /* libopencv_videostab.3.4.1.dylib */; };
@@ -205,6 +204,7 @@
 		A768A1C72091D01F007DF719 /* libpcl_io.1.8.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A34694206DFCD6008C3032 /* libpcl_io.1.8.1.dylib */; };
 		A768A1C82091D0AB007DF719 /* libboost_system-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7852BE52079FA480028361F /* libboost_system-mt.dylib */; };
 		A768A1CA2091D0AB007DF719 /* libboost_system.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A768A1C92091D0AB007DF719 /* libboost_system.dylib */; };
+		A768A1CC2091E4F7007DF719 /* dodtracmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A768A1CB2091E4F7007DF719 /* dodtracmain.cpp */; };
 		A76E4F982079B15900947465 /* Tools.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A70A849A2078D9130015282A /* Tools.hpp */; };
 		A76E4F992079B15900947465 /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A70A849B2078D9140015282A /* Tools.cpp */; };
 		A76E4F9A2079B15900947465 /* sgl.h in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEFE2062015B00AD8DA1 /* sgl.h */; };
@@ -255,7 +255,6 @@
 /* Begin PBXFileReference section */
 		A70A849A2078D9130015282A /* Tools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tools.hpp; sourceTree = "<group>"; };
 		A70A849B2078D9140015282A /* Tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tools.cpp; sourceTree = "<group>"; };
-		A744A712208481830080D7C2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A7684C7A205FF4B6000C8CFC /* MarkerMapper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MarkerMapper; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7684C85205FFF8C000C8CFC /* libopencv_text.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_text.3.4.1.dylib; path = ../../../../../../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_text.3.4.1.dylib; sourceTree = "<group>"; };
 		A7684C86205FFF8C000C8CFC /* libopencv_videostab.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_videostab.3.4.1.dylib; path = ../../../../../../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_videostab.3.4.1.dylib; sourceTree = "<group>"; };
@@ -309,6 +308,7 @@
 		A768A1BF20916EB6007DF719 /* libceres.1.12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libceres.1.12.0.dylib; path = "../../../../../../../../../usr/local/Cellar/ceres-solver/1.12.0_4/lib/libceres.1.12.0.dylib"; sourceTree = "<group>"; };
 		A768A1C120916ED7007DF719 /* libglog.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglog.0.dylib; path = ../../../../../../../../../usr/local/Cellar/glog/0.3.4_1/lib/libglog.0.dylib; sourceTree = "<group>"; };
 		A768A1C92091D0AB007DF719 /* libboost_system.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_system.dylib; path = ../../../../../../../../../usr/local/Cellar/boost/1.66.0/lib/libboost_system.dylib; sourceTree = "<group>"; };
+		A768A1CB2091E4F7007DF719 /* dodtracmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dodtracmain.cpp; sourceTree = "<group>"; };
 		A770EE5C206F45DF00513CFB /* DodecaTrackerPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DodecaTrackerPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A770EE5E206F45DF00513CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A770EE62206F463000513CFB /* DodecaTrackerPlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DodecaTrackerPlugin.cpp; sourceTree = "<group>"; };
@@ -908,7 +908,7 @@
 		A7684C7C205FF4B6000C8CFC /* MarkerMapper */ = {
 			isa = PBXGroup;
 			children = (
-				A744A712208481830080D7C2 /* main.cpp */,
+				A768A1CB2091E4F7007DF719 /* dodtracmain.cpp */,
 				A7684CDF20600738000C8CFC /* Libraries */,
 				A7DADEFC2061E92B00AD8DA1 /* stdafx.h */,
 				A7DADEFA2061E88200AD8DA1 /* Calibration.hpp */,
@@ -1437,7 +1437,7 @@
 				A70A849D2078DBFD0015282A /* Tools.cpp in Sources */,
 				A7EB45D2207661970048ADD7 /* DodecaTracker.cpp in Sources */,
 				A7852BED2079FDE50028361F /* Graphics.cpp in Sources */,
-				A744A713208481830080D7C2 /* main.cpp in Sources */,
+				A768A1CC2091E4F7007DF719 /* dodtracmain.cpp in Sources */,
 				A7DADF0920625B4D00AD8DA1 /* PenDetector.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,15 +20,21 @@
 #include "Tools.hpp"
 
 int main(int argc, const char * argv[]) {
-    string camera_parameters_file_path = "Calibration/output/high_fps_camera_parameters.yml";
+    string camera_parameters_file_path = "Calibration/output/camera/logitech_brio_camera_calibration_720p.yml";
     
-    string marker_map_path = "Calibration/output/dodecahedron_marker_map.yml";
+    string marker_map_path = "Calibration/output/dodeca/dodecahedron_marker_map.yml";
     
-    string case_path = "Tracking/high_fps_camera/case4.mov";
+    string case_path = "Tracking/brio_camera/case1.mp4";
+    
+    string pentip_parameters_file_path = "Calibration/output/dodeca/pentip_calibration.yml";
+    string dodeca_center_parameters_file_path = "Calibration/output/dodeca/dodeca_center_calibration.yml";
+    
     
     DodecaTracker dt;
     dt.initCamera(camera_parameters_file_path, case_path);
     dt.initPen(marker_map_path);
+    dt.setPenTip(pentip_parameters_file_path);
+    dt.setDodecaCenter(dodeca_center_parameters_file_path);
     dt.initPenDetector();
     
     pcl::PointCloud<pcl::PointXYZ> cloud;
@@ -43,11 +49,13 @@ int main(int argc, const char * argv[]) {
             Mat m = dt.getPose();
             Mat rvec, tvec;
             getRvecTvecFromViewMatrix(m, rvec, tvec);
-            cout << tvec << endl;
             
-            cloud.points[pcd_id].x = tvec.at<float>(0, 0)*100.0f;
-            cloud.points[pcd_id].y = tvec.at<float>(1, 0)*100.0f;
-            cloud.points[pcd_id].z = tvec.at<float>(2, 0)*100.0f;
+            Mat ptvec = dt.getPenTipPosition();
+            cout << ptvec << endl;
+            
+            cloud.points[pcd_id].x = ptvec.at<float>(0, 0)*100.0f;
+            cloud.points[pcd_id].y = ptvec.at<float>(1, 0)*100.0f;
+            cloud.points[pcd_id].z = ptvec.at<float>(2, 0)*100.0f;
             pcd_id++;
         }
 //        Mat img;
@@ -61,7 +69,7 @@ int main(int argc, const char * argv[]) {
 //            ;  // wait for esc to be pressed
     }
     
-    string pcd_path = "Tracking/high_fps_camera/case4_track.pcd";
+    string pcd_path = "Tracking/brio_camera/case1_track.pcd";
     pcl::io::savePCDFileASCII (pcd_path, cloud);
     
     return 0;
