@@ -72,15 +72,16 @@ int main(int argc, const char * argv[]) {
     cp.readFromXMLFile(marker_map_path_base_name+"-cam.yml");
     assert(cp.isValid());
   
-    string pentip_parameters_file_path = "Calibration/output/dodeca/pentip_calibration.yml";
+    string pentip_parameters_file_path = "Calibration/output/dodeca/dodeca_center_calibration.yml";
 #ifdef CALIB_PENTIP
-    string pentip_photo_path = "Calibration/input/pen_calibration/pentip_calibration";
+    string pentip_photo_path = "Calibration/input/pen_calibration/dodeca_center_calibration";
     calibratePentip(pentip_parameters_file_path, pentip_photo_path, cp, dictionary, mmap);
 #endif
     
     //test
     Pen pen(marker_map_path_base_name+".yml");
-    pen.setPenTip(pentip_parameters_file_path);
+    pen.setDodecaCenter(pentip_parameters_file_path);
+    cout << pen.dodeca_center_position << endl;
     
 #ifdef REALTIME_TRACK
     //追踪
