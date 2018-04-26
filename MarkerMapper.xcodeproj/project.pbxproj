@@ -196,6 +196,8 @@
 		A7684EBB2060AACF000C8CFC /* libaruco.3.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */; };
 		A7684EBC2060AACF000C8CFC /* libaruco.3.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */; };
 		A7684EBD2060AACF000C8CFC /* libaruco.3.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */; };
+		A768A1C020916EB6007DF719 /* libceres.1.12.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A768A1BF20916EB6007DF719 /* libceres.1.12.0.dylib */; };
+		A768A1C220916ED7007DF719 /* libglog.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A768A1C120916ED7007DF719 /* libglog.0.dylib */; };
 		A76E4F982079B15900947465 /* Tools.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A70A849A2078D9130015282A /* Tools.hpp */; };
 		A76E4F992079B15900947465 /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A70A849B2078D9140015282A /* Tools.cpp */; };
 		A76E4F9A2079B15900947465 /* sgl.h in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEFE2062015B00AD8DA1 /* sgl.h */; };
@@ -297,6 +299,8 @@
 		A7684EB72060AA9A000C8CFC /* calibrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = calibrator.cpp; sourceTree = "<group>"; };
 		A7684EB82060AA9A000C8CFC /* calibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calibrator.h; sourceTree = "<group>"; };
 		A7684EBA2060AAA8000C8CFC /* levmarq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = levmarq.h; sourceTree = "<group>"; };
+		A768A1BF20916EB6007DF719 /* libceres.1.12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libceres.1.12.0.dylib; path = "../../../../../../../../../usr/local/Cellar/ceres-solver/1.12.0_4/lib/libceres.1.12.0.dylib"; sourceTree = "<group>"; };
+		A768A1C120916ED7007DF719 /* libglog.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglog.0.dylib; path = ../../../../../../../../../usr/local/Cellar/glog/0.3.4_1/lib/libglog.0.dylib; sourceTree = "<group>"; };
 		A770EE5C206F45DF00513CFB /* DodecaTrackerPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DodecaTrackerPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A770EE5E206F45DF00513CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A770EE62206F463000513CFB /* DodecaTrackerPlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DodecaTrackerPlugin.cpp; sourceTree = "<group>"; };
@@ -646,6 +650,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A768A1C220916ED7007DF719 /* libglog.0.dylib in Frameworks */,
+				A768A1C020916EB6007DF719 /* libceres.1.12.0.dylib in Frameworks */,
 				A7591B85207B124A006C0E94 /* libpcl_visualization.1.8.1.dylib in Frameworks */,
 				A7852BF4207A03EC0028361F /* OpenGL.framework in Frameworks */,
 				A7852BF32079FFE00028361F /* libGLEW.2.1.0.dylib in Frameworks */,
@@ -907,6 +913,8 @@
 		A7684C84205FFF8C000C8CFC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A768A1C120916ED7007DF719 /* libglog.0.dylib */,
+				A768A1BF20916EB6007DF719 /* libceres.1.12.0.dylib */,
 				A7852BF22079FFE00028361F /* libGLEW.2.1.0.dylib */,
 				A7852BF02079FFCC0028361F /* libglfw.3.2.dylib */,
 				A7852BE52079FA480028361F /* libboost_system-mt.dylib */,
@@ -1503,12 +1511,16 @@
 					/usr/local/Cellar/eigen/3.3.4/include/eigen3,
 					/usr/local/include/marker_mapper,
 					"/usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8",
+					/usr/local/Cellar/glog/0.3.4_1/include,
+					"/usr/local/Cellar/ceres-solver/1.12.0_4/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/opencv/3.4.1_2/lib,
 					/usr/local/lib,
 					"$(PROJECT_DIR)/MarkerMapper/Libraries/aruco",
 					/usr/local/Cellar/pcl/1.8.1_2/lib,
+					"/usr/local/Cellar/ceres-solver/1.12.0_4/lib",
+					/usr/local/Cellar/glog/0.3.4_1/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1566,12 +1578,16 @@
 					/usr/local/Cellar/eigen/3.3.4/include/eigen3,
 					/usr/local/include/marker_mapper,
 					"/usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8",
+					/usr/local/Cellar/glog/0.3.4_1/include,
+					"/usr/local/Cellar/ceres-solver/1.12.0_4/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/opencv/3.4.1_2/lib,
 					/usr/local/lib,
 					"$(PROJECT_DIR)/MarkerMapper/Libraries/aruco",
 					/usr/local/Cellar/pcl/1.8.1_2/lib,
+					"/usr/local/Cellar/ceres-solver/1.12.0_4/lib",
+					/usr/local/Cellar/glog/0.3.4_1/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;

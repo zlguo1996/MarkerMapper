@@ -17,7 +17,7 @@
 
 //#define CALIB_CAM
 //#define CALIB_DODECA
-#define REALTIME_TRACK
+//#define REALTIME_TRACK
 
 // 相机标定变量
 float calibration_marker_size = 0.018;    //标定用marker的边长

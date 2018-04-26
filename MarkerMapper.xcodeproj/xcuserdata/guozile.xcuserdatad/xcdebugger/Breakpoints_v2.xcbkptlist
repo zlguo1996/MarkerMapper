@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MarkerMapper/Calibration.cpp"
-            timestampString = "543394942.6310149"
+            timestampString = "546402013.580062"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "calibrateDodecaWithImages(const string&amp; file_path_base_name, const string&amp; calibration_photo_path, int image_num, float calibration_marker_size, const aruco::CameraParameters&amp; camera_parameters, const aruco::Dictionary::DICT_TYPES&amp; dictionary)"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "calibrateDodecaWithImages(const string&amp; file_path_base_name, const string&amp; calibration_photo_path, float calibration_marker_size, const aruco::CameraParameters&amp; camera_parameters, const aruco::Dictionary::DICT_TYPES&amp; dictionary)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MarkerMapper/Calibration.cpp"
-            timestampString = "543394942.631097"
+            timestampString = "546402013.580196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "calibrateDodecaWithImages(const string&amp; file_path_base_name, const string&amp; calibration_photo_path, int image_num, float calibration_marker_size, const aruco::CameraParameters&amp; camera_parameters, const aruco::Dictionary::DICT_TYPES&amp; dictionary)"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "calibrateDodecaWithImages(const string&amp; file_path_base_name, const string&amp; calibration_photo_path, float calibration_marker_size, const aruco::CameraParameters&amp; camera_parameters, const aruco::Dictionary::DICT_TYPES&amp; dictionary)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MarkerMapper/Camera.hpp"
-            timestampString = "546318982.523092"
+            timestampString = "546402013.580268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "detectInterframeMarkers(aruco_mm::arucoMarkerSet&amp; detected_markers)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MarkerMapper/Camera.hpp"
-            timestampString = "546318982.523155"
+            timestampString = "546402013.580318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "detectInterframeMarkers(aruco_mm::arucoMarkerSet&amp; detected_markers)"
             landmarkType = "7">
          </BreakpointContent>

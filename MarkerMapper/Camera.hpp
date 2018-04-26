@@ -80,6 +80,7 @@ public:
     }
     void setMarkerDetector(const aruco::MarkerDetector& md){
         marker_detector.setParameters(md.getParameters());
+        //marker_detector.getParameters().setCornerRefinementMethod(aruco::CornerRefinementMethod::CORNER_LINES);
     }
     
     bool isValid(){
