@@ -16,6 +16,10 @@
 #include <ceres/rotation.h>
 #include <glog/logging.h>
 
+#include <pcl/point_cloud.h>
+#include <pcl/point_types.h>
+#include <pcl/io/pcd_io.h>
+
 // ----------- tools -------------
 // 读取文件夹中以自然数命名的图片
 bool readImages(const string& photo_path, vector<Mat>& images);
@@ -34,7 +38,7 @@ typedef double DOF_6[6];    // r1, r2, r3, t1, t2, t3
 struct ReprojectionErrorPtClb{
     ReprojectionErrorPtClb(const DOF_6 const my_pose1, const DOF_6 const my_pose2){
         memcpy(pose1, my_pose1, 6*sizeof(double));
-        memcpy(pose1, my_pose2, 6*sizeof(double));
+        memcpy(pose2, my_pose2, 6*sizeof(double));
     }
     
     template <typename T>
@@ -72,5 +76,5 @@ struct ReprojectionErrorPtClb{
     DOF_6 pose1, pose2;
 };
 void calibratePentip(const string& file_path, const string& calibration_photo_path, const aruco::CameraParameters& camera_parameters, const aruco::Dictionary::DICT_TYPES& dictionary, const aruco::MarkerMap& marker_map);
-
+void visualizePoints(const string& file_path, const double* points, int point_num);
 #endif /* Calibration_hpp */

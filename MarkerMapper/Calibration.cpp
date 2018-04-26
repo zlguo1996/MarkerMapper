@@ -132,10 +132,11 @@ void calibratePentip(const string& file_path, const string& calibration_photo_pa
     assert(mmpt.isValid());
     
     double caliDofs[6*images.size()];
+    int cali_pNum = 0;
     for(int i=0; i<images.size(); i++){
         // 检测marker
         aruco_mm::arucoMarkerSet marker_set = md.detect(images[i]);
-        assert(marker_set.size()>=2);
+        if (marker_set.size()<2) continue;
 
         // 得到相机姿态
         mmpt.estimatePose(marker_set);
@@ -144,19 +145,23 @@ void calibratePentip(const string& file_path, const string& calibration_photo_pa
         DOF_6 dof;
         assert(rvec.type()==CV_32F && tvec.type()==CV_32F);
         assert(rvec.rows==1 && tvec.rows==1);
-        dof[0] = rvec.at<float>(0, 0);
-        dof[1] = rvec.at<float>(0, 1);
-        dof[2] = rvec.at<float>(0, 2);
-        dof[3] = tvec.at<float>(0, 0);
-        dof[4] = tvec.at<float>(0, 1);
-        dof[5] = tvec.at<float>(0, 2);
-        memcpy(&caliDofs[6*i], dof, 6*sizeof(double));
+        dof[0] = (double)rvec.at<float>(0, 0);
+        dof[1] = (double)rvec.at<float>(0, 1);
+        dof[2] = (double)rvec.at<float>(0, 2);
+        dof[3] = (double)tvec.at<float>(0, 0);
+        dof[4] = (double)tvec.at<float>(0, 1);
+        dof[5] = (double)tvec.at<float>(0, 2);
+        memcpy(&caliDofs[6*cali_pNum], dof, 6*sizeof(double));
+        cali_pNum++;
     }
     
-    double ptPosition[3] = {0.05, 0.05, 0.05};
+    // 可视化所有点
+    //visualizePoints("/Users/guozile/Desktop/未命名文件夹/test.pcd", caliDofs, images.size());
+    
+    double ptPosition[3] = {0.01, 0.01, 0.01};
     ceres::Problem problem;
-    for (int i=0; i<images.size()-1; i++) {
-        for (int j=i; j<images.size(); j++){
+    for (int i=0; i<cali_pNum-1; i++) {
+        for (int j=i; j<cali_pNum; j++){
             ceres::CostFunction* cost_function = ReprojectionErrorPtClb::Create(&caliDofs[i*6], &caliDofs[j*6]);
             problem.AddResidualBlock(cost_function, NULL, ptPosition);
         }
@@ -170,4 +175,27 @@ void calibratePentip(const string& file_path, const string& calibration_photo_pa
     ceres::Solver::Summary summary;
     ceres::Solve(options, &problem, &summary);
     //std::cout << summary.FullReport() << "\n";
+    
+    FileStorage fs(file_path, FileStorage::WRITE);
+    Mat pentip_pos = Mat(3, 1, CV_32F);
+    pentip_pos.at<float>(0, 0) = ptPosition[0];
+    pentip_pos.at<float>(1, 0) = ptPosition[1];
+    pentip_pos.at<float>(2, 0) = ptPosition[2];
+    fs << "pentip_position" << pentip_pos;
+    fs.release();
 }
+
+void visualizePoints(const string& file_path, const double* points, int point_num){
+    pcl::PointCloud<pcl::PointXYZ> cloud;
+    cloud.width    = 100;
+    cloud.height   = 1;
+    cloud.is_dense = false;
+    cloud.points.resize (cloud.width * cloud.height);
+    for(int i=0; i<point_num; i++){
+        cloud.points[i].x = points[i*6+3]*100.0f;
+        cloud.points[i].y = points[i*6+4]*100.0f;
+        cloud.points[i].z = points[i*6+5]*100.0f;
+    }
+    pcl::io::savePCDFileASCII (file_path, cloud);
+}
+

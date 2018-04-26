@@ -17,6 +17,7 @@
 
 //#define CALIB_CAM
 //#define CALIB_DODECA
+#define CALIB_PENTIP
 //#define REALTIME_TRACK
 
 // 相机标定变量
@@ -43,8 +44,8 @@ int main(int argc, const char * argv[]) {
 #ifdef CALIB_CAM
     // 标定相机，并保存相机参数到文件（api学习：aruco/utils_calibration/aruco_calibration.cpp）
     //string calibration_video_path = "Calibration/input/macbook_camera_calibration.mov";
-    string calibration_photo_path = "Calibration/input/logitech_brio_camera_calibration/720p";
-    calibrateCameraWithImages(camera_parameters_file_path, calibration_photo_path, 32, 1080, 720, calibration_marker_size);
+    string calibration_photo_path = "Calibration/input/camera_calibration/logitech_brio_camera_calibration/720p";
+    calibrateCameraWithImages(camera_parameters_file_path, calibration_photo_path, 1080, 720, calibration_marker_size);
     //calibrateCameraWithVideo(camera_parameters_file_path, calibration_video_path, 1080, 720, calibration_marker_size);
 #endif
     
@@ -55,23 +56,34 @@ int main(int argc, const char * argv[]) {
     string marker_map_path_base_name = "Calibration/output/dodeca/dodecahedron_marker_map";
 #ifdef CALIB_DODECA
     // 创建map（api学习：markermapper/utils/mapper_from_images.cpp）
-    string dodecahedron_photo_path = "Calibration/input/dodecahedron_calibration";
-    calibrateDodecaWithImages(marker_map_path_base_name, dodecahedron_photo_path, 45, calibration_marker_size, camera_parameters, dictionary);
+    string dodecahedron_photo_path = "Calibration/input/pen_calibration/dodecahedron_calibration";
+    calibrateDodecaWithImages(marker_map_path_base_name, dodecahedron_photo_path, calibration_marker_size, camera_parameters, dictionary);
 #endif
     
     string board_marker_map_path = "Calibration/output/board_marker_map.yml";
     
     //可视化map
     //visualizeMap(marker_map_path_base_name+".yml");
-#ifdef REALTIME_TRACK
-    //追踪
+
     aruco::MarkerMap mmap;
     mmap.readFromFile(marker_map_path_base_name+".yml");
     assert(mmap.isExpressedInMeters());
     aruco::CameraParameters cp;
     cp.readFromXMLFile(marker_map_path_base_name+"-cam.yml");
     assert(cp.isValid());
+  
+    string pentip_parameters_file_path = "Calibration/output/dodeca/pentip_calibration.yml";
+#ifdef CALIB_PENTIP
+    string pentip_photo_path = "Calibration/input/pen_calibration/pentip_calibration";
+    calibratePentip(pentip_parameters_file_path, pentip_photo_path, cp, dictionary, mmap);
+#endif
     
+    //test
+    Pen pen(marker_map_path_base_name+".yml");
+    pen.setPenTip(pentip_parameters_file_path);
+    
+#ifdef REALTIME_TRACK
+    //追踪
     aruco::MarkerDetector md;
     md.setDictionary(dictionary);
     md.getParameters().setCornerRefinementMethod(aruco::CornerRefinementMethod::CORNER_LINES);

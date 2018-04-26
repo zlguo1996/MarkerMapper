@@ -22,6 +22,7 @@ class Pen{
     
 public:
     MarkerMap marker_map;   // 存储标定的正十二面体位置
+    Mat pentip_position;    // 存储笔尖的位置(3*1 float）
     
     Pen(){
     }
@@ -32,6 +33,12 @@ public:
     
     void setMarkerMap(const string& marker_map_path){
         marker_map.readFromFile(marker_map_path);
+    }
+    
+    void setPenTip(const string& pentip_position_path){
+        FileStorage fs(pentip_position_path, FileStorage::READ);
+        fs["pentip_position"] >> pentip_position;
+        fs.release();
     }
     
     void addFrame(cv::Mat rt_mat, int frame_index){

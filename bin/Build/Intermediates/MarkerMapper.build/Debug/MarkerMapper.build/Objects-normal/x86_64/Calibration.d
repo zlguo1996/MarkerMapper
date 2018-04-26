@@ -356,4 +356,55 @@ dependencies: \
   /usr/local/include/ceres/numeric_diff_cost_function.h \
   /usr/local/include/ceres/ordered_groups.h \
   /usr/local/include/ceres/problem.h /usr/local/include/ceres/solver.h \
-  /usr/local/include/ceres/version.h /usr/local/include/ceres/rotation.h
+  /usr/local/include/ceres/version.h /usr/local/include/ceres/rotation.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/point_cloud.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/point_types.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/register_point_struct.h \
+  /usr/local/include/boost/mpl/contains.hpp \
+  /usr/local/include/boost/mpl/contains_fwd.hpp \
+  /usr/local/include/boost/mpl/sequence_tag.hpp \
+  /usr/local/include/boost/mpl/sequence_tag_fwd.hpp \
+  /usr/local/include/boost/mpl/aux_/has_begin.hpp \
+  /usr/local/include/boost/mpl/aux_/contains_impl.hpp \
+  /usr/local/include/boost/mpl/begin_end.hpp \
+  /usr/local/include/boost/mpl/aux_/begin_end_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/traits_lambda_spec.hpp \
+  /usr/local/include/boost/mpl/find.hpp \
+  /usr/local/include/boost/mpl/find_if.hpp \
+  /usr/local/include/boost/mpl/aux_/find_if_pred.hpp \
+  /usr/local/include/boost/mpl/aux_/iter_apply.hpp \
+  /usr/local/include/boost/mpl/apply.hpp \
+  /usr/local/include/boost/mpl/deref.hpp \
+  /usr/local/include/boost/mpl/aux_/msvc_type.hpp \
+  /usr/local/include/boost/mpl/arg.hpp \
+  /usr/local/include/boost/mpl/iter_fold_if.hpp \
+  /usr/local/include/boost/mpl/logical.hpp \
+  /usr/local/include/boost/mpl/pair.hpp \
+  /usr/local/include/boost/mpl/aux_/iter_fold_if_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/include_preprocessed.hpp \
+  /usr/local/include/boost/preprocessor/cat.hpp \
+  /usr/local/include/boost/preprocessor/stringize.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_if_impl.hpp \
+  /usr/local/include/boost/mpl/same_as.hpp \
+  /usr/local/include/boost/mpl/aux_/lambda_spec.hpp \
+  /usr/local/include/boost/mpl/fold.hpp \
+  /usr/local/include/boost/mpl/O1_size.hpp \
+  /usr/local/include/boost/mpl/aux_/O1_size_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/has_size.hpp \
+  /usr/local/include/boost/mpl/aux_/fold_impl.hpp \
+  /usr/local/include/boost/mpl/aux_/preprocessed/gcc/fold_impl.hpp \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/io/pcd_io.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/io/file_io.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/common/io.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/pcl_base.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/conversions.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/common/impl/io.hpp \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/common/concatenate.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/common/copy_point.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/common/impl/copy_point.hpp \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/io/boost.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/PolygonMesh.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/Vertices.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/TextureMesh.h \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/io/impl/pcd_io.hpp \
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/io/lzf.h
