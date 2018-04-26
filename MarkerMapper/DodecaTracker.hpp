@@ -118,6 +118,22 @@ public:
         
         return true;
     }
+    bool setPenTip(string pentip_path){
+        fstream file;
+        file.open(pentip_path);
+        if(!file.is_open()) return false;
+        
+        pen.setPenTip(pentip_path);
+        return true;
+    }
+    bool setDodecaCenter(string center_path){
+        fstream file;
+        file.open(center_path);
+        if(!file.is_open()) return false;
+        
+        pen.setDodecaCenter(center_path);
+        return true;
+    }
     bool initPenDetector(){
         if(!(camera.isValid()&&pen.isValid())) return false;
         
@@ -152,9 +168,28 @@ public:
         return pen_detector.detectOneFrame();
     }
     
-    // 获得当前帧指定笔的世界坐标的pose
+    // 获得当前帧指定笔的世界坐标的pose（4*4 float）
     cv::Mat getPose(){
         return pen.getFrame(camera.next_frame_index-1);
+    }
+    
+    // 获得当前帧笔尖的世界坐标（3*1 float）
+    cv::Mat getPenTipPosition(){
+        Mat mat;
+        if(pen.pentip_position.empty()) {
+            cout << "PEN::ERROR::No pentip position." << endl;
+            return mat;
+        }
+        else return getPose()*pen.pentip_position;
+    }
+    // 获得当前帧正十二面体中心的世界坐标（3*1 float）
+    cv::Mat getDodecaCenterPosition(){
+        Mat mat;
+        if(pen.dodeca_center_position.empty()) {
+            cout << "PEN::ERROR::No dodeca center position." << endl;
+            return mat;
+        }
+        else return getPose()*pen.dodeca_center_position;
     }
     
     bool isValid(){

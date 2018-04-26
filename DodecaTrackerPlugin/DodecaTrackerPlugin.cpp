@@ -100,6 +100,33 @@ bool EXPORT_API DodecaTrackerPlugin::_isValid(){
     return dodeca_tracker->isValid();
 }
 
+bool EXPORT_API _setPenTip(char* file_path){
+    string pt_file_path = file_path;
+    return dodeca_tracker->setPenTip(pt_file_path);
+}
+bool EXPORT_API _setPenDodecaCenter(char* file_path){
+    string dc_file_path = file_path;
+    return dodeca_tracker->setDodecaCenter(dc_file_path);
+}
+bool EXPORT_API _getPenTipPosition(float* tvec){
+    cv::Mat tv = dodeca_tracker->getPenTipPosition();
+    if(tv.empty()) return false;
+    
+    tvec[0] = tv.at<float>(0, 0);
+    tvec[1] = tv.at<float>(1, 0);
+    tvec[2] = tv.at<float>(2, 0);
+    return true;
+}
+bool EXPORT_API _getPenDodecaCenterPosition(float* tvec){
+    cv::Mat tv = dodeca_tracker->getDodecaCenterPosition();
+    if(tv.empty()) return false;
+    
+    tvec[0] = tv.at<float>(0, 0);
+    tvec[1] = tv.at<float>(1, 0);
+    tvec[2] = tv.at<float>(2, 0);
+    return true;
+}
+
 void EXPORT_API DodecaTrackerPlugin::processImage(Color32* raw, int width, int height, int id){
     Mat frame(height, width, CV_8UC4, raw);
     string file_path = "/Users/guozile/Desktop/frames";

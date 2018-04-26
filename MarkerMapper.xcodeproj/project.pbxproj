@@ -198,6 +198,13 @@
 		A7684EBD2060AACF000C8CFC /* libaruco.3.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */; };
 		A768A1C020916EB6007DF719 /* libceres.1.12.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A768A1BF20916EB6007DF719 /* libceres.1.12.0.dylib */; };
 		A768A1C220916ED7007DF719 /* libglog.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A768A1C120916ED7007DF719 /* libglog.0.dylib */; };
+		A768A1C32091CFA9007DF719 /* libceres.1.12.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A768A1BF20916EB6007DF719 /* libceres.1.12.0.dylib */; };
+		A768A1C42091CFB9007DF719 /* libglog.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A768A1C120916ED7007DF719 /* libglog.0.dylib */; };
+		A768A1C52091CFE9007DF719 /* libpcl_visualization.1.8.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A3468C206DFCD6008C3032 /* libpcl_visualization.1.8.1.dylib */; };
+		A768A1C62091D01F007DF719 /* libpcl_common.1.8.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A34681206DFCD5008C3032 /* libpcl_common.1.8.1.dylib */; };
+		A768A1C72091D01F007DF719 /* libpcl_io.1.8.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A34694206DFCD6008C3032 /* libpcl_io.1.8.1.dylib */; };
+		A768A1C82091D0AB007DF719 /* libboost_system-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7852BE52079FA480028361F /* libboost_system-mt.dylib */; };
+		A768A1CA2091D0AB007DF719 /* libboost_system.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A768A1C92091D0AB007DF719 /* libboost_system.dylib */; };
 		A76E4F982079B15900947465 /* Tools.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A70A849A2078D9130015282A /* Tools.hpp */; };
 		A76E4F992079B15900947465 /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A70A849B2078D9140015282A /* Tools.cpp */; };
 		A76E4F9A2079B15900947465 /* sgl.h in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEFE2062015B00AD8DA1 /* sgl.h */; };
@@ -301,6 +308,7 @@
 		A7684EBA2060AAA8000C8CFC /* levmarq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = levmarq.h; sourceTree = "<group>"; };
 		A768A1BF20916EB6007DF719 /* libceres.1.12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libceres.1.12.0.dylib; path = "../../../../../../../../../usr/local/Cellar/ceres-solver/1.12.0_4/lib/libceres.1.12.0.dylib"; sourceTree = "<group>"; };
 		A768A1C120916ED7007DF719 /* libglog.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglog.0.dylib; path = ../../../../../../../../../usr/local/Cellar/glog/0.3.4_1/lib/libglog.0.dylib; sourceTree = "<group>"; };
+		A768A1C92091D0AB007DF719 /* libboost_system.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_system.dylib; path = ../../../../../../../../../usr/local/Cellar/boost/1.66.0/lib/libboost_system.dylib; sourceTree = "<group>"; };
 		A770EE5C206F45DF00513CFB /* DodecaTrackerPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DodecaTrackerPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A770EE5E206F45DF00513CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A770EE62206F463000513CFB /* DodecaTrackerPlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DodecaTrackerPlugin.cpp; sourceTree = "<group>"; };
@@ -714,6 +722,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A768A1CA2091D0AB007DF719 /* libboost_system.dylib in Frameworks */,
+				A768A1C82091D0AB007DF719 /* libboost_system-mt.dylib in Frameworks */,
+				A768A1C62091D01F007DF719 /* libpcl_common.1.8.1.dylib in Frameworks */,
+				A768A1C72091D01F007DF719 /* libpcl_io.1.8.1.dylib in Frameworks */,
+				A768A1C52091CFE9007DF719 /* libpcl_visualization.1.8.1.dylib in Frameworks */,
+				A768A1C42091CFB9007DF719 /* libglog.0.dylib in Frameworks */,
+				A768A1C32091CFA9007DF719 /* libceres.1.12.0.dylib in Frameworks */,
 				A71CC4F42078F15400517017 /* libaruco.3.0.6.dylib in Frameworks */,
 				A71CC4F52078F15400517017 /* libaruco.3.0.6.dylib in Frameworks */,
 				A71CC4F62078F15400517017 /* libaruco.3.0.6.dylib in Frameworks */,
@@ -913,6 +928,7 @@
 		A7684C84205FFF8C000C8CFC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A768A1C92091D0AB007DF719 /* libboost_system.dylib */,
 				A768A1C120916ED7007DF719 /* libglog.0.dylib */,
 				A768A1BF20916EB6007DF719 /* libceres.1.12.0.dylib */,
 				A7852BF22079FFE00028361F /* libGLEW.2.1.0.dylib */,
@@ -1670,6 +1686,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/opencv/3.4.1_2/lib,
+					/usr/local/Cellar/boost/1.66.0/lib,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = guozile.DodecaTrackerPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1689,6 +1706,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/opencv/3.4.1_2/lib,
+					/usr/local/Cellar/boost/1.66.0/lib,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = guozile.DodecaTrackerPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
