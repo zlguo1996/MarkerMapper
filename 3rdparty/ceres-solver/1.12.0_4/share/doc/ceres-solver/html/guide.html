@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>User’s Guide &mdash; Ceres Solver</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Ceres Solver" href="index.html"/>
+        <link rel="next" title="Modeling Non-linear Least Squares" href="nnls_modeling.html"/>
+        <link rel="prev" title="General Unconstrained Minimization" href="gradient_tutorial.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Ceres Solver
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.12
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User&#8217;s Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html">Modeling Non-linear Least Squares</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_solving.html">Solving Non-linear Least Squares</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gradient_solver.html">General Unconstrained Minimization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Why?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faqs.html">FAQS, Tips &amp; Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_history.html">Version History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Ceres Solver</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>User&#8217;s Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="user-s-guide">
+<span id="chapter-users-guide"></span><h1>User&#8217;s Guide<a class="headerlink" href="#user-s-guide" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nnls_modeling.html">Modeling Non-linear Least Squares</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#costfunction"><code class="docutils literal"><span class="pre">CostFunction</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#sizedcostfunction"><code class="docutils literal"><span class="pre">SizedCostFunction</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#autodiffcostfunction"><code class="docutils literal"><span class="pre">AutoDiffCostFunction</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#dynamicautodiffcostfunction"><code class="docutils literal"><span class="pre">DynamicAutoDiffCostFunction</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#numericdiffcostfunction"><code class="docutils literal"><span class="pre">NumericDiffCostFunction</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#dynamicnumericdiffcostfunction"><code class="docutils literal"><span class="pre">DynamicNumericDiffCostFunction</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#costfunctiontofunctor"><code class="docutils literal"><span class="pre">CostFunctionToFunctor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#dynamiccostfunctiontofunctor"><code class="docutils literal"><span class="pre">DynamicCostFunctionToFunctor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#conditionedcostfunction"><code class="docutils literal"><span class="pre">ConditionedCostFunction</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#gradientchecker"><code class="docutils literal"><span class="pre">GradientChecker</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#normalprior"><code class="docutils literal"><span class="pre">NormalPrior</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#lossfunction"><code class="docutils literal"><span class="pre">LossFunction</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#localparameterization"><code class="docutils literal"><span class="pre">LocalParameterization</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#autodifflocalparameterization"><code class="docutils literal"><span class="pre">AutoDiffLocalParameterization</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#problem"><code class="docutils literal"><span class="pre">Problem</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#rotation-h"><code class="docutils literal"><span class="pre">rotation.h</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html#cubic-interpolation">Cubic Interpolation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nnls_solving.html">Solving Non-linear Least Squares</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nnls_solving.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_solving.html#trust-region-methods">Trust Region Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_solving.html#line-search-methods">Line Search Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_solving.html#linearsolver">LinearSolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_solving.html#solver-options"><code class="docutils literal"><span class="pre">Solver::Options</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_solving.html#parameterblockordering"><code class="docutils literal"><span class="pre">ParameterBlockOrdering</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_solving.html#iterationcallback"><code class="docutils literal"><span class="pre">IterationCallback</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_solving.html#crsmatrix"><code class="docutils literal"><span class="pre">CRSMatrix</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_solving.html#solver-summary"><code class="docutils literal"><span class="pre">Solver::Summary</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_solving.html#covariance-estimation">Covariance Estimation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gradient_solver.html">General Unconstrained Minimization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gradient_solver.html#modeling">Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gradient_solver.html#solving">Solving</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="nnls_modeling.html" class="btn btn-neutral float-right" title="Modeling Non-linear Least Squares" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gradient_tutorial.html" class="btn btn-neutral" title="General Unconstrained Minimization" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016 Google Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.12.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+      MathJax.Hub.Config({
+          "HTML-CSS": {
+            availableFonts: ["TeX"]
+          }
+        });
+      </script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-49769510-1', 'ceres-solver.org');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>

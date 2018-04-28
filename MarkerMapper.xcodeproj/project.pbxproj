@@ -191,7 +191,6 @@
 		A7684CDA205FFF8D000C8CFC /* libopencv_imgproc.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAE205FFF8D000C8CFC /* libopencv_imgproc.3.4.1.dylib */; };
 		A7684CDB205FFF8D000C8CFC /* libopencv_photo.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CAF205FFF8D000C8CFC /* libopencv_photo.3.4.1.dylib */; };
 		A7684CDC205FFF8D000C8CFC /* libopencv_phase_unwrapping.3.4.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CB0205FFF8D000C8CFC /* libopencv_phase_unwrapping.3.4.1.dylib */; };
-		A7684EB92060AA9A000C8CFC /* calibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7684EB72060AA9A000C8CFC /* calibrator.cpp */; };
 		A7684EBB2060AACF000C8CFC /* libaruco.3.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */; };
 		A7684EBC2060AACF000C8CFC /* libaruco.3.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */; };
 		A7684EBD2060AACF000C8CFC /* libaruco.3.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */; };
@@ -209,9 +208,6 @@
 		A76E4F992079B15900947465 /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A70A849B2078D9140015282A /* Tools.cpp */; };
 		A76E4F9A2079B15900947465 /* sgl.h in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEFE2062015B00AD8DA1 /* sgl.h */; };
 		A76E4F9B2079B15900947465 /* sglviewer.h in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEFF2062015B00AD8DA1 /* sglviewer.h */; };
-		A76E4F9C2079B15900947465 /* calibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7684EB72060AA9A000C8CFC /* calibrator.cpp */; };
-		A76E4F9D2079B15900947465 /* calibrator.h in Sources */ = {isa = PBXBuildFile; fileRef = A7684EB82060AA9A000C8CFC /* calibrator.h */; };
-		A76E4F9E2079B15900947465 /* levmarq.h in Sources */ = {isa = PBXBuildFile; fileRef = A7684EBA2060AAA8000C8CFC /* levmarq.h */; };
 		A76E4F9F2079B15900947465 /* stdafx.h in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEFC2061E92B00AD8DA1 /* stdafx.h */; };
 		A76E4FA12079B15900947465 /* Calibration.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEFA2061E88200AD8DA1 /* Calibration.hpp */; };
 		A76E4FA22079B15900947465 /* Calibration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEF92061E88200AD8DA1 /* Calibration.cpp */; };
@@ -238,6 +234,10 @@
 		A7DADF062062516800AD8DA1 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADF042062516800AD8DA1 /* Camera.cpp */; };
 		A7DADF0920625B4D00AD8DA1 /* PenDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7DADF0720625B4D00AD8DA1 /* PenDetector.cpp */; };
 		A7EB45D2207661970048ADD7 /* DodecaTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7EB45D0207661970048ADD7 /* DodecaTracker.cpp */; };
+		A7F4781920943DC8008FC49A /* calibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4781820943DC8008FC49A /* calibrator.cpp */; };
+		A7F4781A20943F07008FC49A /* calibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7F4781820943DC8008FC49A /* calibrator.cpp */; };
+		A7F4781B20943F0A008FC49A /* calibrator.h in Sources */ = {isa = PBXBuildFile; fileRef = A7F4781620943DC7008FC49A /* calibrator.h */; };
+		A7F4781C20943F0E008FC49A /* levmarq.h in Sources */ = {isa = PBXBuildFile; fileRef = A7F4781720943DC8008FC49A /* levmarq.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -302,9 +302,6 @@
 		A7684CB0205FFF8D000C8CFC /* libopencv_phase_unwrapping.3.4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_phase_unwrapping.3.4.1.dylib; path = ../../../../../../../../../usr/local/Cellar/opencv/3.4.1_2/lib/libopencv_phase_unwrapping.3.4.1.dylib; sourceTree = "<group>"; };
 		A7684CDD20600109000C8CFC /* libaruco.3.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaruco.3.0.6.dylib; path = ../../../../../../../../../usr/local/lib/libaruco.3.0.6.dylib; sourceTree = "<group>"; };
 		A7684EB52060A847000C8CFC /* libaruco.3.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaruco.3.0.6.dylib; path = "../../../../../../../Desktop/aruco-3.0.6 2/build/src/libaruco.3.0.6.dylib"; sourceTree = "<group>"; };
-		A7684EB72060AA9A000C8CFC /* calibrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = calibrator.cpp; sourceTree = "<group>"; };
-		A7684EB82060AA9A000C8CFC /* calibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calibrator.h; sourceTree = "<group>"; };
-		A7684EBA2060AAA8000C8CFC /* levmarq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = levmarq.h; sourceTree = "<group>"; };
 		A768A1BF20916EB6007DF719 /* libceres.1.12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libceres.1.12.0.dylib; path = "../../../../../../../../../usr/local/Cellar/ceres-solver/1.12.0_4/lib/libceres.1.12.0.dylib"; sourceTree = "<group>"; };
 		A768A1C120916ED7007DF719 /* libglog.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglog.0.dylib; path = ../../../../../../../../../usr/local/Cellar/glog/0.3.4_1/lib/libglog.0.dylib; sourceTree = "<group>"; };
 		A768A1C92091D0AB007DF719 /* libboost_system.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_system.dylib; path = ../../../../../../../../../usr/local/Cellar/boost/1.66.0/lib/libboost_system.dylib; sourceTree = "<group>"; };
@@ -651,6 +648,9 @@
 		A7DADF0820625B4D00AD8DA1 /* PenDetector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PenDetector.hpp; sourceTree = "<group>"; };
 		A7EB45D0207661970048ADD7 /* DodecaTracker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DodecaTracker.cpp; sourceTree = "<group>"; };
 		A7EB45D1207661970048ADD7 /* DodecaTracker.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DodecaTracker.hpp; sourceTree = "<group>"; };
+		A7F4781620943DC7008FC49A /* calibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calibrator.h; sourceTree = "<group>"; };
+		A7F4781720943DC8008FC49A /* levmarq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = levmarq.h; sourceTree = "<group>"; };
+		A7F4781820943DC8008FC49A /* calibrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = calibrator.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1315,9 +1315,9 @@
 		A7684CE020600749000C8CFC /* aruco */ = {
 			isa = PBXGroup;
 			children = (
-				A7684EB72060AA9A000C8CFC /* calibrator.cpp */,
-				A7684EB82060AA9A000C8CFC /* calibrator.h */,
-				A7684EBA2060AAA8000C8CFC /* levmarq.h */,
+				A7F4781820943DC8008FC49A /* calibrator.cpp */,
+				A7F4781620943DC7008FC49A /* calibrator.h */,
+				A7F4781720943DC8008FC49A /* levmarq.h */,
 			);
 			path = aruco;
 			sourceTree = "<group>";
@@ -1430,7 +1430,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7684EB92060AA9A000C8CFC /* calibrator.cpp in Sources */,
 				A7DADF062062516800AD8DA1 /* Camera.cpp in Sources */,
 				A7DADEFB2061E88200AD8DA1 /* Calibration.cpp in Sources */,
 				A7DADF0320624EC300AD8DA1 /* Pen.cpp in Sources */,
@@ -1438,6 +1437,7 @@
 				A7EB45D2207661970048ADD7 /* DodecaTracker.cpp in Sources */,
 				A7852BED2079FDE50028361F /* Graphics.cpp in Sources */,
 				A768A1CC2091E4F7007DF719 /* dodtracmain.cpp in Sources */,
+				A7F4781920943DC8008FC49A /* calibrator.cpp in Sources */,
 				A7DADF0920625B4D00AD8DA1 /* PenDetector.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1451,9 +1451,6 @@
 				A76E4F992079B15900947465 /* Tools.cpp in Sources */,
 				A76E4F9A2079B15900947465 /* sgl.h in Sources */,
 				A76E4F9B2079B15900947465 /* sglviewer.h in Sources */,
-				A76E4F9C2079B15900947465 /* calibrator.cpp in Sources */,
-				A76E4F9D2079B15900947465 /* calibrator.h in Sources */,
-				A76E4F9E2079B15900947465 /* levmarq.h in Sources */,
 				A76E4F9F2079B15900947465 /* stdafx.h in Sources */,
 				A76E4FA12079B15900947465 /* Calibration.hpp in Sources */,
 				A76E4FA22079B15900947465 /* Calibration.cpp in Sources */,
@@ -1466,6 +1463,9 @@
 				A76E4FA92079B15900947465 /* DodecaTracker.hpp in Sources */,
 				A76E4FAA2079B15900947465 /* DodecaTracker.cpp in Sources */,
 				A770EE64206F463000513CFB /* DodecaTrackerPlugin.cpp in Sources */,
+				A7F4781A20943F07008FC49A /* calibrator.cpp in Sources */,
+				A7F4781B20943F0A008FC49A /* calibrator.h in Sources */,
+				A7F4781C20943F0E008FC49A /* levmarq.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1521,22 +1521,31 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/Cellar/opencv/3.4.1_2/include,
 					/usr/local/include,
-					/usr/local/include/aruco,
-					/usr/local/Cellar/eigen/3.3.4/include/eigen3,
-					/usr/local/include/marker_mapper,
-					"/usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8",
-					/usr/local/Cellar/glog/0.3.4_1/include,
-					"/usr/local/Cellar/ceres-solver/1.12.0_4/include",
+					"$(PROJECT_DIR)/3rdparty/aruco/include",
+					"$(PROJECT_DIR)/3rdparty/aruco/include/aruco",
+					"$(PROJECT_DIR)/3rdparty/boost/1.66.0/include/boost",
+					"$(PROJECT_DIR)/3rdparty/ceres-solver/1.12.0_4/include",
+					"$(PROJECT_DIR)/3rdparty/eigen/3.3.4/include/eigen3",
+					"$(PROJECT_DIR)/3rdparty/glew/2.1.0/include",
+					"$(PROJECT_DIR)/3rdparty/glfw/3.2.1/include",
+					"$(PROJECT_DIR)/3rdparty/glm/0.9.8.3/include",
+					"$(PROJECT_DIR)/3rdparty/glog/0.3.4_1/include",
+					"$(PROJECT_DIR)/3rdparty/markermapper/include",
+					"$(PROJECT_DIR)/3rdparty/opencv/3.4.1_2/include",
+					"$(PROJECT_DIR)/3rdparty/pcl/1.8.1_2/include/pcl-1.8",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					/usr/local/Cellar/opencv/3.4.1_2/lib,
 					/usr/local/lib,
-					"$(PROJECT_DIR)/MarkerMapper/Libraries/aruco",
-					/usr/local/Cellar/pcl/1.8.1_2/lib,
-					"/usr/local/Cellar/ceres-solver/1.12.0_4/lib",
-					/usr/local/Cellar/glog/0.3.4_1/lib,
+					"$(PROJECT_DIR)/3rdparty/aruco/lib",
+					"$(PROJECT_DIR)/3rdparty/boost/1.66.0/lib",
+					"$(PROJECT_DIR)/3rdparty/ceres-solver/1.12.0_4/lib",
+					"$(PROJECT_DIR)/3rdparty/glew/2.1.0/lib",
+					"$(PROJECT_DIR)/3rdparty/glfw/3.2.1/lib",
+					"$(PROJECT_DIR)/3rdparty/glog/0.3.4_1/lib",
+					"$(PROJECT_DIR)/3rdparty/markermapper/lib",
+					"$(PROJECT_DIR)/3rdparty/opencv/3.4.1_2/lib",
+					"$(PROJECT_DIR)/3rdparty/pcl/1.8.1_2/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1588,22 +1597,31 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/Cellar/opencv/3.4.1_2/include,
 					/usr/local/include,
-					/usr/local/include/aruco,
-					/usr/local/Cellar/eigen/3.3.4/include/eigen3,
-					/usr/local/include/marker_mapper,
-					"/usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8",
-					/usr/local/Cellar/glog/0.3.4_1/include,
-					"/usr/local/Cellar/ceres-solver/1.12.0_4/include",
+					"$(PROJECT_DIR)/3rdparty/aruco/include",
+					"$(PROJECT_DIR)/3rdparty/aruco/include/aruco",
+					"$(PROJECT_DIR)/3rdparty/boost/1.66.0/include/boost",
+					"$(PROJECT_DIR)/3rdparty/ceres-solver/1.12.0_4/include",
+					"$(PROJECT_DIR)/3rdparty/eigen/3.3.4/include/eigen3",
+					"$(PROJECT_DIR)/3rdparty/glew/2.1.0/include",
+					"$(PROJECT_DIR)/3rdparty/glfw/3.2.1/include",
+					"$(PROJECT_DIR)/3rdparty/glm/0.9.8.3/include",
+					"$(PROJECT_DIR)/3rdparty/glog/0.3.4_1/include",
+					"$(PROJECT_DIR)/3rdparty/markermapper/include",
+					"$(PROJECT_DIR)/3rdparty/opencv/3.4.1_2/include",
+					"$(PROJECT_DIR)/3rdparty/pcl/1.8.1_2/include/pcl-1.8",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					/usr/local/Cellar/opencv/3.4.1_2/lib,
 					/usr/local/lib,
-					"$(PROJECT_DIR)/MarkerMapper/Libraries/aruco",
-					/usr/local/Cellar/pcl/1.8.1_2/lib,
-					"/usr/local/Cellar/ceres-solver/1.12.0_4/lib",
-					/usr/local/Cellar/glog/0.3.4_1/lib,
+					"$(PROJECT_DIR)/3rdparty/aruco/lib",
+					"$(PROJECT_DIR)/3rdparty/boost/1.66.0/lib",
+					"$(PROJECT_DIR)/3rdparty/ceres-solver/1.12.0_4/lib",
+					"$(PROJECT_DIR)/3rdparty/glew/2.1.0/lib",
+					"$(PROJECT_DIR)/3rdparty/glfw/3.2.1/lib",
+					"$(PROJECT_DIR)/3rdparty/glog/0.3.4_1/lib",
+					"$(PROJECT_DIR)/3rdparty/markermapper/lib",
+					"$(PROJECT_DIR)/3rdparty/opencv/3.4.1_2/lib",
+					"$(PROJECT_DIR)/3rdparty/pcl/1.8.1_2/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1616,29 +1634,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2ZD568S42;
-				HEADER_SEARCH_PATHS = (
-					/usr/local/Cellar/opencv/3.4.1_2/include,
-					/usr/local/include,
-					/usr/local/include/aruco,
-					/usr/local/Cellar/eigen/3.3.4/include/eigen3,
-					/usr/local/include/marker_mapper,
-					"/usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8",
-					/usr/local/Cellar/boost/1.66.0/include,
-					/usr/local/Cellar/glfw/3.2.1/include,
-					/usr/local/Cellar/glm/0.9.8.3/include,
-					/usr/local/Cellar/glew/2.1.0/include,
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/usr/local/Cellar/opencv/3.4.1_2/lib,
-					/usr/local/lib,
-					"$(PROJECT_DIR)/MarkerMapper/Libraries/aruco",
-					/usr/local/Cellar/pcl/1.8.1_2/lib,
-					/usr/local/Cellar/vtk/8.1.0/lib,
-					/usr/local/Cellar/boost/1.66.0/lib,
-					/usr/local/Cellar/glfw/3.2.1/lib,
-					/usr/local/Cellar/glew/2.1.0/lib,
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1648,29 +1645,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2ZD568S42;
-				HEADER_SEARCH_PATHS = (
-					/usr/local/Cellar/opencv/3.4.1_2/include,
-					/usr/local/include,
-					/usr/local/include/aruco,
-					/usr/local/Cellar/eigen/3.3.4/include/eigen3,
-					/usr/local/include/marker_mapper,
-					"/usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8",
-					/usr/local/Cellar/boost/1.66.0/include,
-					/usr/local/Cellar/glfw/3.2.1/include,
-					/usr/local/Cellar/glm/0.9.8.3/include,
-					/usr/local/Cellar/glew/2.1.0/include,
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/usr/local/Cellar/opencv/3.4.1_2/lib,
-					/usr/local/lib,
-					"$(PROJECT_DIR)/MarkerMapper/Libraries/aruco",
-					/usr/local/Cellar/pcl/1.8.1_2/lib,
-					/usr/local/Cellar/vtk/8.1.0/lib,
-					/usr/local/Cellar/boost/1.66.0/lib,
-					/usr/local/Cellar/glfw/3.2.1/lib,
-					/usr/local/Cellar/glew/2.1.0/lib,
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1681,13 +1657,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Y2ZD568S42;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DodecaTrackerPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/usr/local/Cellar/opencv/3.4.1_2/lib,
-					/usr/local/Cellar/boost/1.66.0/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = guozile.DodecaTrackerPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1701,13 +1674,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Y2ZD568S42;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DodecaTrackerPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/usr/local/Cellar/opencv/3.4.1_2/lib,
-					/usr/local/Cellar/boost/1.66.0/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = guozile.DodecaTrackerPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

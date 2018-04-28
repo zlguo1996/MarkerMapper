@@ -1,0 +1,784 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>General Unconstrained Minimization &mdash; Ceres Solver</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Ceres Solver" href="index.html"/>
+        <link rel="up" title="User’s Guide" href="guide.html"/>
+        <link rel="next" title="Why?" href="features.html"/>
+        <link rel="prev" title="Solving Non-linear Least Squares" href="nnls_solving.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Ceres Solver
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.12
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="guide.html">User&#8217;s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="nnls_modeling.html">Modeling Non-linear Least Squares</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnls_solving.html">Solving Non-linear Least Squares</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">General Unconstrained Minimization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#modeling">Modeling</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#firstorderfunction"><code class="docutils literal"><span class="pre">FirstOrderFunction</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gradientproblem"><code class="docutils literal"><span class="pre">GradientProblem</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#solving">Solving</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gradientproblemsolver-options"><code class="docutils literal"><span class="pre">GradientProblemSolver::Options</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gradientproblemsolver-summary"><code class="docutils literal"><span class="pre">GradientProblemSolver::Summary</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Why?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faqs.html">FAQS, Tips &amp; Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_history.html">Version History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Ceres Solver</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="guide.html">User&#8217;s Guide</a> &raquo;</li>
+      
+    <li>General Unconstrained Minimization</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="general-unconstrained-minimization">
+<span id="chapter-gradient-problem-solver"></span><h1>General Unconstrained Minimization<a class="headerlink" href="#general-unconstrained-minimization" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="modeling">
+<h2>Modeling<a class="headerlink" href="#modeling" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="firstorderfunction">
+<h3><a class="reference internal" href="#_CPPv218FirstOrderFunction" title="FirstOrderFunction"><code class="xref cpp cpp-class docutils literal"><span class="pre">FirstOrderFunction</span></code></a><a class="headerlink" href="#firstorderfunction" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv218FirstOrderFunction">
+<span id="FirstOrderFunction"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">FirstOrderFunction</code><a class="headerlink" href="#_CPPv218FirstOrderFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instances of <a class="reference internal" href="#_CPPv218FirstOrderFunction" title="FirstOrderFunction"><code class="xref cpp cpp-class docutils literal"><span class="pre">FirstOrderFunction</span></code></a> implement the evaluation of
+a function and its gradient.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FirstOrderFunction</span> <span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+   <span class="k">virtual</span> <span class="o">~</span><span class="n">FirstOrderFunction</span><span class="p">()</span> <span class="p">{}</span>
+   <span class="k">virtual</span> <span class="kt">bool</span> <span class="n">Evaluate</span><span class="p">(</span><span class="k">const</span> <span class="kt">double</span><span class="o">*</span> <span class="k">const</span> <span class="n">parameters</span><span class="p">,</span>
+                         <span class="kt">double</span><span class="o">*</span> <span class="n">cost</span><span class="p">,</span>
+                         <span class="kt">double</span><span class="o">*</span> <span class="n">gradient</span><span class="p">)</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+   <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">NumParameters</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK18FirstOrderFunction8EvaluateEPCKdPdPd">
+<span id="FirstOrderFunction::Evaluate__doubleCPC.doubleP.doublePC"></span>bool <code class="descclassname">FirstOrderFunction::</code><code class="descname">Evaluate</code><span class="sig-paren">(</span><em class="property">const</em> double *<em class="property">const</em> <em>parameters</em>, double *<em>cost</em>, double *<em>gradient</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK18FirstOrderFunction8EvaluateEPCKdPdPd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the cost/value of the function. If <code class="docutils literal"><span class="pre">gradient</span></code> is not
+<code class="docutils literal"><span class="pre">NULL</span></code> then evaluate the gradient too. If evaluation is
+successful return, <code class="docutils literal"><span class="pre">true</span></code> else return <code class="docutils literal"><span class="pre">false</span></code>.</p>
+<p><code class="docutils literal"><span class="pre">cost</span></code> guaranteed to be never <code class="docutils literal"><span class="pre">NULL</span></code>, <code class="docutils literal"><span class="pre">gradient</span></code> can be <code class="docutils literal"><span class="pre">NULL</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK18FirstOrderFunction13NumParametersEv">
+<span id="FirstOrderFunction::NumParametersC"></span>int <code class="descclassname">FirstOrderFunction::</code><code class="descname">NumParameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK18FirstOrderFunction13NumParametersEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of parameters in the domain of the function.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="gradientproblem">
+<h3><a class="reference internal" href="#_CPPv215GradientProblem" title="GradientProblem"><code class="xref cpp cpp-class docutils literal"><span class="pre">GradientProblem</span></code></a><a class="headerlink" href="#gradientproblem" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv215GradientProblem">
+<span id="GradientProblem"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">GradientProblem</code><a class="headerlink" href="#_CPPv215GradientProblem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="highlight-c++"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">GradientProblem</span> <span class="p">{</span>
+ <span class="k">public</span><span class="o">:</span>
+  <span class="k">explicit</span> <span class="n">GradientProblem</span><span class="p">(</span><span class="n">FirstOrderFunction</span><span class="o">*</span> <span class="n">function</span><span class="p">);</span>
+  <span class="n">GradientProblem</span><span class="p">(</span><span class="n">FirstOrderFunction</span><span class="o">*</span> <span class="n">function</span><span class="p">,</span>
+                  <span class="n">LocalParameterization</span><span class="o">*</span> <span class="n">parameterization</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="nf">NumParameters</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="nf">NumLocalParameters</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="nf">Evaluate</span><span class="p">(</span><span class="k">const</span> <span class="kt">double</span><span class="o">*</span> <span class="n">parameters</span><span class="p">,</span> <span class="kt">double</span><span class="o">*</span> <span class="n">cost</span><span class="p">,</span> <span class="kt">double</span><span class="o">*</span> <span class="n">gradient</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="nf">Plus</span><span class="p">(</span><span class="k">const</span> <span class="kt">double</span><span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span><span class="o">*</span> <span class="n">delta</span><span class="p">,</span> <span class="kt">double</span><span class="o">*</span> <span class="n">x_plus_delta</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Instances of <a class="reference internal" href="#_CPPv215GradientProblem" title="GradientProblem"><code class="xref cpp cpp-class docutils literal"><span class="pre">GradientProblem</span></code></a> represent general non-linear
+optimization problems that must be solved using just the value of the
+objective function and its gradient. Unlike the <code class="xref cpp cpp-class docutils literal"><span class="pre">Problem</span></code>
+class, which can only be used to model non-linear least squares
+problems, instances of <a class="reference internal" href="#_CPPv215GradientProblem" title="GradientProblem"><code class="xref cpp cpp-class docutils literal"><span class="pre">GradientProblem</span></code></a> not restricted in the
+form of the objective function.</p>
+<p>Structurally <a class="reference internal" href="#_CPPv215GradientProblem" title="GradientProblem"><code class="xref cpp cpp-class docutils literal"><span class="pre">GradientProblem</span></code></a> is a composition of a
+<a class="reference internal" href="#_CPPv218FirstOrderFunction" title="FirstOrderFunction"><code class="xref cpp cpp-class docutils literal"><span class="pre">FirstOrderFunction</span></code></a> and optionally a
+<code class="xref cpp cpp-class docutils literal"><span class="pre">LocalParameterization</span></code>.</p>
+<p>The <a class="reference internal" href="#_CPPv218FirstOrderFunction" title="FirstOrderFunction"><code class="xref cpp cpp-class docutils literal"><span class="pre">FirstOrderFunction</span></code></a> is responsible for evaluating the cost
+and gradient of the objective function.</p>
+<p>The <code class="xref cpp cpp-class docutils literal"><span class="pre">LocalParameterization</span></code> is responsible for going back and
+forth between the ambient space and the local tangent space. When a
+<code class="xref cpp cpp-class docutils literal"><span class="pre">LocalParameterization</span></code> is not provided, then the tangent space
+is assumed to coincide with the ambient Euclidean space that the
+gradient vector lives in.</p>
+<p>The constructor takes ownership of the <a class="reference internal" href="#_CPPv218FirstOrderFunction" title="FirstOrderFunction"><code class="xref cpp cpp-class docutils literal"><span class="pre">FirstOrderFunction</span></code></a> and
+<code class="xref cpp cpp-class docutils literal"><span class="pre">LocalParamterization</span></code> objects passed to it.</p>
+<dl class="function">
+<dt id="_CPPv25SolveRKN21GradientProblemSolver7OptionsERK15GradientProblemPdPN21GradientProblemSolver7SummaryE">
+<span id="Solve__GradientProblemSolver::OptionsCR.GradientProblemCR.doubleP.GradientProblemSolver::SummaryP"></span>void <code class="descclassname"></code><code class="descname">Solve</code><span class="sig-paren">(</span><em class="property">const</em> GradientProblemSolver::<a class="reference internal" href="#_CPPv2N21GradientProblemSolver7OptionsE" title="GradientProblemSolver::Options">Options</a> &amp;<em>options</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv215GradientProblem" title="GradientProblem">GradientProblem</a> &amp;<em>problem</em>, double *<em>parameters</em>, GradientProblemSolver::<a class="reference internal" href="#_CPPv2N21GradientProblemSolver7SummaryE" title="GradientProblemSolver::Summary">Summary</a> *<em>summary</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv25SolveRKN21GradientProblemSolver7OptionsERK15GradientProblemPdPN21GradientProblemSolver7SummaryE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solve the given <a class="reference internal" href="#_CPPv215GradientProblem" title="GradientProblem"><code class="xref cpp cpp-class docutils literal"><span class="pre">GradientProblem</span></code></a> using the values in
+<code class="docutils literal"><span class="pre">parameters</span></code> as the initial guess of the solution.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="solving">
+<h2>Solving<a class="headerlink" href="#solving" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="gradientproblemsolver-options">
+<h3><a class="reference internal" href="#_CPPv2N21GradientProblemSolver7OptionsE" title="GradientProblemSolver::Options"><code class="xref cpp cpp-class docutils literal"><span class="pre">GradientProblemSolver::Options</span></code></a><a class="headerlink" href="#gradientproblemsolver-options" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv2N21GradientProblemSolver7OptionsE">
+<span id="GradientProblemSolver::Options"></span><em class="property">class </em><code class="descclassname">GradientProblemSolver::</code><code class="descname">Options</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7OptionsE" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#_CPPv2N21GradientProblemSolver7OptionsE" title="GradientProblemSolver::Options"><code class="xref cpp cpp-class docutils literal"><span class="pre">GradientProblemSolver::Options</span></code></a> controls the overall
+behavior of the solver. We list the various settings and their
+default values below.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK21GradientProblemSolver7Options7IsValidEP6string">
+<span id="GradientProblemSolver::Options::IsValid__stringPC"></span>bool <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">IsValid</code><span class="sig-paren">(</span>string *<em>error</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK21GradientProblemSolver7Options7IsValidEP6string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate the values in the options struct and returns true on
+success. If there is a problem, the method returns false with
+<code class="docutils literal"><span class="pre">error</span></code> containing a textual description of the cause.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options26line_search_direction_typeE">
+<span id="GradientProblemSolver::Options::line_search_direction_type__LineSearchDirectionType"></span>LineSearchDirectionType <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">line_search_direction_type</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options26line_search_direction_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">LBFGS</span></code></p>
+<p>Choices are <code class="docutils literal"><span class="pre">STEEPEST_DESCENT</span></code>, <code class="docutils literal"><span class="pre">NONLINEAR_CONJUGATE_GRADIENT</span></code>,
+<code class="docutils literal"><span class="pre">BFGS</span></code> and <code class="docutils literal"><span class="pre">LBFGS</span></code>.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options16line_search_typeE">
+<span id="GradientProblemSolver::Options::line_search_type__LineSearchType"></span>LineSearchType <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">line_search_type</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options16line_search_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">WOLFE</span></code></p>
+<p>Choices are <code class="docutils literal"><span class="pre">ARMIJO</span></code> and <code class="docutils literal"><span class="pre">WOLFE</span></code> (strong Wolfe conditions).
+Note that in order for the assumptions underlying the <code class="docutils literal"><span class="pre">BFGS</span></code> and
+<code class="docutils literal"><span class="pre">LBFGS</span></code> line search direction algorithms to be guaranteed to be
+satisifed, the <code class="docutils literal"><span class="pre">WOLFE</span></code> line search should be used.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options33nonlinear_conjugate_gradient_typeE">
+<span id="GradientProblemSolver::Options::nonlinear_conjugate_gradient_type__NonlinearConjugateGradientType"></span>NonlinearConjugateGradientType <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">nonlinear_conjugate_gradient_type</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options33nonlinear_conjugate_gradient_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">FLETCHER_REEVES</span></code></p>
+<p>Choices are <code class="docutils literal"><span class="pre">FLETCHER_REEVES</span></code>, <code class="docutils literal"><span class="pre">POLAK_RIBIERE</span></code> and
+<code class="docutils literal"><span class="pre">HESTENES_STIEFEL</span></code>.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options13max_lbfs_rankE">
+<span id="GradientProblemSolver::Options::max_lbfs_rank__i"></span>int <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">max_lbfs_rank</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options13max_lbfs_rankE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: 20</p>
+<p>The L-BFGS hessian approximation is a low rank approximation to the
+inverse of the Hessian matrix. The rank of the approximation
+determines (linearly) the space and time complexity of using the
+approximation. Higher the rank, the better is the quality of the
+approximation. The increase in quality is however is bounded for a
+number of reasons.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>The method only uses secant information and not actual
+derivatives.</li>
+<li>The Hessian approximation is constrained to be positive
+definite.</li>
+</ol>
+</div></blockquote>
+<p>So increasing this rank to a large number will cost time and space
+complexity without the corresponding increase in solution
+quality. There are no hard and fast rules for choosing the maximum
+rank. The best choice usually requires some problem specific
+experimentation.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options39use_approximate_eigenvalue_bfgs_scalingE">
+<span id="GradientProblemSolver::Options::use_approximate_eigenvalue_bfgs_scaling__b"></span>bool <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">use_approximate_eigenvalue_bfgs_scaling</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options39use_approximate_eigenvalue_bfgs_scalingE" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Default: <code class="docutils literal"><span class="pre">false</span></code></p>
+<p>As part of the <code class="docutils literal"><span class="pre">BFGS</span></code> update step / <code class="docutils literal"><span class="pre">LBFGS</span></code> right-multiply
+step, the initial inverse Hessian approximation is taken to be the
+Identity.  However, <a class="reference internal" href="bibliography.html#oren" id="id1">[Oren]</a> showed that using instead <span class="math">\(I *
+\gamma\)</span>, where <span class="math">\(\gamma\)</span> is a scalar chosen to approximate an
+eigenvalue of the true inverse Hessian can result in improved
+convergence in a wide variety of cases.  Setting
+<code class="docutils literal"><span class="pre">use_approximate_eigenvalue_bfgs_scaling</span></code> to true enables this
+scaling in <code class="docutils literal"><span class="pre">BFGS</span></code> (before first iteration) and <code class="docutils literal"><span class="pre">LBFGS</span></code> (at each
+iteration).</p>
+<p>Precisely, approximate eigenvalue scaling equates to</p>
+<div class="math">
+\[\gamma = \frac{y_k' s_k}{y_k' y_k}\]</div>
+<p>With:</p>
+</div></blockquote>
+<div class="math">
+\[y_k = \nabla f_{k+1} - \nabla f_k\]</div>
+<div class="math">
+\[s_k = x_{k+1} - x_k\]</div>
+<p>Where <span class="math">\(f()\)</span> is the line search objective and <span class="math">\(x\)</span> the
+vector of parameter values <a class="reference internal" href="bibliography.html#nocedalwright" id="id2">[NocedalWright]</a>.</p>
+<p>It is important to note that approximate eigenvalue scaling does
+<strong>not</strong> <em>always</em> improve convergence, and that it can in fact
+<em>significantly</em> degrade performance for certain classes of problem,
+which is why it is disabled by default.  In particular it can
+degrade performance when the sensitivity of the problem to different
+parameters varies significantly, as in this case a single scalar
+factor fails to capture this variation and detrimentally downscales
+parts of the Jacobian approximation which correspond to
+low-sensitivity parameters. It can also reduce the robustness of the
+solution to errors in the Jacobians.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options30line_search_interpolation_typeE">
+<span id="GradientProblemSolver::Options::line_search_interpolation_type__LineSearchIterpolationType"></span>LineSearchIterpolationType <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">line_search_interpolation_type</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options30line_search_interpolation_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">CUBIC</span></code></p>
+<p>Degree of the polynomial used to approximate the objective
+function. Valid values are <code class="docutils literal"><span class="pre">BISECTION</span></code>, <code class="docutils literal"><span class="pre">QUADRATIC</span></code> and
+<code class="docutils literal"><span class="pre">CUBIC</span></code>.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options25min_line_search_step_sizeE">
+<span id="GradientProblemSolver::Options::min_line_search_step_size__double"></span>double <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">min_line_search_step_size</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options25min_line_search_step_sizeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The line search terminates if:</p>
+<div class="math">
+\[\|\Delta x_k\|_\infty &lt; \text{min_line_search_step_size}\]</div>
+<p>where <span class="math">\(\|\cdot\|_\infty\)</span> refers to the max norm, and
+<span class="math">\(\Delta x_k\)</span> is the step change in the parameter values at
+the <span class="math">\(k\)</span>-th iteration.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options40line_search_sufficient_function_decreaseE">
+<span id="GradientProblemSolver::Options::line_search_sufficient_function_decrease__double"></span>double <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">line_search_sufficient_function_decrease</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options40line_search_sufficient_function_decreaseE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">1e-4</span></code></p>
+<p>Solving the line search problem exactly is computationally
+prohibitive. Fortunately, line search based optimization algorithms
+can still guarantee convergence if instead of an exact solution,
+the line search algorithm returns a solution which decreases the
+value of the objective function sufficiently. More precisely, we
+are looking for a step size s.t.</p>
+<div class="math">
+\[f(\text{step_size}) \le f(0) + \text{sufficient_decrease} * [f'(0) * \text{step_size}]\]</div>
+<p>This condition is known as the Armijo condition.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options32max_line_search_step_contractionE">
+<span id="GradientProblemSolver::Options::max_line_search_step_contraction__double"></span>double <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">max_line_search_step_contraction</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options32max_line_search_step_contractionE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">1e-3</span></code></p>
+<p>In each iteration of the line search,</p>
+<div class="math">
+\[\text{new_step_size} \geq \text{max_line_search_step_contraction} * \text{step_size}\]</div>
+<p>Note that by definition, for contraction:</p>
+<div class="math">
+\[0 &lt; \text{max_step_contraction} &lt; \text{min_step_contraction} &lt; 1\]</div>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options32min_line_search_step_contractionE">
+<span id="GradientProblemSolver::Options::min_line_search_step_contraction__double"></span>double <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">min_line_search_step_contraction</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options32min_line_search_step_contractionE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">0.6</span></code></p>
+<p>In each iteration of the line search,</p>
+<div class="math">
+\[\text{new_step_size} \leq \text{min_line_search_step_contraction} * \text{step_size}\]</div>
+<p>Note that by definition, for contraction:</p>
+<div class="math">
+\[0 &lt; \text{max_step_contraction} &lt; \text{min_step_contraction} &lt; 1\]</div>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options40max_num_line_search_step_size_iterationsE">
+<span id="GradientProblemSolver::Options::max_num_line_search_step_size_iterations__i"></span>int <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">max_num_line_search_step_size_iterations</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options40max_num_line_search_step_size_iterationsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">20</span></code></p>
+<p>Maximum number of trial step size iterations during each line
+search, if a step size satisfying the search conditions cannot be
+found within this number of trials, the line search will stop.</p>
+<p>As this is an &#8216;artificial&#8217; constraint (one imposed by the user, not
+the underlying math), if <code class="docutils literal"><span class="pre">WOLFE</span></code> line search is being used, <em>and</em>
+points satisfying the Armijo sufficient (function) decrease
+condition have been found during the current search (in <span class="math">\(\leq\)</span>
+<code class="docutils literal"><span class="pre">max_num_line_search_step_size_iterations</span></code>).  Then, the step size
+with the lowest function value which satisfies the Armijo condition
+will be returned as the new valid step, even though it does <em>not</em>
+satisfy the strong Wolfe conditions.  This behaviour protects
+against early termination of the optimizer at a sub-optimal point.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options38max_num_line_search_direction_restartsE">
+<span id="GradientProblemSolver::Options::max_num_line_search_direction_restarts__i"></span>int <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">max_num_line_search_direction_restarts</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options38max_num_line_search_direction_restartsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">5</span></code></p>
+<p>Maximum number of restarts of the line search direction algorithm
+before terminating the optimization. Restarts of the line search
+direction algorithm occur when the current algorithm fails to
+produce a new descent direction. This typically indicates a
+numerical failure, or a breakdown in the validity of the
+approximations used.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options41line_search_sufficient_curvature_decreaseE">
+<span id="GradientProblemSolver::Options::line_search_sufficient_curvature_decrease__double"></span>double <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">line_search_sufficient_curvature_decrease</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options41line_search_sufficient_curvature_decreaseE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">0.9</span></code></p>
+<p>The strong Wolfe conditions consist of the Armijo sufficient
+decrease condition, and an additional requirement that the
+step size be chosen s.t. the <em>magnitude</em> (&#8216;strong&#8217; Wolfe
+conditions) of the gradient along the search direction
+decreases sufficiently. Precisely, this second condition
+is that we seek a step size s.t.</p>
+<div class="math">
+\[\|f'(\text{step_size})\| \leq \text{sufficient_curvature_decrease} * \|f'(0)\|\]</div>
+<p>Where <span class="math">\(f()\)</span> is the line search objective and <span class="math">\(f'()\)</span> is the derivative
+of <span class="math">\(f\)</span> with respect to the step size: <span class="math">\(\frac{d f}{d~\text{step size}}\)</span>.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options30max_line_search_step_expansionE">
+<span id="GradientProblemSolver::Options::max_line_search_step_expansion__double"></span>double <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">max_line_search_step_expansion</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options30max_line_search_step_expansionE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">10.0</span></code></p>
+<p>During the bracketing phase of a Wolfe line search, the step size
+is increased until either a point satisfying the Wolfe conditions
+is found, or an upper bound for a bracket containing a point
+satisfying the conditions is found.  Precisely, at each iteration
+of the expansion:</p>
+<div class="math">
+\[\text{new_step_size} \leq \text{max_step_expansion} * \text{step_size}\]</div>
+<p>By definition for expansion</p>
+<div class="math">
+\[\text{max_step_expansion} &gt; 1.0\]</div>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options18max_num_iterationsE">
+<span id="GradientProblemSolver::Options::max_num_iterations__i"></span>int <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">max_num_iterations</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options18max_num_iterationsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">50</span></code></p>
+<p>Maximum number of iterations for which the solver should run.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options26max_solver_time_in_secondsE">
+<span id="GradientProblemSolver::Options::max_solver_time_in_seconds__double"></span>double <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">max_solver_time_in_seconds</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options26max_solver_time_in_secondsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">1e6</span></code>
+Maximum amount of time for which the solver should run.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options18function_toleranceE">
+<span id="GradientProblemSolver::Options::function_tolerance__double"></span>double <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">function_tolerance</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options18function_toleranceE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">1e-6</span></code></p>
+<p>Solver terminates if</p>
+<div class="math">
+\[\frac{|\Delta \text{cost}|}{\text{cost}} \leq \text{function_tolerance}\]</div>
+<p>where, <span class="math">\(\Delta \text{cost}\)</span> is the change in objective
+function value (up or down) in the current iteration of the line search.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options18gradient_toleranceE">
+<span id="GradientProblemSolver::Options::gradient_tolerance__double"></span>double <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">gradient_tolerance</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options18gradient_toleranceE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">1e-10</span></code></p>
+<p>Solver terminates if</p>
+<div class="math">
+\[\|x - \Pi \boxplus(x, -g(x))\|_\infty \leq \text{gradient_tolerance}\]</div>
+<p>where <span class="math">\(\|\cdot\|_\infty\)</span> refers to the max norm, <span class="math">\(\Pi\)</span>
+is projection onto the bounds constraints and <span class="math">\(\boxplus\)</span> is
+Plus operation for the overall local parameterization associated
+with the parameter vector.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options19parameter_toleranceE">
+<span id="GradientProblemSolver::Options::parameter_tolerance__double"></span>double <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">parameter_tolerance</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options19parameter_toleranceE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">1e-8</span></code></p>
+<p>Solver terminates if</p>
+<div class="math">
+\[\|\Delta x\| \leq (\|x\| + \text{parameter_tolerance}) * \text{parameter_tolerance}\]</div>
+<p>where <span class="math">\(\Delta x\)</span> is the step computed by the linear solver in
+the current iteration of the line search.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options12logging_typeE">
+<span id="GradientProblemSolver::Options::logging_type__LoggingType"></span>LoggingType <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">logging_type</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options12logging_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">PER_MINIMIZER_ITERATION</span></code></p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options28minimizer_progress_to_stdoutE">
+<span id="GradientProblemSolver::Options::minimizer_progress_to_stdout__b"></span>bool <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">minimizer_progress_to_stdout</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options28minimizer_progress_to_stdoutE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: <code class="docutils literal"><span class="pre">false</span></code></p>
+<p>By default the <code class="xref cpp cpp-class docutils literal"><span class="pre">Minimizer</span></code> progress is logged to <code class="docutils literal"><span class="pre">STDERR</span></code>
+depending on the <code class="docutils literal"><span class="pre">vlog</span></code> level. If this flag is set to true, and
+<a class="reference internal" href="#_CPPv2N21GradientProblemSolver7Options12logging_typeE" title="GradientProblemSolver::Options::logging_type"><code class="xref cpp cpp-member docutils literal"><span class="pre">GradientProblemSolver::Options::logging_type</span></code></a> is not
+<code class="docutils literal"><span class="pre">SILENT</span></code>, the logging output is sent to <code class="docutils literal"><span class="pre">STDOUT</span></code>.</p>
+<p>The progress display looks like</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>0: f: 2.317806e+05 d: 0.00e+00 g: 3.19e-01 h: 0.00e+00 s: 0.00e+00 e:  <span class="m">0</span> it: 2.98e-02 tt: 8.50e-02
+1: f: 2.312019e+05 d: 5.79e+02 g: 3.18e-01 h: 2.41e+01 s: 1.00e+00 e:  <span class="m">1</span> it: 4.54e-02 tt: 1.31e-01
+2: f: 2.300462e+05 d: 1.16e+03 g: 3.17e-01 h: 4.90e+01 s: 2.54e-03 e:  <span class="m">1</span> it: 4.96e-02 tt: 1.81e-01
+</pre></div>
+</div>
+<p>Here</p>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">f</span></code> is the value of the objective function.</li>
+<li><code class="docutils literal"><span class="pre">d</span></code> is the change in the value of the objective function if
+the step computed in this iteration is accepted.</li>
+<li><code class="docutils literal"><span class="pre">g</span></code> is the max norm of the gradient.</li>
+<li><code class="docutils literal"><span class="pre">h</span></code> is the change in the parameter vector.</li>
+<li><code class="docutils literal"><span class="pre">s</span></code> is the optimal step length computed by the line search.</li>
+<li><code class="docutils literal"><span class="pre">it</span></code> is the time take by the current iteration.</li>
+<li><code class="docutils literal"><span class="pre">tt</span></code> is the total time taken by the minimizer.</li>
+</ol>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Options9callbacksE">
+<span id="GradientProblemSolver::Options::callbacks__vector:IterationCallback:"></span>vector&lt;IterationCallback&gt; <code class="descclassname">GradientProblemSolver::Options::</code><code class="descname">callbacks</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Options9callbacksE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callbacks that are executed at the end of each iteration of the
+<code class="xref cpp cpp-class docutils literal"><span class="pre">Minimizer</span></code>. They are executed in the order that they are
+specified in this vector. See the documentation for
+<code class="xref cpp cpp-class docutils literal"><span class="pre">IterationCallback</span></code> for more details.</p>
+<p>The solver does NOT take ownership of these pointers.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="gradientproblemsolver-summary">
+<h3><a class="reference internal" href="#_CPPv2N21GradientProblemSolver7SummaryE" title="GradientProblemSolver::Summary"><code class="xref cpp cpp-class docutils literal"><span class="pre">GradientProblemSolver::Summary</span></code></a><a class="headerlink" href="#gradientproblemsolver-summary" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="_CPPv2N21GradientProblemSolver7SummaryE">
+<span id="GradientProblemSolver::Summary"></span><em class="property">class </em><code class="descclassname">GradientProblemSolver::</code><code class="descname">Summary</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7SummaryE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Summary of the various stages of the solver after termination.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK21GradientProblemSolver7Summary11BriefReportEv">
+<span id="GradientProblemSolver::Summary::BriefReportC"></span>string <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">BriefReport</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK21GradientProblemSolver7Summary11BriefReportEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>A brief one line description of the state of the solver after
+termination.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK21GradientProblemSolver7Summary10FullReportEv">
+<span id="GradientProblemSolver::Summary::FullReportC"></span>string <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">FullReport</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK21GradientProblemSolver7Summary10FullReportEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>A full multiline description of the state of the solver after
+termination.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK21GradientProblemSolver7Summary16IsSolutionUsableEv">
+<span id="GradientProblemSolver::Summary::IsSolutionUsableC"></span>bool <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">IsSolutionUsable</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK21GradientProblemSolver7Summary16IsSolutionUsableEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the solution returned by the optimization algorithm can be
+relied on to be numerically sane. This will be the case if
+<cite>GradientProblemSolver::Summary:termination_type</cite> is set to <cite>CONVERGENCE</cite>,
+<cite>USER_SUCCESS</cite> or <cite>NO_CONVERGENCE</cite>, i.e., either the solver
+converged by meeting one of the convergence tolerances or because
+the user indicated that it had converged or it ran to the maximum
+number of iterations or time.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary16termination_typeE">
+<span id="GradientProblemSolver::Summary::termination_type__TerminationType"></span>TerminationType <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">termination_type</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary16termination_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The cause of the minimizer terminating.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary7messageE">
+<span id="GradientProblemSolver::Summary::message__string"></span>string <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">message</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary7messageE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reason why the solver terminated.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary12initial_costE">
+<span id="GradientProblemSolver::Summary::initial_cost__double"></span>double <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">initial_cost</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary12initial_costE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cost of the problem (value of the objective function) before the
+optimization.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary10final_costE">
+<span id="GradientProblemSolver::Summary::final_cost__double"></span>double <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">final_cost</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary10final_costE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cost of the problem (value of the objective function) after the
+optimization.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary10iterationsE">
+<span id="GradientProblemSolver::Summary::iterations__vector:IterationSummary:"></span>vector&lt;IterationSummary&gt; <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">iterations</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary10iterationsE" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="xref cpp cpp-class docutils literal"><span class="pre">IterationSummary</span></code> for each minimizer iteration in order.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary21total_time_in_secondsE">
+<span id="GradientProblemSolver::Summary::total_time_in_seconds__double"></span>double <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">total_time_in_seconds</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary21total_time_in_secondsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time (in seconds) spent in the solver.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary31cost_evaluation_time_in_secondsE">
+<span id="GradientProblemSolver::Summary::cost_evaluation_time_in_seconds__double"></span>double <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">cost_evaluation_time_in_seconds</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary31cost_evaluation_time_in_secondsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time (in seconds) spent evaluating the cost vector.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary35gradient_evaluation_time_in_secondsE">
+<span id="GradientProblemSolver::Summary::gradient_evaluation_time_in_seconds__double"></span>double <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">gradient_evaluation_time_in_seconds</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary35gradient_evaluation_time_in_secondsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time (in seconds) spent evaluating the gradient vector.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary14num_parametersE">
+<span id="GradientProblemSolver::Summary::num_parameters__i"></span>int <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">num_parameters</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary14num_parametersE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of parameters in the problem.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary20num_local_parametersE">
+<span id="GradientProblemSolver::Summary::num_local_parameters__i"></span>int <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">num_local_parameters</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary20num_local_parametersE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dimension of the tangent space of the problem. This is different
+from <a class="reference internal" href="#_CPPv2N21GradientProblemSolver7Summary14num_parametersE" title="GradientProblemSolver::Summary::num_parameters"><code class="xref cpp cpp-member docutils literal"><span class="pre">GradientProblemSolver::Summary::num_parameters</span></code></a> if a
+<code class="xref cpp cpp-class docutils literal"><span class="pre">LocalParameterization</span></code> object is used.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary26line_search_direction_typeE">
+<span id="GradientProblemSolver::Summary::line_search_direction_type__LineSearchDirectionType"></span>LineSearchDirectionType <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">line_search_direction_type</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary26line_search_direction_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of line search direction used.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary16line_search_typeE">
+<span id="GradientProblemSolver::Summary::line_search_type__LineSearchType"></span>LineSearchType <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">line_search_type</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary16line_search_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of the line search algorithm used.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary30line_search_interpolation_typeE">
+<span id="GradientProblemSolver::Summary::line_search_interpolation_type__LineSearchInterpolationType"></span>LineSearchInterpolationType <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">line_search_interpolation_type</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary30line_search_interpolation_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>When performing line search, the degree of the polynomial used to
+approximate the objective function.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary33nonlinear_conjugate_gradient_typeE">
+<span id="GradientProblemSolver::Summary::nonlinear_conjugate_gradient_type__NonlinearConjugateGradientType"></span>NonlinearConjugateGradientType <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">nonlinear_conjugate_gradient_type</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary33nonlinear_conjugate_gradient_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the line search direction is <cite>NONLINEAR_CONJUGATE_GRADIENT</cite>,
+then this indicates the particular variant of non-linear conjugate
+gradient used.</p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21GradientProblemSolver7Summary14max_lbfgs_rankE">
+<span id="GradientProblemSolver::Summary::max_lbfgs_rank__i"></span>int <code class="descclassname">GradientProblemSolver::Summary::</code><code class="descname">max_lbfgs_rank</code><a class="headerlink" href="#_CPPv2N21GradientProblemSolver7Summary14max_lbfgs_rankE" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the type of the line search direction is <cite>LBFGS</cite>, then this
+indicates the rank of the Hessian approximation.</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="features.html" class="btn btn-neutral float-right" title="Why?" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="nnls_solving.html" class="btn btn-neutral" title="Solving Non-linear Least Squares" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016 Google Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.12.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+      MathJax.Hub.Config({
+          "HTML-CSS": {
+            availableFonts: ["TeX"]
+          }
+        });
+      </script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-49769510-1', 'ceres-solver.org');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>

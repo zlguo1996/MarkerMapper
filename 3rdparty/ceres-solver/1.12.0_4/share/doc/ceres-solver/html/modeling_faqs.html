@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Modeling &mdash; Ceres Solver</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Ceres Solver" href="index.html"/>
+        <link rel="up" title="FAQS, Tips &amp; Tricks" href="faqs.html"/>
+        <link rel="next" title="Solving" href="solving_faqs.html"/>
+        <link rel="prev" title="FAQS, Tips &amp; Tricks" href="faqs.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Ceres Solver
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.12
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide.html">User&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Why?</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="faqs.html">FAQS, Tips &amp; Tricks</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solving_faqs.html">Solving</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faqs.html#further-reading">Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_history.html">Version History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Ceres Solver</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="faqs.html">FAQS, Tips &amp; Tricks</a> &raquo;</li>
+      
+    <li>Modeling</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="modeling">
+<span id="chapter-modeling-faqs"></span><h1>Modeling<a class="headerlink" href="#modeling" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p class="first">Use analytical/automatic derivatives.</p>
+<p>This is the single most important piece of advice we can give to
+you. It is tempting to take the easy way out and use numeric
+differentiation. This is a bad idea. Numeric differentiation is
+slow, ill-behaved, hard to get right, and results in poor
+convergence behaviour.</p>
+<p>Ceres allows the user to define templated functors which will
+be automatically differentiated. For most situations this is enough
+and we recommend using this facility. In some cases the derivatives
+are simple enough or the performance considerations are such that
+the overhead of automatic differentiation is too much. In such
+cases, analytic derivatives are recommended.</p>
+<p>The use of numerical derivatives should be a measure of last
+resort, where it is simply not possible to write a templated
+implementation of the cost function.</p>
+<p>In many cases it is not possible to do analytic or automatic
+differentiation of the entire cost function, but it is generally
+the case that it is possible to decompose the cost function into
+parts that need to be numerically differentiated and parts that can
+be automatically or analytically differentiated.</p>
+<p>To this end, Ceres has extensive support for mixing analytic,
+automatic and numeric differentiation. See
+<a class="reference internal" href="nnls_modeling.html#_CPPv2N5ceres21CostFunctionToFunctorE" title="ceres::CostFunctionToFunctor"><code class="xref cpp cpp-class docutils literal"><span class="pre">CostFunctionToFunctor</span></code></a>.</p>
+</li>
+<li><p class="first">When using Quaternions,  consider using <a class="reference internal" href="nnls_modeling.html#_CPPv2N5ceres26QuaternionParameterizationE" title="ceres::QuaternionParameterization"><code class="xref cpp cpp-class docutils literal"><span class="pre">QuaternionParameterization</span></code></a>.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Quaternion">Quaternions</a> are a
+four dimensional parameterization of the space of three dimensional
+rotations <span class="math">\(SO(3)\)</span>.  However, the <span class="math">\(SO(3)\)</span> is a three
+dimensional set, and so is the tangent space of a
+Quaternion. Therefore, it is sometimes (not always) benefecial to
+associate a local parameterization with parameter blocks
+representing a Quaternion. Assuming that the order of entries in
+your parameter block is <span class="math">\(w,x,y,z\)</span>, you can use
+<a class="reference internal" href="nnls_modeling.html#_CPPv2N5ceres26QuaternionParameterizationE" title="ceres::QuaternionParameterization"><code class="xref cpp cpp-class docutils literal"><span class="pre">QuaternionParameterization</span></code></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are using <a class="reference external" href="http://eigen.tuxfamily.org/dox/classEigen_1_1Quaternion.html">Eigen&#8217;s Quaternion</a>
+object, whose layout is <span class="math">\(x,y,z,w\)</span>, then you should use
+<a class="reference internal" href="nnls_modeling.html#_CPPv2N5ceres31EigenQuaternionParameterizationE" title="ceres::EigenQuaternionParameterization"><code class="xref cpp cpp-class docutils literal"><span class="pre">EigenQuaternionParameterization</span></code></a>.</p>
+</div>
+</li>
+<li><p class="first">How do I solve problems with general linear &amp; non-linear
+<strong>inequality</strong> constraints with Ceres Solver?</p>
+<p>Currently, Ceres Solver only supports upper and lower bounds
+constraints on the parameter blocks.</p>
+<p>A crude way of dealing with inequality constraints is have one or
+more of your cost functions check if the inequalities you are
+interested in are satisfied, and if not return false instead of
+true. This will prevent the solver from ever stepping into an
+infeasible region.</p>
+<p>This requires that the starting point for the optimization be a
+feasible point.  You also risk pre-mature convergence using this
+method.</p>
+</li>
+<li><p class="first">How do I solve problems with general linear &amp; non-linear <strong>equality</strong>
+constraints with Ceres Solver?</p>
+<p>There is no built in support in ceres for solving problems with
+equality constraints.  Currently, Ceres Solver only supports upper
+and lower bounds constraints on the parameter blocks.</p>
+<p>The trick described above for dealing with inequality
+constraints will <strong>not</strong> work for equality constraints.</p>
+</li>
+<li><p class="first">How do I set one or more components of a parameter block constant?</p>
+<p>Using <a class="reference internal" href="nnls_modeling.html#_CPPv2N5ceres22SubsetParameterizationE" title="ceres::SubsetParameterization"><code class="xref cpp cpp-class docutils literal"><span class="pre">SubsetParameterization</span></code></a>.</p>
+</li>
+<li><p class="first">Putting <a class="reference external" href="http://en.wikipedia.org/wiki/Inverse_function_theorem">Inverse Function Theorem</a> to use.</p>
+<p>Every now and then we have to deal with functions which cannot be
+evaluated analytically. Computing the Jacobian in such cases is
+tricky. A particularly interesting case is where the inverse of the
+function is easy to compute analytically. An example of such a
+function is the Coordinate transformation between the <a class="reference external" href="http://en.wikipedia.org/wiki/ECEF">ECEF</a> and the <a class="reference external" href="http://en.wikipedia.org/wiki/World_Geodetic_System">WGS84</a> where the
+conversion from WGS84 to ECEF is analytic, but the conversion
+back to WGS84 uses an iterative algorithm. So how do you compute the
+derivative of the ECEF to WGS84 transformation?</p>
+<p>One obvious approach would be to numerically
+differentiate the conversion function. This is not a good idea. For
+one, it will be slow, but it will also be numerically quite
+bad.</p>
+<p>Turns out you can use the <a class="reference external" href="http://en.wikipedia.org/wiki/Inverse_function_theorem">Inverse Function Theorem</a> in this
+case to compute the derivatives more or less analytically.</p>
+<p>The key result here is. If <span class="math">\(x = f^{-1}(y)\)</span>, and <span class="math">\(Df(x)\)</span>
+is the invertible Jacobian of <span class="math">\(f\)</span> at <span class="math">\(x\)</span>. Then the
+Jacobian <span class="math">\(Df^{-1}(y) = [Df(x)]^{-1}\)</span>, i.e., the Jacobian of
+the <span class="math">\(f^{-1}\)</span> is the inverse of the Jacobian of <span class="math">\(f\)</span>.</p>
+<p>Algorithmically this means that given <span class="math">\(y\)</span>, compute <span class="math">\(x =
+f^{-1}(y)\)</span> by whatever means you can. Evaluate the Jacobian of
+<span class="math">\(f\)</span> at <span class="math">\(x\)</span>. If the Jacobian matrix is invertible, then
+its inverse is the Jacobian of <span class="math">\(f^{-1}(y)\)</span> at  <span class="math">\(y\)</span>.</p>
+<p>One can put this into practice with the following code fragment.</p>
+<div class="highlight-c++"><div class="highlight"><pre><span></span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span> <span class="n">ecef</span><span class="p">;</span> <span class="c1">// Fill some values</span>
+<span class="c1">// Iterative computation.</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Vector3d</span> <span class="n">lla</span> <span class="o">=</span> <span class="n">ECEFToLLA</span><span class="p">(</span><span class="n">ecef</span><span class="p">);</span>
+<span class="c1">// Analytic derivatives</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix3d</span> <span class="n">lla_to_ecef_jacobian</span> <span class="o">=</span> <span class="n">LLAToECEFJacobian</span><span class="p">(</span><span class="n">lla</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="n">invertible</span><span class="p">;</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix3d</span> <span class="n">ecef_to_lla_jacobian</span><span class="p">;</span>
+<span class="n">lla_to_ecef_jacobian</span><span class="p">.</span><span class="n">computeInverseWithCheck</span><span class="p">(</span><span class="n">ecef_to_lla_jacobian</span><span class="p">,</span> <span class="n">invertible</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="solving_faqs.html" class="btn btn-neutral float-right" title="Solving" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="faqs.html" class="btn btn-neutral" title="FAQS, Tips &amp; Tricks" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016 Google Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.12.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+      MathJax.Hub.Config({
+          "HTML-CSS": {
+            availableFonts: ["TeX"]
+          }
+        });
+      </script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-49769510-1', 'ceres-solver.org');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>

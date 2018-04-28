@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Users &mdash; Ceres Solver</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Ceres Solver" href="index.html"/>
+        <link rel="next" title="Contributing" href="contributing.html"/>
+        <link rel="prev" title="Solving" href="solving_faqs.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Ceres Solver
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.12
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide.html">User&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Why?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faqs.html">FAQS, Tips &amp; Tricks</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_history.html">Version History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Ceres Solver</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Users</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="users">
+<span id="chapter-users"></span><h1>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>At <a class="reference external" href="http://www.google.com">Google</a>, Ceres is used to:<ul>
+<li>Estimate the pose of <a class="reference external" href="http://youtu.be/z00ORu4bU-A">Street View</a> cars, aircrafts, and satellites.</li>
+<li>Build 3D models for <a class="reference external" href="http://google-latlong.blogspot.com/2012/04/visit-global-landmarks-with-photo-tours.html">PhotoTours</a>.</li>
+<li>Estimate satellite image sensor characteristics.</li>
+<li>Stitch <a class="reference external" href="http://www.google.com/maps/about/contribute/photosphere/">panoramas</a> on Android and iOS.</li>
+<li>Apply <a class="reference external" href="http://googleresearch.blogspot.com/2014/04/lens-blur-in-new-google-camera-app.html">Lens Blur</a> on Android.</li>
+<li>Solve <a class="reference external" href="http://en.wikipedia.org/wiki/Structure_from_motion">bundle adjustment</a> and <a class="reference external" href="http://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping">SLAM</a> problems in <a class="reference external" href="https://www.google.com/atap/projecttango/">Project
+Tango</a>.</li>
+</ul>
+</li>
+<li><a class="reference external" href="https://www.willowgarage.com/blog/2013/08/09/enabling-robots-see-better-through-improved-camera-calibration">Willow Garage</a> uses Ceres to solve <a class="reference external" href="http://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping">SLAM</a> problems.</li>
+<li><a class="reference external" href="http://www.swri.org/">Southwest Research Institute</a> uses Ceres for
+<a class="reference external" href="http://rosindustrial.org/news/2014/9/24/industrial-calibration-library-update-and-presentation">calibrating robot-camera systems</a>.</li>
+<li><a class="reference external" href="http://www.blender.org">Blender</a> uses Ceres for <a class="reference external" href="http://mango.blender.org/development/planar-tracking-preview/">planar
+tracking</a> and <a class="reference external" href="http://en.wikipedia.org/wiki/Structure_from_motion">bundle adjustment</a>.</li>
+<li><a class="reference external" href="http://imagine.enpc.fr/~moulonp/openMVG/">OpenMVG</a> an open source
+multi-view geometry library uses Ceres for <a class="reference external" href="http://en.wikipedia.org/wiki/Structure_from_motion">bundle adjustment</a>.</li>
+<li><a class="reference external" href="http://research.microsoft.com/en-us/">Microsoft Research</a> uses
+Ceres for nonlinear optimization of objectives involving subdivision
+surfaces under <a class="reference external" href="http://research.microsoft.com/en-us/projects/handmodelingfrommonoculardepth/">skinned control meshes</a>.</li>
+<li><a class="reference external" href="http://www.matterport.com">Matterport</a>, uses Ceres for global
+alignment of 3D point clouds and for pose graph optimization.</li>
+<li><a class="reference external" href="http://obviousengine.com/">Obvious Engineering</a> uses Ceres for
+bundle adjustment for their 3D photography app <a class="reference external" href="http://seene.co/">Seene</a>.</li>
+<li>The <a class="reference external" href="http://www.asl.ethz.ch/">Autonomous Systems Lab</a> at ETH
+Zurich uses Ceres for<ul>
+<li>Camera and Camera/IMU Calibration.</li>
+<li>Large scale optimization of visual, inertial, gps and
+wheel-odometry data for long term autonomy.</li>
+</ul>
+</li>
+<li><a class="reference external" href="http://openptrack.org/">OpenPTrack</a> uses Ceres for camera
+calibration.</li>
+<li>The <a class="reference external" href="http://robotics.dei.unipd.it/">Intelligent Autonomous System Lab</a>
+at University of Padova, Italy, uses Ceres for<ul>
+<li>Camera/depth sensors network calibration.</li>
+<li>Depth sensor distortion map estimation.</li>
+</ul>
+</li>
+<li><a class="reference external" href="http://cs.ucsb.edu/~cmsweeney/theia">Theia</a> is an open source
+Structure from Motion library that uses Ceres for <a class="reference external" href="http://en.wikipedia.org/wiki/Structure_from_motion">bundle adjustment</a>
+and camera pose estimation.</li>
+<li>The <a class="reference external" href="https://www.arl.psu.edu/">Applied Research Laboratory</a> at
+Pennsylvania State University uses in their synthetic aperture Sonar
+beamforming engine, called ASASIN , for estimating platform
+kinematics.</li>
+<li><a class="reference external" href="https://github.com/colmap/colmap">Colmap</a> is a an open source
+structure from motion library that makes heavy use of Ceres for
+bundle adjustment with support for many camera models and for other
+non-linear least-squares problems (relative, absolute pose
+refinement, etc.).</li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="contributing.html" class="btn btn-neutral float-right" title="Contributing" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="solving_faqs.html" class="btn btn-neutral" title="Solving" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016 Google Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.12.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+      MathJax.Hub.Config({
+          "HTML-CSS": {
+            availableFonts: ["TeX"]
+          }
+        });
+      </script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-49769510-1', 'ceres-solver.org');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>

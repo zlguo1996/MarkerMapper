@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Solving &mdash; Ceres Solver</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Ceres Solver" href="index.html"/>
+        <link rel="up" title="FAQS, Tips &amp; Tricks" href="faqs.html"/>
+        <link rel="next" title="Users" href="users.html"/>
+        <link rel="prev" title="Modeling" href="modeling_faqs.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Ceres Solver
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.12
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide.html">User&#8217;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Why?</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="faqs.html">FAQS, Tips &amp; Tricks</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="modeling_faqs.html">Modeling</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Solving</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faqs.html#further-reading">Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version_history.html">Version History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Ceres Solver</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="faqs.html">FAQS, Tips &amp; Tricks</a> &raquo;</li>
+      
+    <li>Solving</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="solving">
+<span id="chapter-solving-faqs"></span><h1>Solving<a class="headerlink" href="#solving" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p class="first">How do I evaluate the Jacobian for a solved problem?</p>
+<p>Using <a class="reference internal" href="nnls_modeling.html#_CPPv2N5ceres7Problem8EvaluateERKN7Problem15EvaluateOptionsEPdP6vectorIdEP6vectorIdEP9CRSMatrix" title="ceres::Problem::Evaluate"><code class="xref cpp cpp-func docutils literal"><span class="pre">Problem::Evaluate()</span></code></a>.</p>
+</li>
+<li><p class="first">How do I choose the right linear solver?</p>
+<p>When using the <code class="docutils literal"><span class="pre">TRUST_REGION</span></code> minimizer, the choice of linear
+solver is an important decision. It affects solution quality and
+runtime. Here is a simple way to reason about it.</p>
+<ol class="arabic">
+<li><p class="first">For small (a few hundred parameters) or dense problems use
+<code class="docutils literal"><span class="pre">DENSE_QR</span></code>.</p>
+</li>
+<li><p class="first">For general sparse problems (i.e., the Jacobian matrix has a
+substantial number of zeros) use
+<code class="docutils literal"><span class="pre">SPARSE_NORMAL_CHOLESKY</span></code>. This requires that you have
+<code class="docutils literal"><span class="pre">SuiteSparse</span></code> or <code class="docutils literal"><span class="pre">CXSparse</span></code> installed.</p>
+</li>
+<li><p class="first">For bundle adjustment problems with up to a hundred or so
+cameras, use <code class="docutils literal"><span class="pre">DENSE_SCHUR</span></code>.</p>
+</li>
+<li><p class="first">For larger bundle adjustment problems with sparse Schur
+Complement/Reduced camera matrices use <code class="docutils literal"><span class="pre">SPARSE_SCHUR</span></code>. This
+requires that you build Ceres with support for <code class="docutils literal"><span class="pre">SuiteSparse</span></code>,
+<code class="docutils literal"><span class="pre">CXSparse</span></code> or Eigen&#8217;s sparse linear algebra libraries.</p>
+<p>If you do not have access to these libraries for whatever
+reason, <code class="docutils literal"><span class="pre">ITERATIVE_SCHUR</span></code> with <code class="docutils literal"><span class="pre">SCHUR_JACOBI</span></code> is an
+excellent alternative.</p>
+</li>
+<li><p class="first">For large bundle adjustment problems (a few thousand cameras or
+more) use the <code class="docutils literal"><span class="pre">ITERATIVE_SCHUR</span></code> solver. There are a number of
+preconditioner choices here. <code class="docutils literal"><span class="pre">SCHUR_JACOBI</span></code> offers an
+excellent balance of speed and accuracy. This is also the
+recommended option if you are solving medium sized problems for
+which <code class="docutils literal"><span class="pre">DENSE_SCHUR</span></code> is too slow but <code class="docutils literal"><span class="pre">SuiteSparse</span></code> is not
+available.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are solving small to medium sized problems, consider
+setting <code class="docutils literal"><span class="pre">Solver::Options::use_explicit_schur_complement</span></code> to
+<code class="docutils literal"><span class="pre">true</span></code>, it can result in a substantial performance boost.</p>
+</div>
+<p>If you are not satisfied with <code class="docutils literal"><span class="pre">SCHUR_JACOBI</span></code>&#8216;s performance try
+<code class="docutils literal"><span class="pre">CLUSTER_JACOBI</span></code> and <code class="docutils literal"><span class="pre">CLUSTER_TRIDIAGONAL</span></code> in that
+order. They require that you have <code class="docutils literal"><span class="pre">SuiteSparse</span></code>
+installed. Both of these preconditioners use a clustering
+algorithm. Use <code class="docutils literal"><span class="pre">SINGLE_LINKAGE</span></code> before <code class="docutils literal"><span class="pre">CANONICAL_VIEWS</span></code>.</p>
+</li>
+</ol>
+</li>
+<li><p class="first">Use <a class="reference internal" href="nnls_solving.html#_CPPv2NK5ceres6Solver7Summary10FullReportEv" title="ceres::Solver::Summary::FullReport"><code class="xref cpp cpp-func docutils literal"><span class="pre">Solver::Summary::FullReport()</span></code></a> to diagnose performance problems.</p>
+<p>When diagnosing Ceres performance issues - runtime and convergence,
+the first place to start is by looking at the output of
+<code class="docutils literal"><span class="pre">Solver::Summary::FullReport</span></code>. Here is an example</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>./bin/bundle_adjuster --input ../data/problem-16-22106-pre.txt
+
+iter      cost      cost_change  <span class="p">|</span>gradient<span class="p">|</span>   <span class="p">|</span>step<span class="p">|</span>    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   <span class="m">0</span>  4.185660e+06    0.00e+00    2.16e+07   0.00e+00   0.00e+00  1.00e+04       <span class="m">0</span>    7.50e-02    3.58e-01
+   <span class="m">1</span>  1.980525e+05    3.99e+06    5.34e+06   2.40e+03   9.60e-01  3.00e+04       <span class="m">1</span>    1.84e-01    5.42e-01
+   <span class="m">2</span>  5.086543e+04    1.47e+05    2.11e+06   1.01e+03   8.22e-01  4.09e+04       <span class="m">1</span>    1.53e-01    6.95e-01
+   <span class="m">3</span>  1.859667e+04    3.23e+04    2.87e+05   2.64e+02   9.85e-01  1.23e+05       <span class="m">1</span>    1.71e-01    8.66e-01
+   <span class="m">4</span>  1.803857e+04    5.58e+02    2.69e+04   8.66e+01   9.93e-01  3.69e+05       <span class="m">1</span>    1.61e-01    1.03e+00
+   <span class="m">5</span>  1.803391e+04    4.66e+00    3.11e+02   1.02e+01   1.00e+00  1.11e+06       <span class="m">1</span>    1.49e-01    1.18e+00
+
+Ceres Solver v1.12.0 Solve Report
+----------------------------------
+                                     Original                  Reduced
+Parameter blocks                        <span class="m">22122</span>                    22122
+Parameters                              <span class="m">66462</span>                    66462
+Residual blocks                         <span class="m">83718</span>                    83718
+Residual                               <span class="m">167436</span>                   167436
+
+Minimizer                        TRUST_REGION
+
+Sparse linear algebra library    SUITE_SPARSE
+Trust region strategy     LEVENBERG_MARQUARDT
+
+                                        Given                     Used
+Linear solver                    SPARSE_SCHUR             SPARSE_SCHUR
+Threads                                     <span class="m">1</span>                        1
+Linear solver threads                       <span class="m">1</span>                        1
+Linear solver ordering              AUTOMATIC                22106, 16
+
+Cost:
+Initial                          4.185660e+06
+Final                            1.803391e+04
+Change                           4.167626e+06
+
+Minimizer iterations                        5
+Successful steps                            5
+Unsuccessful steps                          0
+
+Time <span class="o">(</span>in seconds<span class="o">)</span>:
+Preprocessor                            0.283
+
+  Residual evaluation                   0.061
+  Jacobian evaluation                   0.361
+  Linear solver                         0.382
+Minimizer                               0.895
+
+Postprocessor                           0.002
+Total                                   1.220
+
+Termination:                   NO_CONVERGENCE <span class="o">(</span>Maximum number of iterations reached.<span class="o">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<blockquote>
+<div><p>Let us focus on run-time performance. The relevant lines to look at
+are</p>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>Time <span class="o">(</span>in seconds<span class="o">)</span>:
+Preprocessor                            0.283
+
+  Residual evaluation                   0.061
+  Jacobian evaluation                   0.361
+  Linear solver                         0.382
+Minimizer                               0.895
+
+Postprocessor                           0.002
+Total                                   1.220
+</pre></div>
+</div>
+</div></blockquote>
+<p>Which tell us that of the total 1.2 seconds, about .3 seconds was
+spent in the linear solver and the rest was mostly spent in
+preprocessing and jacobian evaluation.</p>
+<p>The preprocessing seems particularly expensive. Looking back at the
+report, we observe</p>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>Linear solver ordering              AUTOMATIC                22106, 16
+</pre></div>
+</div>
+</div></blockquote>
+<p>Which indicates that we are using automatic ordering for the
+<code class="docutils literal"><span class="pre">SPARSE_SCHUR</span></code> solver. This can be expensive at times. A straight
+forward way to deal with this is to give the ordering manually. For
+<code class="docutils literal"><span class="pre">bundle_adjuster</span></code> this can be done by passing the flag
+<code class="docutils literal"><span class="pre">-ordering=user</span></code>. Doing so and looking at the timing block of the
+full report gives us</p>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>Time <span class="o">(</span>in seconds<span class="o">)</span>:
+Preprocessor                            0.051
+
+  Residual evaluation                   0.053
+  Jacobian evaluation                   0.344
+  Linear solver                         0.372
+Minimizer                               0.854
+
+Postprocessor                           0.002
+Total                                   0.935
+</pre></div>
+</div>
+</div></blockquote>
+<p>The preprocessor time has gone down by more than 5.5x!.</p>
+</div></blockquote>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="users.html" class="btn btn-neutral float-right" title="Users" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modeling_faqs.html" class="btn btn-neutral" title="Modeling" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016 Google Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.12.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+      MathJax.Hub.Config({
+          "HTML-CSS": {
+            availableFonts: ["TeX"]
+          }
+        });
+      </script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-49769510-1', 'ceres-solver.org');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>

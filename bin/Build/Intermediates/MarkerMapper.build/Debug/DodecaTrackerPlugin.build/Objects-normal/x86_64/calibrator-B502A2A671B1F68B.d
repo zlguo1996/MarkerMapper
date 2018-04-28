@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Libraries/aruco/calibrator.cpp \
+  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/Tracking/MarkerMapper\ 2/MarkerMapper/Libraries/aruco/calibrator.cpp \
   /usr/local/include/aruco/markermap.h \
   /usr/local/include/aruco/aruco_export.h \
   /usr/local/include/aruco/marker.h \
@@ -30,9 +30,9 @@ dependencies: \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/core/types_c.h \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/core/optim.hpp \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/core/ovx.hpp \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Libraries/aruco/calibrator.h \
+  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/Tracking/MarkerMapper\ 2/MarkerMapper/Libraries/aruco/calibrator.h \
   /usr/local/include/aruco/cameraparameters.h \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Libraries/aruco/levmarq.h \
+  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/Tracking/MarkerMapper\ 2/MarkerMapper/Libraries/aruco/levmarq.h \
   /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/Core \
   /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
   /usr/local/Cellar/eigen/3.3.4/include/eigen3/Eigen/src/Core/util/Macros.h \

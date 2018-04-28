@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/tmp/ceres-solver-20170304-41094-13gd1j7/ceres-solver-1.12.0/examples/curve_fitting.c
+math.h
+-
+stdio.h
+-
+string.h
+-
+ceres/c_api.h
+/tmp/ceres-solver-20170304-41094-13gd1j7/ceres-solver-1.12.0/examples/ceres/c_api.h
+
+config/ceres/internal/config.h
+
+include/ceres/c_api.h
+ceres/internal/port.h
+include/ceres/ceres/internal/port.h
+ceres/internal/disable_warnings.h
+include/ceres/ceres/internal/disable_warnings.h
+ceres/internal/reenable_warnings.h
+include/ceres/ceres/internal/reenable_warnings.h
+
+include/ceres/internal/disable_warnings.h
+
+include/ceres/internal/port.h
+cstddef
+-
+ceres/internal/config.h
+include/ceres/internal/ceres/internal/config.h
+tr1/memory
+-
+memory
+-
+
+include/ceres/internal/reenable_warnings.h
+
