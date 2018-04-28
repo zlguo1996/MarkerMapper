@@ -1,0 +1,7 @@
+%YAML:1.0
+---
+pentip_position: !!opencv-matrix
+   rows: 3
+   cols: 1
+   dt: f
+   data: [ 5.60214685e-04, 1.30922254e-03, -2.60815751e-02 ]
