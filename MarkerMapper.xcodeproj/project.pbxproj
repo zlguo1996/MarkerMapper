@@ -1509,15 +1509,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/Cellar/opencv/3.4.1_2/include,
 					/usr/local/include,
 					/usr/local/include/aruco,
-					/usr/local/Cellar/eigen/3.3.4/include/eigen3,
+					/usr/local/include/eigen3,
 					/usr/local/include/marker_mapper,
 					"/usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8",
-					/usr/local/Cellar/glog/0.3.5_3/include,
-					"/usr/local/Cellar/ceres-solver/1.13.0_4/include",
-					/usr/local/Cellar/boost/1.66.0/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib,
@@ -1573,15 +1569,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					/usr/local/Cellar/opencv/3.4.1_2/include,
 					/usr/local/include,
 					/usr/local/include/aruco,
-					/usr/local/Cellar/eigen/3.3.4/include/eigen3,
+					/usr/local/include/eigen3,
 					/usr/local/include/marker_mapper,
 					"/usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8",
-					/usr/local/Cellar/glog/0.3.5_3/include,
-					"/usr/local/Cellar/ceres-solver/1.13.0_4/include",
-					/usr/local/Cellar/boost/1.66.0/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib,
