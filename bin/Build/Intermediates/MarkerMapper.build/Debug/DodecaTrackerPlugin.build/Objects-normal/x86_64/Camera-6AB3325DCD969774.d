@@ -1,7 +1,7 @@
 dependencies: \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Camera.cpp \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Camera.hpp \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/stdafx.h \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Camera.cpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Camera.hpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/stdafx.h \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/opencv.hpp \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/opencv_modules.hpp \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/core.hpp \
@@ -142,4 +142,4 @@ dependencies: \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/core/core.hpp \
   /usr/local/include/marker_mapper/marker_mapper_exports.h \
   /usr/local/include/marker_mapper/mapper_types.h \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Libraries/aruco/calibrator.h
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Libraries/aruco/calibrator.h

@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Libraries/my_lib/Tools.cpp \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Libraries/my_lib/Tools.hpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Libraries/my_lib/Tools.cpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Libraries/my_lib/Tools.hpp \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/opencv.hpp \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/opencv_modules.hpp \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/core.hpp \

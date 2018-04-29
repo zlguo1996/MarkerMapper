@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/dodtracmain.cpp \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/stdafx.h \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/dodtracmain.cpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/stdafx.h \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/opencv.hpp \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/opencv_modules.hpp \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/core.hpp \
@@ -141,7 +141,7 @@ dependencies: \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/core/core.hpp \
   /usr/local/include/marker_mapper/marker_mapper_exports.h \
   /usr/local/include/marker_mapper/mapper_types.h \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Libraries/aruco/calibrator.h \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Libraries/aruco/calibrator.h \
   /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/point_cloud.h \
   /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/point_types.h \
   /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/register_point_struct.h \
@@ -193,15 +193,15 @@ dependencies: \
   /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/TextureMesh.h \
   /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/io/impl/pcd_io.hpp \
   /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/io/lzf.h \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Libraries/aruco_mm/sglviewer.h \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Libraries/aruco_mm/sgl.h \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Libraries/aruco_mm/sglviewer.h \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Libraries/aruco_mm/sgl.h \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/highgui/highgui.hpp \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/imgproc/imgproc.hpp \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/DodecaTracker.hpp \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Pen.hpp \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Camera.hpp \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/PenDetector.hpp \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Calibration.hpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/DodecaTracker.hpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Pen.hpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Camera.hpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/PenDetector.hpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Calibration.hpp \
   /usr/local/include/ceres/ceres.h \
   /usr/local/include/ceres/autodiff_cost_function.h \
   /usr/local/include/ceres/internal/autodiff.h \
@@ -258,7 +258,7 @@ dependencies: \
   /usr/local/include/ceres/ordered_groups.h \
   /usr/local/include/ceres/problem.h /usr/local/include/ceres/solver.h \
   /usr/local/include/ceres/version.h /usr/local/include/ceres/rotation.h \
-  /Users/guozile/Documents/学习/毕业设计/毕设/工程文件/代码/MarkerMapper/MarkerMapper/Libraries/my_lib/Tools.hpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Libraries/my_lib/Tools.hpp \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/aruco.hpp \
   /usr/local/Cellar/opencv/3.4.1_2/include/opencv2/aruco/dictionary.hpp \
   /usr/local/include/glm/glm.hpp \
