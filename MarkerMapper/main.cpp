@@ -17,8 +17,8 @@
 
 //#define CALIB_CAM
 //#define CALIB_DODECA
-#define CALIB_PENTIP
-//#define REALTIME_TRACK
+//#define CALIB_PENTIP
+#define REALTIME_TRACK
 
 // 相机标定变量
 float calibration_marker_size = 0.018;    //标定用marker的边长
@@ -77,11 +77,6 @@ int main(int argc, const char * argv[]) {
     string pentip_photo_path = "Calibration/input/pen_calibration/dodeca_center_calibration";
     calibratePentip(pentip_parameters_file_path, pentip_photo_path, cp, dictionary, mmap);
 #endif
-    
-    //test
-    Pen pen(marker_map_path_base_name+".yml");
-    pen.setDodecaCenter(pentip_parameters_file_path);
-    cout << pen.dodeca_center_position << endl;
     
 #ifdef REALTIME_TRACK
     //追踪

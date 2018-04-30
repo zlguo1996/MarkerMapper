@@ -200,7 +200,6 @@
 		A768A1C72091D01F007DF719 /* libpcl_io.1.8.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A34694206DFCD6008C3032 /* libpcl_io.1.8.1.dylib */; };
 		A768A1C82091D0AB007DF719 /* libboost_system-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7852BE52079FA480028361F /* libboost_system-mt.dylib */; };
 		A768A1CA2091D0AB007DF719 /* libboost_system.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A768A1C92091D0AB007DF719 /* libboost_system.dylib */; };
-		A768A1CC2091E4F7007DF719 /* dodtracmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A768A1CB2091E4F7007DF719 /* dodtracmain.cpp */; };
 		A76E4F982079B15900947465 /* Tools.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A70A849A2078D9130015282A /* Tools.hpp */; };
 		A76E4F992079B15900947465 /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A70A849B2078D9140015282A /* Tools.cpp */; };
 		A76E4F9A2079B15900947465 /* sgl.h in Sources */ = {isa = PBXBuildFile; fileRef = A7DADEFE2062015B00AD8DA1 /* sgl.h */; };
@@ -221,6 +220,7 @@
 		A76E4FAA2079B15900947465 /* DodecaTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7EB45D0207661970048ADD7 /* DodecaTracker.cpp */; };
 		A76E4FAB2079B18A00947465 /* DodecaTrackerPlugin.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A770EE63206F463000513CFB /* DodecaTrackerPlugin.hpp */; };
 		A770EE64206F463000513CFB /* DodecaTrackerPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A770EE62206F463000513CFB /* DodecaTrackerPlugin.cpp */; };
+		A77256712096BD1F006D251B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77256702096BD1F006D251B /* main.cpp */; };
 		A7852BE62079FA480028361F /* libboost_system-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7852BE52079FA480028361F /* libboost_system-mt.dylib */; };
 		A7852BE72079FA740028361F /* libpcl_common.1.8.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A34681206DFCD5008C3032 /* libpcl_common.1.8.1.dylib */; };
 		A7852BE82079FA740028361F /* libpcl_io.1.8.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A34694206DFCD6008C3032 /* libpcl_io.1.8.1.dylib */; };
@@ -304,11 +304,11 @@
 		A768A1BF20916EB6007DF719 /* libceres.1.12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libceres.1.12.0.dylib; path = "../../../../../../../../../usr/local/Cellar/ceres-solver/1.12.0_4/lib/libceres.1.12.0.dylib"; sourceTree = "<group>"; };
 		A768A1C120916ED7007DF719 /* libglog.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglog.0.dylib; path = ../../../../../../../../../usr/local/Cellar/glog/0.3.4_1/lib/libglog.0.dylib; sourceTree = "<group>"; };
 		A768A1C92091D0AB007DF719 /* libboost_system.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_system.dylib; path = ../../../../../../../../../usr/local/Cellar/boost/1.66.0/lib/libboost_system.dylib; sourceTree = "<group>"; };
-		A768A1CB2091E4F7007DF719 /* dodtracmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dodtracmain.cpp; sourceTree = "<group>"; };
 		A770EE5C206F45DF00513CFB /* DodecaTrackerPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DodecaTrackerPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A770EE5E206F45DF00513CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A770EE62206F463000513CFB /* DodecaTrackerPlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DodecaTrackerPlugin.cpp; sourceTree = "<group>"; };
 		A770EE63206F463000513CFB /* DodecaTrackerPlugin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DodecaTrackerPlugin.hpp; sourceTree = "<group>"; };
+		A77256702096BD1F006D251B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A785299D2079F9210028361F /* libvtkFiltersHybridPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersHybridPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersHybridPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
 		A785299E2079F9210028361F /* libvtkIOTecplotTable-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkIOTecplotTable-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkIOTecplotTable-8.1.1.dylib"; sourceTree = "<group>"; };
 		A785299F2079F9210028361F /* libvtkFiltersGenericPython27D-8.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libvtkFiltersGenericPython27D-8.1.1.dylib"; path = "../../../../../../../../../usr/local/Cellar/vtk/8.1.0/lib/libvtkFiltersGenericPython27D-8.1.1.dylib"; sourceTree = "<group>"; };
@@ -895,7 +895,7 @@
 		A7684C7C205FF4B6000C8CFC /* MarkerMapper */ = {
 			isa = PBXGroup;
 			children = (
-				A768A1CB2091E4F7007DF719 /* dodtracmain.cpp */,
+				A77256702096BD1F006D251B /* main.cpp */,
 				A7684CDF20600738000C8CFC /* Libraries */,
 				A7DADEFC2061E92B00AD8DA1 /* stdafx.h */,
 				A7DADEFA2061E88200AD8DA1 /* Calibration.hpp */,
@@ -1425,7 +1425,7 @@
 				A7DADF0320624EC300AD8DA1 /* Pen.cpp in Sources */,
 				A70A849D2078DBFD0015282A /* Tools.cpp in Sources */,
 				A7EB45D2207661970048ADD7 /* DodecaTracker.cpp in Sources */,
-				A768A1CC2091E4F7007DF719 /* dodtracmain.cpp in Sources */,
+				A77256712096BD1F006D251B /* main.cpp in Sources */,
 				A7DADF0920625B4D00AD8DA1 /* PenDetector.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
