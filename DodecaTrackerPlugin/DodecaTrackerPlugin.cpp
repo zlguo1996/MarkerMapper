@@ -109,7 +109,7 @@ bool EXPORT_API DodecaTrackerPlugin::_setPenDodecaCenter(char* file_path){
     return dodeca_tracker->setDodecaCenter(dc_file_path);
 }
 bool EXPORT_API DodecaTrackerPlugin::_getPenTipPosition(float* tvec){
-    cv::Mat tv = dodeca_tracker->getPenTipPosition();
+    cv::Mat tv = CVToU3d*dodeca_tracker->getPenTipPosition();
     if(tv.empty()) return false;
     
     tvec[0] = tv.at<float>(0, 0);
@@ -118,7 +118,7 @@ bool EXPORT_API DodecaTrackerPlugin::_getPenTipPosition(float* tvec){
     return true;
 }
 bool EXPORT_API DodecaTrackerPlugin::_getPenDodecaCenterPosition(float* tvec){
-    cv::Mat tv = dodeca_tracker->getDodecaCenterPosition();
+    cv::Mat tv = CVToU3d*dodeca_tracker->getDodecaCenterPosition();
     if(tv.empty()) return false;
     
     tvec[0] = tv.at<float>(0, 0);
