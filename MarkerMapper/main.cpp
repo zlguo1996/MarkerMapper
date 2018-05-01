@@ -86,8 +86,8 @@ int main(int argc, const char * argv[]) {
     md.setDictionary(dictionary);
     md.getParameters().setCornerRefinementMethod(aruco::CornerRefinementMethod::CORNER_LINES);
     
-    string case_path = "Tracking/case1.mov";
-    cv::VideoCapture video_capture(0);
+    string case_path = "Tracking/brio_camera/case1.mp4";
+    cv::VideoCapture video_capture(case_path);
     //video_capture.set(CV_CAP_PROP_FPS, 30);
     cout << video_capture.get(CV_CAP_PROP_FPS) << endl;
     
@@ -98,20 +98,22 @@ int main(int argc, const char * argv[]) {
     
     // 计时
     time_t time1 = clock(), time2;
+    time_t time3 = clock(), time4;
     uint count = 1;
     float fps = 0.0f;
     
+    time_t time_all = clock();
     while (camera.grab()) {
-        thread t(std::bind(&PenDetector::detectOneFrame, &pd));
-        t.detach();
-        //bool success = pd.detectOneFrame();
+//        thread t(std::bind(&PenDetector::detectOneFrame, &pd));
+//        t.detach();
+        bool success = pd.detectOneFrame();
         
         Mat img;
         pd.camera->current_frame.copyTo(img);
-//        if (success) {
-//            pd.camera->drawDetectedMarkers(img);
-//            pd.camera->draw3DAxis(img, dodeca_marker_size*2);
-//        }
+        if (success) {
+            pd.camera->drawDetectedMarkers(img);
+            pd.camera->draw3DAxis(img, dodeca_marker_size*2);
+        }
         
 //        aruco::MarkerMapPoseTracker mmappt;
 //        mmappt.setParams(cp, mmap);
@@ -134,6 +136,7 @@ int main(int argc, const char * argv[]) {
         char c = waitKey(20);
         if(c==27) break;
     }
+    cout << "time_per_frame: " << (float)(clock()-time_all)/CLOCKS_PER_SEC/count << endl;
 #endif
     
     return 0;
