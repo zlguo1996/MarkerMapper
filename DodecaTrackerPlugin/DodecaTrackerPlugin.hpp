@@ -60,7 +60,7 @@ namespace DodecaTrackerPlugin {
     extern "C" bool EXPORT_API _getPenDodecaCenterPosition(float* tvec);    // deprecated
     extern "C" bool EXPORT_API _setPenTipM(float* rt_mat);                  // 4*4 行主序
     extern "C" bool EXPORT_API _setPenDodecaCenterM(float* rt_mat);         // 4*4 行主序
-    extern "C" bool EXPORT_API _savePenTipPosition(float* rt_mat, char* file_path);
+    extern "C" bool EXPORT_API _savePenTipPose(float* rt_mat, char* file_path);
     extern "C" bool EXPORT_API _getPenTipPose(float* rt_mat);               // 4*4 行主序
     extern "C" bool EXPORT_API _getPenDodecaCenterPose(float* rt_mat);      // 4*4 行主序
     

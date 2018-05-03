@@ -177,7 +177,7 @@ void calibratePentip(const string& file_path, const string& calibration_photo_pa
     //std::cout << summary.FullReport() << "\n";
     
     FileStorage fs(file_path, FileStorage::WRITE);
-    Mat pentip_pos = Mat::zeros(4, 4, CV_32F);
+    Mat pentip_pos = Mat::eye(4, 4, CV_32F);
     pentip_pos.at<float>(0, 3) = ptPosition[0];
     pentip_pos.at<float>(1, 3) = ptPosition[1];
     pentip_pos.at<float>(2, 3) = ptPosition[2];

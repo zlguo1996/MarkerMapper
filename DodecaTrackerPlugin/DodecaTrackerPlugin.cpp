@@ -156,7 +156,7 @@ bool EXPORT_API DodecaTrackerPlugin::_setPenDodecaCenterM(float* rt_mat){
     memcpy(mat.data, rt_mat, 16*sizeof(float));
     return dodeca_tracker->setDodecaCenter(mat);
 }
-bool EXPORT_API DodecaTrackerPlugin::_savePenTipPosition(float* rt_mat, char* file_path){
+bool EXPORT_API DodecaTrackerPlugin::_savePenTipPose(float* rt_mat, char* file_path){
     Mat mat(4, 4, CV_32F);
     memcpy(mat.data, rt_mat, 16*sizeof(float));
     string pt_file_path = file_path;
