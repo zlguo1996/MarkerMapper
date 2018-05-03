@@ -22,8 +22,8 @@ class Pen{
     
 public:
     MarkerMap marker_map;   // 存储标定的正十二面体位置
-    Mat pentip_position;    // 存储笔尖的位置(3*1 float）
-    Mat dodeca_center_position; // 存储正十二面体中心的位置(3*1 float）
+    Mat pentip_pose;    // 存储笔尖的位置(4*4 float）
+    Mat dodeca_center_pose; // 存储正十二面体中心的位置(4*4 float）
     
     Pen(){
     }
@@ -38,16 +38,16 @@ public:
     
     void setPenTip(const string& pentip_position_path){
         FileStorage fs(pentip_position_path, FileStorage::READ);
-        fs["pentip_position"] >> pentip_position;
+        fs["pentip_position"] >> pentip_pose;
         fs.release();
-        assert(!pentip_position.empty());
+        assert(!pentip_pose.empty());
     }
     
     void setDodecaCenter(const string& dodeca_center_path){
         FileStorage fs(dodeca_center_path, FileStorage::READ);
-        fs["pentip_position"] >> dodeca_center_position;
+        fs["pentip_position"] >> dodeca_center_pose;
         fs.release();
-        assert(!dodeca_center_position.empty());
+        assert(!dodeca_center_pose.empty());
     }
     
     void addFrame(cv::Mat rt_mat, int frame_index){

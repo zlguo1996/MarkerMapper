@@ -79,6 +79,15 @@ bool EXPORT_API DodecaTrackerPlugin::_getCameraPose(float* rvec, float* tvec){
     
     return true;
 }
+bool EXPORT_API DodecaTrackerPlugin::_getCameraPoseM(float* rt_mat){
+    cv::Mat mat = CVToU3d*dodeca_tracker->getCameraPose();
+    if (mat.isContinuous()) {
+        memcpy(rt_mat, mat.data, 16*sizeof(float));
+        return true;
+    }else{
+        return false;
+    }
+}
 
 bool EXPORT_API DodecaTrackerPlugin::_getPose(float* rvec, float* tvec){
     cv::Mat mat = CVToU3d*dodeca_tracker->getPose();
@@ -95,6 +104,15 @@ bool EXPORT_API DodecaTrackerPlugin::_getPose(float* rvec, float* tvec){
     
     return true;
 }
+bool EXPORT_API DodecaTrackerPlugin::_getPoseM(float* rt_mat){
+    cv::Mat mat = CVToU3d*dodeca_tracker->getPose();
+    if (mat.isContinuous()) {
+        memcpy(rt_mat, mat.data, 16*sizeof(float));
+        return true;
+    }else{
+        return false;
+    }
+}
 
 bool EXPORT_API DodecaTrackerPlugin::_isValid(){
     return dodeca_tracker->isValid();
@@ -109,21 +127,50 @@ bool EXPORT_API DodecaTrackerPlugin::_setPenDodecaCenter(char* file_path){
     return dodeca_tracker->setDodecaCenter(dc_file_path);
 }
 bool EXPORT_API DodecaTrackerPlugin::_getPenTipPosition(float* tvec){
-    cv::Mat tv = dodeca_tracker->getPenTipPosition();
-    if(tv.empty()) return false;
+    cv::Mat rt_mat;
+    bool success = dodeca_tracker->getPenTipPose(rt_mat);
+    if(!success) return false;
     
-    tvec[0] = tv.at<float>(0, 0);
-    tvec[1] = tv.at<float>(1, 0);
-    tvec[2] = tv.at<float>(2, 0);
+    tvec[0] = rt_mat.at<float>(0, 3);
+    tvec[1] = rt_mat.at<float>(1, 3);
+    tvec[2] = rt_mat.at<float>(2, 3);
     return true;
 }
 bool EXPORT_API DodecaTrackerPlugin::_getPenDodecaCenterPosition(float* tvec){
-    cv::Mat tv = dodeca_tracker->getDodecaCenterPosition();
-    if(tv.empty()) return false;
+    cv::Mat rt_mat;
+    bool success = dodeca_tracker->getDodecaCenterPose(rt_mat);
+    if(!success) return false;
     
-    tvec[0] = tv.at<float>(0, 0);
-    tvec[1] = tv.at<float>(1, 0);
-    tvec[2] = tv.at<float>(2, 0);
+    tvec[0] = rt_mat.at<float>(0, 3);
+    tvec[1] = rt_mat.at<float>(1, 3);
+    tvec[2] = rt_mat.at<float>(2, 3);
+    return true;
+}
+bool EXPORT_API DodecaTrackerPlugin::_setPenTipM(float* rt_mat){
+    Mat mat(4, 4, CV_32F);
+    memcpy(mat.data, rt_mat, 16*sizeof(float));
+    return dodeca_tracker->setPenTip(mat);
+}
+bool EXPORT_API DodecaTrackerPlugin::_setPenDodecaCenterM(float* rt_mat){
+    Mat mat(4, 4, CV_32F);
+    memcpy(mat.data, rt_mat, 16*sizeof(float));
+    return dodeca_tracker->setDodecaCenter(mat);
+}
+
+bool EXPORT_API DodecaTrackerPlugin::_getPenTipPose(float* rt_mat){
+    cv::Mat mat;
+    bool success = dodeca_tracker->getPenTipPose(mat);
+    if(!success) return false;
+    
+    memcpy(rt_mat, mat.data, 16*sizeof(float));
+    return true;
+}
+bool EXPORT_API DodecaTrackerPlugin::_getPenDodecaCenterPose(float* rt_mat){
+    cv::Mat mat;
+    bool success = dodeca_tracker->getDodecaCenterPose(mat);
+    if(!success) return false;
+    
+    memcpy(rt_mat, mat.data, 16*sizeof(float));
     return true;
 }
 
