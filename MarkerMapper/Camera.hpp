@@ -11,6 +11,8 @@
 
 #include "stdafx.h"
 
+#include <chrono>
+
 //struct MarkerInfo: public vector<aruco::Marker>{
 //    MarkerInfo() {}
 //    MarkerInfo(const vector<aruco::Marker>& markers) : vector<aruco::Marker>(markers){}
@@ -115,12 +117,22 @@ public:
     
     // 检测marker，返回检测到的marker数量
     int detectMarkers(bool is_ift=true){
+        auto start = std::chrono::high_resolution_clock::now();
+        
         aruco_mm::arucoMarkerSet markers = marker_detector.detect(current_frame);
+        
+        auto finish1 = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> elapsed1 = finish1 - start;
+        std::cout << "--- " << elapsed1.count() << " s\n";
+        
         if(is_ift){
             aruco_mm::arucoMarkerSet ift_markers = detectInterframeMarkers(markers);
             markers.insert(markers.end(), ift_markers.begin(), ift_markers.end());
         }
         marker_set.insert(pair<uint32_t, aruco_mm::arucoMarkerSet>(next_frame_index-1, markers));
+        auto finish2 = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> elapsed2 = finish2 - finish1;
+        std::cout << "--- " << elapsed2.count() << " s\n";
         
         // 限制marker_set大小
         if(marker_set.size()>max_marker_set_size){

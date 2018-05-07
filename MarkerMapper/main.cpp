@@ -82,10 +82,10 @@ int main(int argc, const char * argv[]) {
     //追踪
     aruco::MarkerDetector md;
     md.setDictionary(dictionary);
-    md.getParameters().setCornerRefinementMethod(aruco::CornerRefinementMethod::CORNER_LINES);
+    //md.getParameters().setCornerRefinementMethod(aruco::CornerRefinementMethod::CORNER_LINES);
     
-    string case_path = "Tracking/case1.mov";
-    cv::VideoCapture video_capture(0);
+    string case_path = "Tracking/brio_camera/case1.mp4";
+    cv::VideoCapture video_capture(case_path);
     //video_capture.set(CV_CAP_PROP_FPS, 30);
     cout << video_capture.get(CV_CAP_PROP_FPS) << endl;
     
