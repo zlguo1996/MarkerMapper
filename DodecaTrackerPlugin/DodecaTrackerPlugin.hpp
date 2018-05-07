@@ -44,18 +44,25 @@ namespace DodecaTrackerPlugin {
     //检测
     extern "C" bool EXPORT_API _grab();
     extern "C" bool EXPORT_API _detect();
-    extern "C" bool EXPORT_API _getPose(float* rvec, float* tvec);
+    extern "C" bool EXPORT_API _getPose(float* rvec, float* tvec);          // deprecated
+    extern "C" bool EXPORT_API _getPoseM(float* rt_mat);                    // 4*4 行主序
     
     // ------- 相机标定 -------
     extern "C" int  EXPORT_API _detectMarkers();
     extern "C" bool EXPORT_API _calibrateCameraPose(char* calib_marker_map_path);
-    extern "C" bool EXPORT_API _getCameraPose(float* rvec, float* tvec);
+    extern "C" bool EXPORT_API _getCameraPose(float* rvec, float* tvec);    // deprecated
+    extern "C" bool EXPORT_API _getCameraPoseM(float* rt_mat);              // 4*4 行主序
     
     // ------- 笔尖和正十二面体中心 ------
     extern "C" bool EXPORT_API _setPenTip(char* file_path);
     extern "C" bool EXPORT_API _setPenDodecaCenter(char* file_path);
-    extern "C" bool EXPORT_API _getPenTipPosition(float* tvec);
-    extern "C" bool EXPORT_API _getPenDodecaCenterPosition(float* tvec);
+    extern "C" bool EXPORT_API _getPenTipPosition(float* tvec);             // deprecated
+    extern "C" bool EXPORT_API _getPenDodecaCenterPosition(float* tvec);    // deprecated
+    extern "C" bool EXPORT_API _setPenTipM(float* rt_mat);                  // 4*4 行主序
+    extern "C" bool EXPORT_API _setPenDodecaCenterM(float* rt_mat);         // 4*4 行主序
+    extern "C" bool EXPORT_API _savePenTipPose(float* rt_mat, char* file_path);
+    extern "C" bool EXPORT_API _getPenTipPose(float* rt_mat);               // 4*4 行主序
+    extern "C" bool EXPORT_API _getPenDodecaCenterPose(float* rt_mat);      // 4*4 行主序
     
     // -------- 新函数测试 ---------
     extern "C" void EXPORT_API processImage(Color32* raw, int width, int height, int id);

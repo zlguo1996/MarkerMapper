@@ -118,7 +118,7 @@ public:
         
         return true;
     }
-    bool setPenTip(string pentip_path){
+    bool setPenTip(const string& pentip_path){
         fstream file;
         file.open(pentip_path);
         if(!file.is_open()) return false;
@@ -126,12 +126,20 @@ public:
         pen.setPenTip(pentip_path);
         return true;
     }
-    bool setDodecaCenter(string center_path){
+    bool setDodecaCenter(const string& center_path){
         fstream file;
         file.open(center_path);
         if(!file.is_open()) return false;
         
         pen.setDodecaCenter(center_path);
+        return true;
+    }
+    bool setPenTip(const Mat& rt_mat){
+        pen.pentip_pose = rt_mat.clone();
+        return true;
+    }
+    bool setDodecaCenter(const Mat& rt_mat){
+        pen.dodeca_center_pose = rt_mat.clone();
         return true;
     }
     bool initPenDetector(){
@@ -173,29 +181,25 @@ public:
         return pen.getFrame(camera.next_frame_index-1);
     }
     
-    // 获得当前帧笔尖的世界坐标（4*1 float）
-    cv::Mat getPenTipPosition(){
-        Mat mat;
-        if(pen.pentip_position.empty()) {
+    // 获得笔尖的姿态（4*1 float）
+    bool getPenTipPose(cv::Mat& mat){
+        if(pen.pentip_pose.empty()) {
             cout << "PEN::ERROR::No pentip position." << endl;
-            return mat;
+            return false;
+        }else{
+            mat = pen.pentip_pose.clone();
+            return true;
         }
-        Mat vec(4, 1, CV_32F);
-        pen.pentip_position.rowRange(0,3).copyTo(vec.rowRange(0, 3));
-        vec.at<float>(3, 0) = 1.0f;
-        return getPose()*vec;
     }
-    // 获得当前帧正十二面体中心的世界坐标（4*1 float）
-    cv::Mat getDodecaCenterPosition(){
-        Mat mat;
-        if(pen.dodeca_center_position.empty()) {
-            cout << "PEN::ERROR::No dodeca center position." << endl;
-            return mat;
+    // 获得正十二面体中心的姿态（4*1 float）
+    bool getDodecaCenterPose(cv::Mat& mat){
+        if(pen.dodeca_center_pose.empty()) {
+            cout << "PEN::ERROR::No pentip position." << endl;
+            return false;
+        }else{
+            mat =  pen.dodeca_center_pose.clone();
+            return true;
         }
-        Mat vec(4, 1, CV_32F);
-        pen.dodeca_center_position.rowRange(0,3).copyTo(vec.rowRange(0, 3));
-        vec.at<float>(3, 0) = 1.0f;
-        return getPose()*vec;
     }
     
     bool isValid(){
