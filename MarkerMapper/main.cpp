@@ -15,6 +15,8 @@
 #include "Pen.hpp"
 #include "PenDetector.hpp"
 
+#include <chrono>
+
 //#define CALIB_CAM
 //#define CALIB_DODECA
 //#define CALIB_PENTIP
@@ -82,10 +84,10 @@ int main(int argc, const char * argv[]) {
     //追踪
     aruco::MarkerDetector md;
     md.setDictionary(dictionary);
-    md.getParameters().setCornerRefinementMethod(aruco::CornerRefinementMethod::CORNER_LINES);
+    //md.getParameters().setCornerRefinementMethod(aruco::CornerRefinementMethod::CORNER_LINES);
     
-    string case_path = "Tracking/case1.mov";
-    cv::VideoCapture video_capture(0);
+    string case_path = "Tracking/brio_camera/case1.mp4";
+    cv::VideoCapture video_capture(case_path);
     //video_capture.set(CV_CAP_PROP_FPS, 30);
     cout << video_capture.get(CV_CAP_PROP_FPS) << endl;
     
@@ -95,18 +97,19 @@ int main(int argc, const char * argv[]) {
     PenDetector pd(&camera,&pen);
     
     // 计时
-    time_t time1 = clock(), time2;
     uint count = 1;
     float fps = 0.0f;
     
+    auto start = std::chrono::high_resolution_clock::now();
+    
     while (camera.grab()) {
         bool success = pd.detectOneFrame();
-        Mat img;
-        pd.camera->current_frame.copyTo(img);
-        if (success) {
-            pd.camera->drawDetectedMarkers(img);
-            pd.camera->draw3DAxis(img, dodeca_marker_size*2);
-        }
+//        Mat img;
+//        pd.camera->current_frame.copyTo(img);
+//        if (success) {
+//            pd.camera->drawDetectedMarkers(img);
+//            pd.camera->draw3DAxis(img, dodeca_marker_size*2);
+//        }
         
 //        aruco::MarkerMapPoseTracker mmappt;
 //        mmappt.setParams(cp, mmap);
@@ -118,17 +121,18 @@ int main(int argc, const char * argv[]) {
         //imshow("in", img);
         
         // 计算fps
-        if(count%10==0){
-            time2 = clock();
-            fps = 1.0f/((float)(time2-time1)/CLOCKS_PER_SEC/10.0f);
-            time1 = time2;
-        }
-        cout << "fps: " << fps << endl;
+        auto now = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> dur = now - start;
+        cout << "fps: " << count/(double)dur.count() << endl;
         count++;
         
-        char c = waitKey(20);
-        if(c==27) break;
+        //char c = waitKey(20);
+        //if(c==27) break;
     }
+    
+    auto finish = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed = finish - start;
+    std::cout << "Elapsed time: " << elapsed.count() << " s\n";
 #endif
     
     return 0;

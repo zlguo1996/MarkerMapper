@@ -11,6 +11,8 @@
 
 #include "stdafx.h"
 
+#include <chrono>
+
 //struct MarkerInfo: public vector<aruco::Marker>{
 //    MarkerInfo() {}
 //    MarkerInfo(const vector<aruco::Marker>& markers) : vector<aruco::Marker>(markers){}
@@ -40,6 +42,7 @@ public:
     
     cv::Mat camera_pose; // 相机在世界坐标系中的pose（相机坐标系转化为世界坐标系）
     
+    // ------------ 初始化 ----------------
     Camera(){
         
     }
@@ -83,6 +86,7 @@ public:
         //marker_detector.getParameters().setCornerRefinementMethod(aruco::CornerRefinementMethod::CORNER_LINES);
     }
     
+    // ------------- 基本API ---------------
     bool isValid(){
         return video_capture.isOpened()&&camera_parameters.isValid()&&!camera_pose.empty();
     }
@@ -102,6 +106,7 @@ public:
         return true;
     }
     
+    // --------------- 追踪 -------------------
     bool grab(){
         return video_capture.grab();
     }
@@ -114,23 +119,7 @@ public:
     }
     
     // 检测marker，返回检测到的marker数量
-    int detectMarkers(bool is_ift=true){
-        aruco_mm::arucoMarkerSet markers = marker_detector.detect(current_frame);
-        if(is_ift){
-            aruco_mm::arucoMarkerSet ift_markers = detectInterframeMarkers(markers);
-            markers.insert(markers.end(), ift_markers.begin(), ift_markers.end());
-        }
-        marker_set.insert(pair<uint32_t, aruco_mm::arucoMarkerSet>(next_frame_index-1, markers));
-        
-        // 限制marker_set大小
-        if(marker_set.size()>max_marker_set_size){
-            while(marker_set.size()>max_erase_num){
-                marker_set.erase(marker_set.begin());
-            }
-        }
-        
-        return marker_set[next_frame_index-1].size();
-    }
+    int detectMarkers(bool is_ift=true, bool constrain_area=false);
     
     // 追踪markermap相对于相机的位置，返回是否检测成功
     bool mmPoseEstimation(Mat& rt_mat, const aruco::MarkerMap& mm){
@@ -143,7 +132,7 @@ public:
         return true;
     }
     
-    // =============== 以下为一些工具 ================
+    // --------------- 可视化工具 --------------
     // 绘制当前帧检测到的marker
     void drawDetectedMarkers(Mat& img){
         aruco_mm::arucoMarkerSet markers = marker_set[next_frame_index-1];
@@ -156,47 +145,12 @@ public:
     }
     
 private:
+    // --------------- 私有函数 ----------------
+    // 限定marker的检测范围
+    void constrainDetectArea(Mat& frame);
+    
     // 检测帧间marker
-    aruco_mm::arucoMarkerSet detectInterframeMarkers(aruco_mm::arucoMarkerSet& detected_markers){
-        if(next_frame_index<2) return aruco_mm::arucoMarkerSet();
-        
-        aruco_mm::arucoMarkerSet ift_markers;
-        vector<cv::Point2f> ift_contours_vel;
-        for(auto marker:marker_set[next_frame_index-2]){
-            if(!detected_markers.is(marker.id)){
-                aruco::Marker dm;
-                vector<uchar> status;
-                vector<float> error;
-                calcOpticalFlowPyrLK(last_frame, current_frame, marker, dm, status, error);
-                dm.id = marker.id;
-                dm.ssize = marker.ssize;
-                dm.dict_info = marker.dict_info;
-                
-                // 除去光流法失败的marker
-                if(find(status.begin(), status.end(), 0)!=status.end()) continue;
-                
-                for(int i=0; i<4; i++) ift_contours_vel.push_back(dm[i]-marker[i]);
-                
-                ift_markers.push_back(dm);
-            }
-        }
-        
-        // 异常值移除(除去大于均值两个标准差的marker)
-        Scalar mean, stddev;
-        cv::meanStdDev(ift_contours_vel, mean, stddev);
-        cv::Point2f mean_p(mean[0], mean[1]), stddev_p(stddev[0], stddev[1]);
-        vector<int> ift_erase_idx;
-        for(int i=0; i<ift_contours_vel.size(); i++){
-            Point2f p = ift_contours_vel[i];
-            float dist2 = (p-mean_p).dot(p-mean_p);
-            if(dist2>4.0*stddev_p.dot(stddev_p)){
-                if(ift_erase_idx.empty()||ift_erase_idx.back()!=i/4) ift_erase_idx.push_back(i/4);
-            }
-        }
-        for(int i=ift_erase_idx.size()-1; i>=0; i--) ift_markers.erase(ift_markers.begin()+ift_erase_idx[i]);
-        
-        return ift_markers;
-    }
+    aruco_mm::arucoMarkerSet detectInterframeMarkers(aruco_mm::arucoMarkerSet& detected_markers);
 };
 
 #endif /* Camera_hpp */

@@ -42,29 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MarkerMapper/Camera.hpp"
-            timestampString = "546425292.639396"
+            timestampString = "547447136.169513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "detectInterframeMarkers(aruco_mm::arucoMarkerSet&amp; detected_markers)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MarkerMapper/Camera.hpp"
-            timestampString = "546425292.6394449"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "detectInterframeMarkers(aruco_mm::arucoMarkerSet&amp; detected_markers)"
-            landmarkType = "7">
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "Camera"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -112,6 +96,55 @@
             startingLineNumber = "24"
             endingLineNumber = "24"
             landmarkName = "readImages(const string&amp; photo_path, vector&lt;Mat&gt;&amp; images)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            condition = "camera-&gt;next_frame_index-1 == 311"
+            continueAfterRunningActions = "No"
+            filePath = "MarkerMapper/PenDetector.hpp"
+            timestampString = "547457669.230741"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "detectOneFrame()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarkerMapper/Camera.cpp"
+            timestampString = "547457669.2308069"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "findBound(const aruco_mm::arucoMarkerSet&amp; marker_set, cv::Point2f&amp; minB, cv::Point2f&amp; maxB)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MarkerMapper/Camera.cpp"
+            timestampString = "547457669.230857"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "findBound(const aruco_mm::arucoMarkerSet&amp; marker_set, cv::Point2f&amp; minB, cv::Point2f&amp; maxB)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
