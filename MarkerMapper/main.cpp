@@ -15,6 +15,8 @@
 #include "Pen.hpp"
 #include "PenDetector.hpp"
 
+#include <chrono>
+
 //#define CALIB_CAM
 //#define CALIB_DODECA
 //#define CALIB_PENTIP
@@ -99,14 +101,16 @@ int main(int argc, const char * argv[]) {
     uint count = 1;
     float fps = 0.0f;
     
+    auto start = std::chrono::high_resolution_clock::now();
+    
     while (camera.grab()) {
         bool success = pd.detectOneFrame();
-        Mat img;
-        pd.camera->current_frame.copyTo(img);
-        if (success) {
-            pd.camera->drawDetectedMarkers(img);
-            pd.camera->draw3DAxis(img, dodeca_marker_size*2);
-        }
+//        Mat img;
+//        pd.camera->current_frame.copyTo(img);
+//        if (success) {
+//            pd.camera->drawDetectedMarkers(img);
+//            pd.camera->draw3DAxis(img, dodeca_marker_size*2);
+//        }
         
 //        aruco::MarkerMapPoseTracker mmappt;
 //        mmappt.setParams(cp, mmap);
@@ -126,9 +130,13 @@ int main(int argc, const char * argv[]) {
         cout << "fps: " << fps << endl;
         count++;
         
-        char c = waitKey(20);
-        if(c==27) break;
+        //char c = waitKey(20);
+        //if(c==27) break;
     }
+    
+    auto finish = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed = finish - start;
+    std::cout << "Elapsed time: " << elapsed.count() << " s\n";
 #endif
     
     return 0;

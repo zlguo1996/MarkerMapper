@@ -50,25 +50,25 @@ public:
         int frame_index = camera->retrieve();
         auto finish1 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed1 = finish1 - start;
-        std::cout << "-- " << elapsed1.count() << " s\n";
+        std::cout << " - " << elapsed1.count() << " s\n";
         
-        if(camera->detectMarkers()<2) return false;
+        if(camera->detectMarkers(true)<2) return false;
         auto finish2 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed2 = finish2 - finish1;
-        std::cout << "-- " << elapsed2.count() << " s\n";
+        std::cout << " - " << elapsed2.count() << " s\n";
         
         Mat rt_mat;
         if(!camera->mmPoseEstimation(rt_mat, pen->marker_map)) return false;
         auto finish3 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed3 = finish3 - finish2;
-        std::cout << "-- " << elapsed3.count() << " s\n";
+        std::cout << " - " << elapsed3.count() << " s\n";
         
         rt_mat = camera->camera_pose*rt_mat;
         pen->addFrame(rt_mat, frame_index);
         
         auto finish4 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed4 = finish4 - start;
-        std::cout << "- " << elapsed4.count() << " s\n";
+        std::cout << "+ " << elapsed4.count() << " s\n";
         cout << "-------------------" << endl;
         cout << endl;
         
