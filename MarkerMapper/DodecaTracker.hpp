@@ -153,7 +153,7 @@ public:
     //------- 相机位置标定 ---------
     int detectMarkers(){
         int frame_index = camera.retrieve();
-        return camera.detectMarkers(false);
+        return camera.detectMarkers(false, false);
     }
     bool calibrateCameraPose(string calib_marker_map_path){
         return camera.calibratePose(calib_marker_map_path);

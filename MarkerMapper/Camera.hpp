@@ -119,7 +119,7 @@ public:
     }
     
     // 检测marker，返回检测到的marker数量
-    int detectMarkers(bool is_ift=true);
+    int detectMarkers(bool is_ift=true, bool constrain_area=false);
     
     // 追踪markermap相对于相机的位置，返回是否检测成功
     bool mmPoseEstimation(Mat& rt_mat, const aruco::MarkerMap& mm){

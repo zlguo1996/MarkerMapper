@@ -50,12 +50,12 @@ int contoursVelMean(aruco_mm::arucoMarkerSet& marker_set1, aruco_mm::arucoMarker
 // --------- 类方法 -----------
 
 // 检测marker，返回检测到的marker数量
-int Camera::detectMarkers(bool is_ift){
+int Camera::detectMarkers(bool is_ift, bool constrain_area){
     auto start = std::chrono::high_resolution_clock::now();
     
     Mat c_current_frame;
     current_frame.copyTo(c_current_frame);
-    constrainDetectArea(c_current_frame);
+    if(constrain_area) constrainDetectArea(c_current_frame);
     aruco_mm::arucoMarkerSet markers = marker_detector.detect(c_current_frame);
     
     auto finish1 = std::chrono::high_resolution_clock::now();

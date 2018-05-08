@@ -52,7 +52,7 @@ public:
         std::chrono::duration<double> elapsed1 = finish1 - start;
         std::cout << " - " << elapsed1.count() << " s\n";
         
-        if(camera->detectMarkers(true)<2) return false;
+        if(camera->detectMarkers(true, true)<2) return false;
         auto finish2 = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> elapsed2 = finish2 - finish1;
         std::cout << " - " << elapsed2.count() << " s\n";
