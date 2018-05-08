@@ -105,11 +105,10 @@ void Camera::constrainDetectArea(Mat& frame){
     // 获得区域
     // 边长三倍于估计位置（论文为四倍区域？）
     Point2f diff = maxBound- minBound;
-    Point2f luBound = minBound-1.0f*diff, rbBound = maxBound+1.0f*diff;
+    Point2f luBound = minBound-1.5f*diff, rbBound = maxBound+1.5f*diff;
     // 区域交
     Rect2i c_area((Point2i)luBound, (Point2i)rbBound);
     Rect2i t_area(Point2i(0, 0), frame.size());
-    cout << luBound << "," << rbBound << endl;
     Rect2i final_area = c_area & t_area;
     if (final_area.width==0 || final_area.height==0) return;
     
@@ -148,7 +147,6 @@ aruco_mm::arucoMarkerSet Camera::detectInterframeMarkers(aruco_mm::arucoMarkerSe
     Scalar mean, stddev;
     cv::meanStdDev(ift_contours_vel, mean, stddev);
     cv::Point2f mean_p(mean[0], mean[1]), stddev_p(stddev[0], stddev[1]);
-    cout << "dst" << mean_p << endl;
     vector<int> ift_erase_idx;
     for(int i=0; i<ift_contours_vel.size(); i++){
         Point2f p = ift_contours_vel[i];

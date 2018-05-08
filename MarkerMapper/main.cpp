@@ -97,7 +97,6 @@ int main(int argc, const char * argv[]) {
     PenDetector pd(&camera,&pen);
     
     // 计时
-    time_t time1 = clock(), time2;
     uint count = 1;
     float fps = 0.0f;
     
@@ -122,12 +121,9 @@ int main(int argc, const char * argv[]) {
         //imshow("in", img);
         
         // 计算fps
-        if(count%10==0){
-            time2 = clock();
-            fps = 1.0f/((float)(time2-time1)/CLOCKS_PER_SEC/10.0f);
-            time1 = time2;
-        }
-        cout << "fps: " << fps << endl;
+        auto now = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> dur = now - start;
+        cout << "fps: " << count/(double)dur.count() << endl;
         count++;
         
         //char c = waitKey(20);
