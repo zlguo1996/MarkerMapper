@@ -104,23 +104,6 @@
          <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
-            condition = "camera-&gt;next_frame_index-1 == 311"
-            continueAfterRunningActions = "No"
-            filePath = "MarkerMapper/PenDetector.hpp"
-            timestampString = "547786077.953444"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "detectOneFrame()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MarkerMapper/Camera.cpp"
             timestampString = "547459543.428956"
