@@ -60,7 +60,7 @@ int Camera::detectMarkers(bool is_ift, bool constrain_area){
     
     auto finish1 = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed1 = finish1 - start;
-    std::cout << "  - " << elapsed1.count() << " s\n";
+    std::cout << "  -dm_d " << elapsed1.count() << " s\n";
     
     if(is_ift && markers.size()<2 && marker_set.count(next_frame_index-2)){
         aruco_mm::arucoMarkerSet ift_markers = detectInterframeMarkers(markers);
@@ -69,7 +69,7 @@ int Camera::detectMarkers(bool is_ift, bool constrain_area){
     marker_set.insert(pair<uint32_t, aruco_mm::arucoMarkerSet>(next_frame_index-1, markers));
     auto finish2 = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed2 = finish2 - finish1;
-    std::cout << "  - " << elapsed2.count() << " s\n";
+    std::cout << "  -dm_ift " << elapsed2.count() << " s\n";
     
     // 限制marker_set大小
     if(marker_set.size()>max_marker_set_size){

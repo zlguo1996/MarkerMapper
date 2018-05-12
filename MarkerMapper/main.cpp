@@ -87,12 +87,18 @@ int main(int argc, const char * argv[]) {
     //md.getParameters().setCornerRefinementMethod(aruco::CornerRefinementMethod::CORNER_LINES);
     
     string case_path = "Tracking/brio_camera/case1.mp4";
-    cv::VideoCapture video_capture(case_path);
-    //video_capture.set(CV_CAP_PROP_FPS, 30);
-    cout << video_capture.get(CV_CAP_PROP_FPS) << endl;
+    cv::VideoCapture video_capture;
+    video_capture.open("udp://127.0.0.1:9999");
+//    video_capture.set(CV_CAP_PROP_FOURCC, CV_FOURCC('M','P','E','G'));
+//    video_capture.set(CAP_PROP_FRAME_WIDTH, 1280.0);　　//设置摄像头采集图像分辨率
+//    video_capture.set(CAP_PROP_FRAME_HEIGHT, 720.0);
+//    video_capture.set(CAP_PROP_SETTINGS, 1);
+//    video_capture.set(CAP_PROP_FPS, 60);
+    //video_capture.set(CV_CAP_PROP_FPS, 60);
+    //cout << video_capture.get(CV_CAP_PROP_FPS) << endl;
     
     Camera camera(camera_parameters_file_path, video_capture, cv::Mat::eye(4, 4, CV_32F), md);
-    camera.setVideoCaptureParameters720p();
+    //camera.setVideoCaptureParameters720p();
     Pen pen(marker_map_path_base_name+".yml");
     PenDetector pd(&camera,&pen);
     
@@ -102,7 +108,11 @@ int main(int argc, const char * argv[]) {
     
     auto start = std::chrono::high_resolution_clock::now();
     
-    while (camera.grab()) {
+    while (pd.grabOneFrame() && count<60*30) {
+//        cout << video_capture.get(CV_CAP_PROP_FOURCC) << endl;
+//        Mat img;
+//        video_capture.retrieve(img);
+//        imwrite("/Users/guozile/Desktop/hello.jpg", img);
         bool success = pd.detectOneFrame();
 //        Mat img;
 //        pd.camera->current_frame.copyTo(img);

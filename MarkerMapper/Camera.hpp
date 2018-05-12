@@ -115,6 +115,7 @@ public:
     int retrieve(){
         if(!current_frame.empty()) current_frame.copyTo(last_frame);
         video_capture.retrieve(current_frame);
+        
         return next_frame_index++;
     }
     
