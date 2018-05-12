@@ -88,8 +88,8 @@ int main(int argc, const char * argv[]) {
     
     string case_path = "Tracking/brio_camera/case1.mp4";
     cv::VideoCapture video_capture;
-    video_capture.open("udp://10.180.124.15:9999");
-//    video_capture.set(CV_CAP_PROP_FOURCC,CV_FOURCC('M','J','P','G'));
+    video_capture.open("udp://127.0.0.1:9999");
+//    video_capture.set(CV_CAP_PROP_FOURCC, CV_FOURCC('M','P','E','G'));
 //    video_capture.set(CAP_PROP_FRAME_WIDTH, 1280.0);　　//设置摄像头采集图像分辨率
 //    video_capture.set(CAP_PROP_FRAME_HEIGHT, 720.0);
 //    video_capture.set(CAP_PROP_SETTINGS, 1);
@@ -108,20 +108,12 @@ int main(int argc, const char * argv[]) {
     
     auto start = std::chrono::high_resolution_clock::now();
     
-    cv::VideoWriter out;
-    out.open(
-             "/Users/guozile/Desktop/test.mov", //输出文件名
-             CV_FOURCC('D','I','V','X'), // MPEG-4 编码
-             120.0, // 帧率 (FPS)
-             cv::Size( 640, 480 ), // 单帧图片分辨率为 640x480
-             true // 只输入彩色图
-             );
-    
-    while (video_capture.grab() && count<60) {
-        Mat img;
-        video_capture.retrieve(img);
-        imwrite("/Users/guozile/Desktop/hello.jpg", img);
-        //bool success = pd.detectOneFrame();
+    while (pd.grabOneFrame() && count<60*30) {
+//        cout << video_capture.get(CV_CAP_PROP_FOURCC) << endl;
+//        Mat img;
+//        video_capture.retrieve(img);
+//        imwrite("/Users/guozile/Desktop/hello.jpg", img);
+        bool success = pd.detectOneFrame();
 //        Mat img;
 //        pd.camera->current_frame.copyTo(img);
 //        if (success) {
@@ -147,7 +139,6 @@ int main(int argc, const char * argv[]) {
         //char c = waitKey(20);
         //if(c==27) break;
     }
-    out.release();
     
     auto finish = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = finish - start;

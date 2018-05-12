@@ -107,7 +107,7 @@
             condition = "camera-&gt;next_frame_index-1 == 311"
             continueAfterRunningActions = "No"
             filePath = "MarkerMapper/PenDetector.hpp"
-            timestampString = "547457669.230741"
+            timestampString = "547786077.953444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
