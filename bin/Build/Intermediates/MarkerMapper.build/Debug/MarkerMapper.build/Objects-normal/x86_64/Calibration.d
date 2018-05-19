@@ -406,4 +406,8 @@ dependencies: \
   /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/Vertices.h \
   /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/TextureMesh.h \
   /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/io/impl/pcd_io.hpp \
-  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/io/lzf.h
+  /usr/local/Cellar/pcl/1.8.1_2/include/pcl-1.8/pcl/io/lzf.h \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/DodecaTracker.hpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Pen.hpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/Camera.hpp \
+  /Users/guozile/Documents/GitHub/MarkerMapper/MarkerMapper/PenDetector.hpp
