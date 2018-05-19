@@ -19,7 +19,7 @@
 
 //#define CALIB_CAM
 //#define CALIB_DODECA
-//#define CALIB_PENTIP
+#define CALIB_PENTIP
 #define REALTIME_TRACK
 
 // 相机标定变量
@@ -55,10 +55,10 @@ int main(int argc, const char * argv[]) {
     aruco::CameraParameters camera_parameters;
     camera_parameters.readFromXMLFile(camera_parameters_file_path);
     
-    string marker_map_path_base_name = "Calibration/output/dodeca/dodecahedron_marker_map";
+    string marker_map_path_base_name = "Calibration/output/presspen/dodecahedron_marker_map";
 #ifdef CALIB_DODECA
     // 创建map（api学习：markermapper/utils/mapper_from_images.cpp）
-    string dodecahedron_photo_path = "Calibration/input/pen_calibration/dodecahedron_calibration";
+    string dodecahedron_photo_path = "Calibration/input/presspen_calibration/dodecahedron_calibration";
     calibrateDodecaWithImages(marker_map_path_base_name, dodecahedron_photo_path, calibration_marker_size, camera_parameters, dictionary);
 #endif
     
@@ -74,9 +74,9 @@ int main(int argc, const char * argv[]) {
     cp.readFromXMLFile(marker_map_path_base_name+"-cam.yml");
     assert(cp.isValid());
   
-    string pentip_parameters_file_path = "Calibration/output/dodeca/dodeca_center_calibration.yml";
+    string pentip_parameters_file_path = "Calibration/output/presspen/dodeca_center_calibration.yml";
 #ifdef CALIB_PENTIP
-    string pentip_photo_path = "Calibration/input/pen_calibration/dodeca_center_calibration";
+    string pentip_photo_path = "Calibration/input/presspen_calibration/dodeca_center_calibration";
     calibratePentip(pentip_parameters_file_path, pentip_photo_path, cp, dictionary, mmap);
 #endif
     

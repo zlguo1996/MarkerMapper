@@ -8,6 +8,35 @@
 
 #include "Calibration.hpp"
 
+//打印 markers
+bool printMarkers(const string& file_path, float side_length_mm, float marker_length_mm){   // 600 dots per cm
+//    float points[10] = {
+//        0.0, 0.0, 5.0, 0.0, 6.54, 4.75, 2.50, 7.69, -1.54, 4.75
+//    };
+//    float width = (10.0+1.0)*3+2.0, height = (10.0+1.0)*4+8.0; // 图片的宽和高
+//    float resize = side_length_mm/5.0;
+//
+//    cv::Mat img((int)height*resize, (int)width*resize, CV_8UC1, new Scalar(255));
+    
+//    for (int r=0; r<4; r++) {
+//        for (int c=0; c<3; c++) {
+//            vector<Point2f> points;
+//            for(int i=0; i<5; i++){
+//                points.push_back(new Point2f(resize*points[2*i], resize*points[2*i+1]));
+//            }
+//        }
+//    }
+    
+    aruco::Dictionary dict = aruco::Dictionary::loadPredefined(DodecaTracker::dictionary);
+    for(int i=0; i<11; i++){
+        Mat img = dict.getMarkerImage_id(i, 50);
+        string img_path = file_path + "/" + to_string(i) + ".jpg";
+        imwrite(img_path, img);
+    }
+    
+    return true;
+}
+
 // 读取文件夹中以自然数命名的图片
 bool readImages(const string& photo_path, vector<Mat>& images){
     if (!images.empty()) {

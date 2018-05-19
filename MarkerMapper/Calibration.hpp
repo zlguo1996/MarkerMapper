@@ -20,6 +20,11 @@
 #include <pcl/point_types.h>
 #include <pcl/io/pcd_io.h>
 
+#include "DodecaTracker.hpp"
+
+// ----------- 打印 markers -------
+bool printMarkers(const string& file_path, float side_length_mm, float marker_length_mm);
+
 // ----------- tools -------------
 // 读取文件夹中以自然数命名的图片
 bool readImages(const string& photo_path, vector<Mat>& images);
