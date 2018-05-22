@@ -19,8 +19,8 @@
 
 //#define CALIB_CAM
 //#define CALIB_DODECA
-#define CALIB_PENTIP
-#define REALTIME_TRACK
+//#define CALIB_PENTIP
+//#define REALTIME_TRACK
 
 // 相机标定变量
 float calibration_marker_size = 0.018;    //标定用marker的边长
@@ -47,8 +47,8 @@ int main(int argc, const char * argv[]) {
     // 标定相机，并保存相机参数到文件（api学习：aruco/utils_calibration/aruco_calibration.cpp）
     //string calibration_video_path = "Calibration/input/macbook_camera_calibration.mov";
     string calibration_photo_path = "Calibration/input/camera_calibration/logitech_brio_camera_calibration/720p";
-    calibrateCameraWithImages(camera_parameters_file_path, calibration_photo_path, 1080, 720, calibration_marker_size);
-    //calibrateCameraWithVideo(camera_parameters_file_path, calibration_video_path, 1080, 720, calibration_marker_size);
+    calibrateCameraWithImages(camera_parameters_file_path, calibration_photo_path, 1280, 720, calibration_marker_size);
+    //calibrateCameraWithVideo(camera_parameters_file_path, calibration_video_path, 1280, 720, calibration_marker_size);
 #endif
     
     // 读取相机参数文件
@@ -80,6 +80,15 @@ int main(int argc, const char * argv[]) {
     calibratePentip(pentip_parameters_file_path, pentip_photo_path, cp, dictionary, mmap);
 #endif
     
+    DodecaTracker dt;
+    cout << dt.initCamera(camera_parameters_file_path, "udp://127.0.0.1:9999") << endl;
+    dt.initPen(marker_map_path_base_name+".yml");
+    dt.initPenDetector();
+    
+    while(dt.grab()){
+        if(dt.detect()) cout << dt.getPose() << endl;
+    }
+    
 #ifdef REALTIME_TRACK
     //追踪
     aruco::MarkerDetector md;
@@ -87,8 +96,7 @@ int main(int argc, const char * argv[]) {
     //md.getParameters().setCornerRefinementMethod(aruco::CornerRefinementMethod::CORNER_LINES);
     
     string case_path = "Tracking/brio_camera/case1.mp4";
-    cv::VideoCapture video_capture;
-    video_capture.open("udp://127.0.0.1:9999");
+    cv::VideoCapture video_capture("udp://127.0.0.1:9999");
 //    video_capture.set(CV_CAP_PROP_FOURCC, CV_FOURCC('M','P','E','G'));
 //    video_capture.set(CAP_PROP_FRAME_WIDTH, 1280.0);　　//设置摄像头采集图像分辨率
 //    video_capture.set(CAP_PROP_FRAME_HEIGHT, 720.0);

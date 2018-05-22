@@ -38,6 +38,18 @@ bool EXPORT_API DodecaTrackerPlugin::_initCameraRvecTvec(char* camera_parameter_
     return dodeca_tracker->initCamera(camera_parameter_path_s, deviceNum, cam_mat);
 }
 
+extern "C" bool EXPORT_API _initCameraS(char* camera_parameter_path, char* file_path){
+    string camera_parameter_path_s = camera_parameter_path;
+    return dodeca_tracker->initCamera(camera_parameter_path_s, file_path);
+}
+
+extern "C" bool EXPORT_API _initCameraSRvecTvec(char* camera_parameter_path, char* file_path, float* rvec, float* tvec){
+    string camera_parameter_path_s = camera_parameter_path;
+    Mat cam_mat;
+    getViewMatrixFromRvecTvec(rvec, tvec, cam_mat);
+    return dodeca_tracker->initCamera(camera_parameter_path_s, file_path, cam_mat);
+}
+
 bool EXPORT_API DodecaTrackerPlugin::_initPen(char* marker_map_path){
     string marker_map_path_s = marker_map_path;
     return dodeca_tracker->initPen(marker_map_path_s);
@@ -181,6 +193,16 @@ bool EXPORT_API DodecaTrackerPlugin::_getPenDodecaCenterPose(float* rt_mat){
     if(!success) return false;
     
     memcpy(rt_mat, mat.data, 16*sizeof(float));
+    return true;
+}
+bool EXPORT_API DodecaTrackerPlugin::_getPoseFromFile(float* rt_mat, char* file_path){
+    string file_path_s = file_path;
+    FileStorage fs(file_path_s, FileStorage::READ);
+    Mat pose;
+    fs["pentip_position"] >> pose;
+    fs.release();
+    
+    memcpy(rt_mat, pose.data, 16*sizeof(float));
     return true;
 }
 

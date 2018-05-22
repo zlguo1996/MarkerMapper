@@ -94,9 +94,9 @@ public:
         fstream file;
         file.open(camera_parameter_path);
         if(!file.is_open()) return false;
-        fstream video_file;
-        video_file.open(video_file_path);
-        if(!video_file.is_open()) return false;
+//        fstream video_file;
+//        video_file.open(video_file_path);
+//        if(!video_file.is_open()) return false;
         
         this->camera_parameter_path = camera_parameter_path;
         this->video_file_path = video_file_path;

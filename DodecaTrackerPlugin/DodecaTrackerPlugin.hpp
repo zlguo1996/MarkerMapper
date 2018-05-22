@@ -39,6 +39,8 @@ namespace DodecaTrackerPlugin {
     //初始化
     extern "C" bool EXPORT_API _initCamera(char* camera_parameter_path, int deviceNum);
     extern "C" bool EXPORT_API _initCameraRvecTvec(char* camera_parameter_path, int deviceNum, float* rvec, float* tvec);
+    extern "C" bool EXPORT_API _initCameraS(char* camera_parameter_path, char* file_path);
+    extern "C" bool EXPORT_API _initCameraSRvecTvec(char* camera_parameter_path, char* file_path, float* rvec, float* tvec);
     extern "C" bool EXPORT_API _initPen(char* marker_map_path);
     extern "C" bool EXPORT_API _initPenDetector();
     //检测
@@ -63,6 +65,7 @@ namespace DodecaTrackerPlugin {
     extern "C" bool EXPORT_API _savePenTipPose(float* rt_mat, char* file_path);
     extern "C" bool EXPORT_API _getPenTipPose(float* rt_mat);               // 4*4 行主序
     extern "C" bool EXPORT_API _getPenDodecaCenterPose(float* rt_mat);      // 4*4 行主序
+    extern "C" bool EXPORT_API _getPoseFromFile(float* rt_mat, char* file_path);      // 4*4 行主序
     
     // -------- 新函数测试 ---------
     extern "C" void EXPORT_API processImage(Color32* raw, int width, int height, int id);
